@@ -1,95 +1,104 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MermerSitesi</title>
-    <script type="importmap"></script>
+    <title>@ViewData["Title"] - HollandStone</title> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MermerSitesi.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-    <div class="top-bar bg-light py-1 border-bottom">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="social-icons">
-                <a href="#" class="text-dark me-2"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="slogan text-uppercase text-muted d-none d-md-block" style="font-size: 0.8rem; letter-spacing: 1px;">
-                Yenilikçi projelerimizle bir adım önde olmak için sizlere hizmet vermek isteriz.
-            </div>
-            <div class="language-selector">
-                <a href="#" class="text-dark text-decoration-none" style="font-size: 0.8rem;">
-                    LANGUAGE <i class="fas fa-caret-down"></i>
-                </a>
+        <div class="top-bar bg-light py-1 border-bottom">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="social-icons">
+                    <a href="#" class="text-dark me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="slogan text-uppercase text-muted d-none d-md-block" style="font-size: 0.8rem; letter-spacing: 1px;">
+                    Yenilikçi projelerimizle bir adım önde olmak için sizlere hizmet vermek isteriz.
+                </div>
+                <div class="language-selector">
+                    <a href="#" class="text-dark text-decoration-none" style="font-size: 0.8rem;">
+                        LANGUAGE <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center w-100 justify-content-start">
-                    <li class="nav-item">
-                        <a class="nav-link text-uppercase fw-bold text-dark" href="#"><i class="fas fa-search me-1"></i> ARA</a>
-                    </li>
-                    <li class="nav-item ps-3">
-                        <a class="nav-link text-uppercase text-dark" href="#">HAKKIMIZDA</a>
-                    </li>
-                    <li class="nav-item ps-3 dropdown">
-                        <a class="nav-link dropdown-toggle text-uppercase text-dark" href="#" role="button" data-bs-toggle="dropdown">KOLEKSİYON</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Mermer</a></li>
-                            <li><a class="dropdown-item" href="#">Traverten</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <a class="navbar-brand mx-auto text-center text-dark text-decoration-none" href="/" style="min-width: 200px;">
-    <div style="font-family: 'Times New Roman', serif; font-size: 2rem; letter-spacing: 4px; line-height: 1; color: #000;">
-        BIANCO
-    </div>
-    <div style="font-family: 'Times New Roman', serif; font-size: 2rem; letter-spacing: 4px; line-height: 1; color: #000;">
-        CARRARA
-    </div>
-    <div class="text-muted mt-2" style="font-size: 0.65rem; letter-spacing: 3px; font-family: sans-serif;">
-        BEAUTY OF NATURE
-    </div>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center w-100 justify-content-start">
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase fw-bold text-dark nav-hover-effect" href="#"><i class="fas fa-search me-1"></i> ARA</a>
+                        </li>
+                        <li class="nav-item ps-3">
+                            <a class="nav-link text-uppercase text-dark nav-hover-effect" href="#">HAKKIMIZDA</a>
+                        </li>
+                        
+                        <li class="nav-item ps-3 dropdown">
+                            <a class="nav-link dropdown-toggle text-uppercase text-dark nav-hover-effect" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    KOLEKSİYON <i class="fas fa-caret-down ms-1" style="font-size: 0.8rem;"></i>
 </a>
+                            <ul class="dropdown-menu rounded-0 border-0 shadow-sm mt-2" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-muted" href="#">Beyaz Mermer</a></li>
+                                <li><a class="dropdown-item text-muted" href="#">Siyah Mermer</a></li>
+                                <li><a class="dropdown-item text-muted" href="#">Kahverengi Mermer</a></li>
+                                <li><a class="dropdown-item text-muted" href="#">Gri Mermer</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-muted" href="#">Diğer Renkler</a></li>
+                                <li><a class="dropdown-item text-muted" href="#">Porselen</a></li>
+                            </ul>
+                        </li>
+                    </ul>
 
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center w-100 justify-content-end">
-                    <li class="nav-item pe-3">
-                        <a class="nav-link text-uppercase text-dark" href="#">BLOG</a>
-                    </li>
-                    <li class="nav-item pe-3">
-                        <a class="nav-link text-uppercase text-dark" href="#">İLETİŞİM</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-uppercase fw-bold text-dark" href="#"><i class="fab fa-whatsapp me-1"></i> WHATSAPP</a>
-                    </li>
-                </ul>
+                    <a class="navbar-brand mx-auto text-center text-dark text-decoration-none" href="/" style="min-width: 200px;">
+                        <div style="font-family: 'Times New Roman', serif; font-size: 2rem; letter-spacing: 4px; line-height: 1; color: #000;">
+                            HOLLAND
+                        </div>
+                        <div style="font-family: 'Times New Roman', serif; font-size: 2rem; letter-spacing: 4px; line-height: 1; color: #000;">
+                            STONE
+                        </div>
+                        <div class="text-muted mt-2" style="font-size: 0.65rem; letter-spacing: 3px; font-family: sans-serif;">
+                            BEAUTY OF NATURE
+                        </div>
+                    </a>
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center w-100 justify-content-end">
+                        <li class="nav-item pe-3">
+                            <a class="nav-link text-uppercase text-dark nav-hover-effect" href="#">BLOG</a>
+                        </li>
+                        <li class="nav-item pe-3">
+                            <a class="nav-link text-uppercase text-dark nav-hover-effect" href="#">İLETİŞİM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase fw-bold text-dark nav-hover-effect" href="#"><i class="fab fa-whatsapp me-1"></i> WHATSAPP</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
-    <div class="container">
+        </nav>
+    </header>
+    
+    <div class="container-fluid p-0">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - MermerSitesi - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top footer text-muted mt-5">
+        <div class="container text-center">
+            &copy; 2025 - HollandStone - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

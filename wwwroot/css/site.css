@@ -67,3 +67,198 @@ body {
     margin-bottom: 1rem;
   }
 }
+
+/* --- NAVIGASYON HOVER EFEKTİ (Kayan Çizgi) --- */
+.nav-hover-effect {
+  position: relative;
+  /* Çizgiyi buna göre konumlandıracağız */
+  display: inline-block;
+  padding-bottom: 5px;
+  /* Çizgi ile yazı arasına biraz boşluk */
+}
+
+/* Çizginin başlangıç hali (Görünmez ve genişliği 0) */
+.nav-hover-effect::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  /* Çizgi kalınlığı */
+  display: block;
+  margin-top: 3px;
+  right: 0;
+  background: #000;
+  /* Çizgi rengi (Siyah) */
+  transition: width 0.3s ease;
+  /* Animasyon hızı */
+  -webkit-transition: width 0.3s ease;
+}
+
+/* Üzerine gelince (Hover) çizgi genişlesin */
+.nav-hover-effect:hover::after {
+  width: 100%;
+  left: 0;
+  background: #000;
+}
+
+/* --- DROPDOWN MENÜ STİLİ (Görseldeki gibi sade) --- */
+.dropdown-menu {
+  border-radius: 0;
+  /* Köşeleri keskin yap */
+  padding: 15px 0;
+  /* İç boşluk */
+  margin-top: 0px !important;
+  /* Menüye yapışık olsun */
+}
+
+.dropdown-item {
+  font-size: 0.9rem;
+  /* Yazı boyutu */
+  padding: 8px 25px;
+  /* Satır boşlukları */
+  font-weight: 400;
+  transition: all 0.2s;
+}
+
+/* Dropdown elemanına gelince arka plan grileşsin */
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #000 !important;
+  padding-left: 30px;
+  /* Hafif sağa kayma efekti */
+}
+
+/* --- GÜNCELLENMİŞ NAVIGASYON STİLİ --- */
+
+.nav-hover-effect {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* 1. Kayan Çizgi (Artık ::before kullanıyoruz, çakışma olmasın diye) */
+.nav-hover-effect::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  /* Çizgi kalınlığı */
+  bottom: 0;
+  /* Tam alt hizaya yapıştır */
+  left: 0;
+  background-color: #000;
+  /* Siyah renk */
+  transition: width 0.3s ease;
+}
+
+/* Hover olunca çizgi genişlesin */
+.nav-hover-effect:hover::before {
+  width: 100%;
+}
+
+/* 2. Siyah Lekeyi (Bootstrap Okunu) Kaldırma */
+/* Bu kod artık çizgiyi etkilemez çünkü çizgiyi ::before'a taşıdık */
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* --- DROPDOWN MENÜ STİLİ (Aynı kalabilir) --- */
+.dropdown-menu {
+  border-radius: 0;
+  padding: 15px 0;
+  margin-top: 0px !important;
+  border: none;
+  /* Kenar çizgisini de kaldıralım daha temiz dursun */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  /* Hafif gölge */
+}
+
+.dropdown-item {
+  font-size: 0.9rem;
+  padding: 8px 25px;
+  font-weight: 400;
+  transition: all 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #000 !important;
+  padding-left: 30px;
+}
+
+/* Slider Numara Göstergesi */
+.slider-counter {
+  bottom: 30px;
+  /* Slider'ın alt kısmına yaslar */
+  z-index: 10;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  /* Yazıların okunması için gölge */
+}
+
+/* WhatsApp Sabit Buton */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+  display: flex;
+  /* İkonu ortalamak için */
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Küçük Kontrol Butonları (Show 1/8 yanındakiler) */
+.slider-nav-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-nav-btn:hover {
+  background-color: #f8f9fa;
+}
+
+/* Slider Resim Ayarı */
+.hero-img {
+  height: 500px;
+  /* Yüksekliği 500 pikselle sınırladık (daha kısa olsun istersen 400px yap) */
+  object-fit: cover;
+  /* Resim basık görünmesin diye otomatik kırpar */
+  width: 100%;
+  /* Genişliği kutuya tam oturtur */
+  filter: brightness(0.9);
+  /* Yazılar okunsun diye hafif karartma */
+}
+
+/* --- DROPDOWN MENÜNÜN ÜZERİNE GELİNCE AÇILMASI --- */
+
+/* Sadece bilgisayar ekranlarında (992px ve üzeri) çalışsın */
+@media (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    /* Menü ile buton arasındaki boşluğu sıfırla */
+  }
+
+  /* Menünün hemen kapanmaması için görünmez bir köprü kuralım */
+  .dropdown .dropdown-menu {
+    margin-top: 0;
+  }
+}
