@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MermerSitesi</title>
@@ -11,26 +12,73 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MermerSitesi</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="top-bar bg-light py-1 border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="social-icons">
+                <a href="#" class="text-dark me-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
             </div>
-        </nav>
-    </header>
+            <div class="slogan text-uppercase text-muted d-none d-md-block" style="font-size: 0.8rem; letter-spacing: 1px;">
+                Yenilikçi projelerimizle bir adım önde olmak için sizlere hizmet vermek isteriz.
+            </div>
+            <div class="language-selector">
+                <a href="#" class="text-dark text-decoration-none" style="font-size: 0.8rem;">
+                    LANGUAGE <i class="fas fa-caret-down"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center w-100 justify-content-start">
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase fw-bold text-dark" href="#"><i class="fas fa-search me-1"></i> ARA</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a class="nav-link text-uppercase text-dark" href="#">HAKKIMIZDA</a>
+                    </li>
+                    <li class="nav-item ps-3 dropdown">
+                        <a class="nav-link dropdown-toggle text-uppercase text-dark" href="#" role="button" data-bs-toggle="dropdown">KOLEKSİYON</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Mermer</a></li>
+                            <li><a class="dropdown-item" href="#">Traverten</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a class="navbar-brand mx-auto text-center text-dark text-decoration-none" href="/" style="min-width: 200px;">
+    <div style="font-family: 'Times New Roman', serif; font-size: 2rem; letter-spacing: 4px; line-height: 1; color: #000;">
+        BIANCO
+    </div>
+    <div style="font-family: 'Times New Roman', serif; font-size: 2rem; letter-spacing: 4px; line-height: 1; color: #000;">
+        CARRARA
+    </div>
+    <div class="text-muted mt-2" style="font-size: 0.65rem; letter-spacing: 3px; font-family: sans-serif;">
+        BEAUTY OF NATURE
+    </div>
+</a>
+
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center w-100 justify-content-end">
+                    <li class="nav-item pe-3">
+                        <a class="nav-link text-uppercase text-dark" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link text-uppercase text-dark" href="#">İLETİŞİM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase fw-bold text-dark" href="#"><i class="fab fa-whatsapp me-1"></i> WHATSAPP</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
