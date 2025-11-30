@@ -262,3 +262,91 @@ body {
     margin-top: 0;
   }
 }
+
+/* --- Ürün Vitrini Düzeltilmiş Stiller --- */
+
+/* Resim Kutusu: Boyutu sabitler */
+.product-img-box {
+  width: 100%;
+  height: 200px;
+  /* Dikdörtgen yüksekliği */
+  overflow: hidden;
+  /* Taşmayı engeller */
+  background-color: #f0f0f0;
+  /* Resim yüklenmezse gri zemin görünsün */
+}
+
+/* Resmin Kendisi: Kutuyu tamamen doldurur */
+.product-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Resmi ezmeden kutuya sığdırır (önemli!) */
+  transition: transform 0.5s ease;
+}
+
+/* Hover Efekti: Resim hafif yakınlaşır */
+.product-img-box:hover img {
+  transform: scale(1.1);
+}
+
+/* Ürün Başlıkları - Kalın Yazı Ayarı */
+.product-title {
+  font-size: 0.9rem;
+  /* Yazıyı çok az büyüttüm */
+  font-weight: 900;
+  /* 700 = Bold (Kalın) demektir */
+  color: #000;
+  /* Rengi tam siyah yaptım */
+  margin-top: 15px;
+  /* Resimle yazı arasına biraz daha boşluk */
+  font-family: 'Times New Roman', serif;
+  /* İstersen burayı sans-serif yaparak düz yazıya çevirebilirsin */
+  letter-spacing: 0.5px;
+  /* Harf aralarını çok az açarak daha şık durmasını sağladım */
+}
+
+.product-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 10px;
+  font-family: sans-serif;
+  /* Görseldeki gibi sade font */
+}
+
+/* Yukarı Çık (Scroll Top) Butonu */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 110px;
+  /* WhatsApp butonunun solunda dursun */
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s;
+  opacity: 0;
+  /* Başlangıçta gizli olsun */
+  visibility: hidden;
+  z-index: 999;
+}
+
+/* Görünür olduğunda çalışacak sınıf */
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top-btn:hover {
+  background-color: #f8f9fa;
+  color: #000;
+  transform: translateY(-3px);
+  /* Hafif yukarı kalksın */
+}

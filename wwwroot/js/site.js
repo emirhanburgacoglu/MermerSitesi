@@ -20,3 +20,20 @@ if (myCarousel) {
         progressBar.style.width = progressPercent + "%";
     })
 }
+// Yukarı Çık Butonu Kontrolü
+var scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = function () {
+    // Sayfa 300px aşağı kaydırıldıysa butonu göster
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollTopBtn.classList.add("show");
+    } else {
+        scrollTopBtn.classList.remove("show");
+    }
+};
+
+// Butona tıklayınca en tepeye çık
+scrollTopBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
