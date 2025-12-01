@@ -69,4 +69,11 @@
   
   <data name="DiscoverCollection" xml:space="preserve"><value>Koleksiyonumuzu Keşfedin</value></data>
   <data name="ViewDetails" xml:space="preserve"><value>İNCELE</value></data>
+  <data name="FooterDesc" xml:space="preserve"><value>Doğanın milyonlarca yılda oluşturduğu sanatı, modern yaşam alanlarınıza taşıyoruz. Kalite, estetik ve güvenin adresi.</value></data>
+  <data name="Discover" xml:space="preserve"><value>Keşfet</value></data>
+  <data name="FAQ" xml:space="preserve"><value>SSS</value></data>
+  <data name="EmailPlaceholder" xml:space="preserve"><value>E-Posta Adresiniz</value></data>
+  <data name="AllRightsReserved" xml:space="preserve"><value>Tüm Hakları Saklıdır.</value></data>
+  <data name="PrivacyPolicy" xml:space="preserve"><value>Gizlilik Politikası</value></data>
+  <data name="TermsOfUse" xml:space="preserve"><value>Kullanım Şartları</value></data>
 </root>

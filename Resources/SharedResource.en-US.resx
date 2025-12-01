@@ -69,4 +69,11 @@
   
   <data name="DiscoverCollection" xml:space="preserve"><value>Discover Our Collection</value></data>
   <data name="ViewDetails" xml:space="preserve"><value>VIEW DETAILS</value></data>
+  <data name="FooterDesc" xml:space="preserve"><value>We carry the art created by nature over millions of years to your modern living spaces. The address of quality, aesthetics, and trust.</value></data>
+  <data name="Discover" xml:space="preserve"><value>Discover</value></data>
+  <data name="FAQ" xml:space="preserve"><value>FAQ</value></data>
+  <data name="EmailPlaceholder" xml:space="preserve"><value>Your Email Address</value></data>
+  <data name="AllRightsReserved" xml:space="preserve"><value>All Rights Reserved.</value></data>
+  <data name="PrivacyPolicy" xml:space="preserve"><value>Privacy Policy</value></data>
+  <data name="TermsOfUse" xml:space="preserve"><value>Terms of Use</value></data>
 </root>

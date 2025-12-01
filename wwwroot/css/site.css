@@ -356,3 +356,87 @@ body {
   color: #000;
   transform: translateY(-3px);
 }
+
+/* --- MOBİL MENÜ AYARLARI --- */
+@media (max-width: 991px) {
+
+  /* Mobilde logoyu biraz küçültelim */
+  .navbar-brand div {
+    font-size: 1.2rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  /* Offcanvas (Yan Menü) Genişliği */
+  .offcanvas {
+    width: 80% !important;
+  }
+}
+
+/* Masaüstü Offcanvas Ayarı (Görünmez yapıp normal menü gibi davranması için) */
+@media (min-width: 992px) {
+  .offcanvas {
+    background: transparent;
+    width: auto;
+    visibility: visible !important;
+    transform: none !important;
+    border: none;
+    flex-grow: 1;
+  }
+
+  .offcanvas-header {
+    display: none;
+  }
+
+  .offcanvas-body {
+    display: flex;
+  }
+}
+
+/* --- PREMIUM FOOTER STYLES --- */
+.bg-black {
+  background-color: #111 !important;
+  /* Tam siyah değil, çok koyu gri daha kalitelidir */
+}
+
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
+/* Footer Linkleri */
+.footer-link {
+  color: #aaa;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: #fff;
+  transform: translateX(5px);
+  /* Üzerine gelince sağa kayar */
+}
+
+/* Yuvarlak Sosyal Medya Butonları */
+.social-btn {
+  width: 35px;
+  height: 35px;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+.hover-white:hover {
+  color: #fff !important;
+}
