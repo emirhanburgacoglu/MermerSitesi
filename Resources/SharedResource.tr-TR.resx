@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="Home" xml:space="preserve"><value>ANA SAYFA</value></data>
+  <data name="About" xml:space="preserve"><value>HAKKIMIZDA</value></data>
+  <data name="Collection" xml:space="preserve"><value>KOLEKSİYON</value></data>
+  <data name="Blog" xml:space="preserve"><value>BLOG</value></data>
+  <data name="Contact" xml:space="preserve"><value>İLETİŞİM</value></data>
+  <data name="Search" xml:space="preserve"><value>ARA</value></data>
+  <data name="Language" xml:space="preserve"><value>DİL</value></data>
+  <data name="Slogan" xml:space="preserve"><value>Yenilikçi projelerimizle bir adım önde olmak için sizlere hizmet vermek isteriz.</value></data>
+
+  <data name="OurStory" xml:space="preserve"><value>HİKAYEMİZ</value></data>
+  <data name="ProcessingArtOfNature" xml:space="preserve"><value>Doğanın Sanatını İşliyoruz</value></data>
+  <data name="TouchingHeartOfStone" xml:space="preserve"><value>Taşın kalbine dokunuyoruz.</value></data>
+  <data name="WhoIsHollandStone" xml:space="preserve"><value>Holland Stone Kimdir?</value></data>
+  <data name="YearsExperience" xml:space="preserve"><value>Yıllık Deneyim</value></data>
+  <data name="CompletedProjects" xml:space="preserve"><value>Biten Proje</value></data>
+  <data name="ExportCountries" xml:space="preserve"><value>Ülkeye İhracat</value></data>
+  
+  <data name="AboutText1" xml:space="preserve">
+    <value>2010 yılında İtalya'nın Carrara bölgesindeki ocaklardan ilham alarak kurulan firmamız, doğal taşın işlenmemiş ham güzelliğini modern yaşam alanlarına taşıma tutkusuyla yola çıkmıştır.</value>
+  </data>
+  <data name="AboutText2" xml:space="preserve">
+    <value>İstanbul'daki 7000 m²'lik tesisimizde, dünyanın dört bir yanından gelen en seçkin mermer bloklarını, en son teknoloji ve geleneksel el işçiliğini harmanlayarak işliyoruz. Bizim için mermer sadece bir inşaat malzemesi değil, doğanın milyonlarca yılda yazdığı bir hikayedir.</value>
+  </data>
+  <data name="HollandStoneMarble" xml:space="preserve"><value>Holland Stone Mermer</value></data>
+  <data name="Show" xml:space="preserve"><value>Görüntüle</value></data>
+  
+  <data name="Product1" xml:space="preserve"><value>Nero Marquina (China) Mermer</value></data>
+  <data name="Product2" xml:space="preserve"><value>Tropical Storm Mermer</value></data>
+  <data name="Product3" xml:space="preserve"><value>Bianco Gioia Mermer</value></data>
+  <data name="Product4" xml:space="preserve"><value>Bianco Lasa Mermer</value></data>
+
+  <data name="HomeDescription" xml:space="preserve">
+    <value>Holland Stone Mermer Çözüm Ortağınız; mimari kitleyle mermeri üst düzey projelerde birleştirerek mimarlık ve danışmanlık hizmeti veren şirketlerin mermer projelerinde çözüm ortağı olmak amacı ile İstanbul faaliyete başlamıştır. Kuruluşundan bu yana özel ve resmi kurumlar için hizmet sunmaktadır. Ferhatpaşa'da 2000 m2 'lik ve Sancaktepe Yenidoğan mevkinde 5000 m2 'lik depolarında beyaz mermer, siyah mermer, gri mermer, kahverengi mermer, yeşil mermer, mavi mermer, yarı değerli taşların yanı sıra porselen plakalarınında satışını sağlamaktadır.</value>
+  </data>
+  <data name="LetsBringProjectsToLife" xml:space="preserve"><value>Projelerinizi Hayata Geçirelim</value></data>
+  <data name="HeadOffice" xml:space="preserve"><value>MERKEZ OFİS</value></data>
+  <data name="Address" xml:space="preserve"><value>Adres</value></data>
+  <data name="Phone" xml:space="preserve"><value>Telefon</value></data>
+  <data name="Email" xml:space="preserve"><value>E-Posta</value></data>
+  <data name="ContactUs" xml:space="preserve"><value>BİZE ULAŞIN</value></data>
+  <data name="ContactFormDesc" xml:space="preserve"><value>Formu doldurun, size dönüş yapalım.</value></data>
+  <data name="NameSurname" xml:space="preserve"><value>Adınız Soyadınız</value></data>
+  <data name="YourEmail" xml:space="preserve"><value>E-Posta Adresiniz</value></data>
+  <data name="Subject" xml:space="preserve"><value>Konu</value></data>
+  <data name="YourMessage" xml:space="preserve"><value>Mesajınız</value></data>
+  <data name="Send" xml:space="preserve"><value>GÖNDER</value></data>
+  <data name="BlogSubtitle" xml:space="preserve"><value>Trendler, İpuçları ve Haberler</value></data>
+  <data name="ReadMore" xml:space="preserve"><value>Devamını Oku</value></data>
+  <data name="Maintenance" xml:space="preserve"><value>Bakım</value></data>
+  <data name="Trend" xml:space="preserve"><value>Trend</value></data>
+  <data name="History" xml:space="preserve"><value>Tarihçe</value></data>
+
+  <data name="BlogTitle1" xml:space="preserve"><value>Mermer Temizliğinde Altın Kurallar</value></data>
+  <data name="BlogDesc1" xml:space="preserve"><value>Doğal taşlarınızı asitli temizleyicilerden koruyarak ömrünü nasıl uzatırsınız? İşte uzmanından tavsiyeler.</value></data>
+
+  <data name="BlogTitle2" xml:space="preserve"><value>2025 Mutfak Trendleri</value></data>
+  <data name="BlogDesc2" xml:space="preserve"><value>Bu yıl mutfaklarda beyaz Carrara mermeri mi yoksa koyu renkli granitler mi moda? İç mimarların seçimi.</value></data>
+
+  <data name="BlogTitle3" xml:space="preserve"><value>Carrara Mermerinin Tarihi</value></data>
+  <data name="BlogDesc3" xml:space="preserve"><value>Michelangelo'nun Davut heykelinden günümüze uzanan beyaz altının, İtalya'dan dünyaya yayılan hikayesi.</value></data>
+</root>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="Home" xml:space="preserve"><value>HOME</value></data>
+  <data name="About" xml:space="preserve"><value>ABOUT US</value></data>
+  <data name="Collection" xml:space="preserve"><value>COLLECTION</value></data>
+  <data name="Blog" xml:space="preserve"><value>BLOG</value></data>
+  <data name="Contact" xml:space="preserve"><value>CONTACT</value></data>
+  <data name="Search" xml:space="preserve"><value>SEARCH</value></data>
+  <data name="Language" xml:space="preserve"><value>LANGUAGE</value></data>
+  <data name="Slogan" xml:space="preserve"><value>We are at your service to be one step ahead with our innovative projects.</value></data>
+
+  <data name="OurStory" xml:space="preserve"><value>OUR STORY</value></data>
+  <data name="ProcessingArtOfNature" xml:space="preserve"><value>Processing the Art of Nature</value></data>
+  <data name="TouchingHeartOfStone" xml:space="preserve"><value>Touching the heart of stone.</value></data>
+  <data name="WhoIsHollandStone" xml:space="preserve"><value>Who is Holland Stone?</value></data>
+  <data name="YearsExperience" xml:space="preserve"><value>Years Experience</value></data>
+  <data name="CompletedProjects" xml:space="preserve"><value>Completed Projects</value></data>
+  <data name="ExportCountries" xml:space="preserve"><value>Countries Exported</value></data>
+  
+  <data name="AboutText1" xml:space="preserve">
+    <value>Founded in 2010 inspired by the quarries in Carrara, Italy, our company set out with a passion to carry the raw beauty of natural stone to modern living spaces.</value>
+  </data>
+  <data name="AboutText2" xml:space="preserve">
+    <value>In our 7000 m² facility in Istanbul, we process the most exclusive marble blocks from around the world, blending state-of-the-art technology with traditional craftsmanship. For us, marble is not just a building material, but a story written by nature over millions of years.</value>
+  </data>
+  <data name="HollandStoneMarble" xml:space="preserve"><value>Holland Stone Marble</value></data>
+  <data name="Show" xml:space="preserve"><value>Show</value></data>
+  
+  <data name="Product1" xml:space="preserve"><value>Nero Marquina (China) Marble</value></data>
+  <data name="Product2" xml:space="preserve"><value>Tropical Storm Marble</value></data>
+  <data name="Product3" xml:space="preserve"><value>Bianco Gioia Marble</value></data>
+  <data name="Product4" xml:space="preserve"><value>Bianco Lasa Marble</value></data>
+
+  <data name="HomeDescription" xml:space="preserve">
+    <value>Holland Stone Marble Solution Partner; started its operations in Istanbul with the aim of being a solution partner in marble projects of companies providing architecture and consultancy services by combining marble with the architectural audience in high-level projects. It has been serving private and official institutions since its establishment. In its 2000 m2 warehouse in Ferhatpaşa and 5000 m2 warehouse in Sancaktepe Yenidoğan location, it provides sales of white marble, black marble, gray marble, brown marble, green marble, blue marble, semi-precious stones as well as porcelain slabs.</value>
+  </data>
+  <data name="LetsBringProjectsToLife" xml:space="preserve"><value>Let's Bring Your Projects to Life</value></data>
+  <data name="HeadOffice" xml:space="preserve"><value>HEAD OFFICE</value></data>
+  <data name="Address" xml:space="preserve"><value>Address</value></data>
+  <data name="Phone" xml:space="preserve"><value>Phone</value></data>
+  <data name="Email" xml:space="preserve"><value>Email</value></data>
+  <data name="ContactUs" xml:space="preserve"><value>CONTACT US</value></data>
+  <data name="ContactFormDesc" xml:space="preserve"><value>Fill out the form and we will get back to you.</value></data>
+  <data name="NameSurname" xml:space="preserve"><value>Full Name</value></data>
+  <data name="YourEmail" xml:space="preserve"><value>Your Email Address</value></data>
+  <data name="Subject" xml:space="preserve"><value>Subject</value></data>
+  <data name="YourMessage" xml:space="preserve"><value>Your Message</value></data>
+  <data name="Send" xml:space="preserve"><value>SEND</value></data>
+  <data name="BlogSubtitle" xml:space="preserve"><value>Trends, Tips and News</value></data>
+  <data name="ReadMore" xml:space="preserve"><value>Read More</value></data>
+  <data name="Maintenance" xml:space="preserve"><value>Maintenance</value></data>
+  <data name="Trend" xml:space="preserve"><value>Trend</value></data>
+  <data name="History" xml:space="preserve"><value>History</value></data>
+
+  <data name="BlogTitle1" xml:space="preserve"><value>Golden Rules of Marble Cleaning</value></data>
+  <data name="BlogDesc1" xml:space="preserve"><value>How to extend the life of your natural stones by protecting them from acidic cleaners? Here are tips from the expert.</value></data>
+
+  <data name="BlogTitle2" xml:space="preserve"><value>2025 Kitchen Trends</value></data>
+  <data name="BlogDesc2" xml:space="preserve"><value>Is white Carrara marble or dark colored granite fashionable in kitchens this year? The choice of interior designers.</value></data>
+
+  <data name="BlogTitle3" xml:space="preserve"><value>History of Carrara Marble</value></data>
+  <data name="BlogDesc3" xml:space="preserve"><value>The story of white gold spreading from Italy to the world, extending from Michelangelo's David statue to the present day.</value></data>
+</root>

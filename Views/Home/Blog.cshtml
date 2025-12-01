@@ -1,12 +1,14 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IHtmlLocalizer<MermerSitesi.SharedResource> Localizer
 @{
-    ViewData["Title"] = "Blog";
+    ViewData["Title"] = Localizer["Blog"];
 }
 
 <div class="page-header blog-header d-flex align-items-center justify-content-center mb-5">
     <div class="text-center text-white position-relative z-index-1">
-        <h1 class="display-3 fw-bold" style="font-family: 'Times New Roman', serif; letter-spacing: 3px;">BLOG</h1>
+        <h1 class="display-3 fw-bold" style="font-family: 'Times New Roman', serif; letter-spacing: 3px;">@Localizer["Blog"]</h1>
         <div class="divider mx-auto bg-white mt-3" style="width: 80px; height: 3px;"></div>
-        <p class="mt-3 lead text-uppercase" style="letter-spacing: 2px; font-size: 0.9rem;">Trendler, İpuçları ve Haberler</p>
+        <p class="mt-3 lead text-uppercase" style="letter-spacing: 2px; font-size: 0.9rem;">@Localizer["BlogSubtitle"]</p>
     </div>
     <div class="overlay"></div>
 </div>
@@ -20,10 +22,10 @@
                     <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" class="card-img-top w-100 h-100 object-fit-cover" alt="Blog 1">
                 </div>
                 <div class="card-body p-4">
-                    <span class="badge bg-black rounded-0 mb-2">Bakım</span>
-                    <h5 class="card-title fw-bold mt-2" style="font-family: 'Times New Roman', serif;">Mermer Temizliğinde Altın Kurallar</h5>
-                    <p class="card-text text-muted small line-clamp-3">Doğal taşlarınızı asitli temizleyicilerden koruyarak ömrünü nasıl uzatırsınız? İşte uzmanından tavsiyeler.</p>
-                    <a href="#" class="text-uppercase text-dark fw-bold text-decoration-none small" style="letter-spacing: 1px;">Devamını Oku <i class="fas fa-arrow-right ms-1"></i></a>
+                    <span class="badge bg-black rounded-0 mb-2">@Localizer["Maintenance"]</span>
+                    <h5 class="card-title fw-bold mt-2" style="font-family: 'Times New Roman', serif;">@Localizer["BlogTitle1"]</h5>
+                    <p class="card-text text-muted small line-clamp-3">@Localizer["BlogDesc1"]</p>
+                    <a href="#" class="text-uppercase text-dark fw-bold text-decoration-none small" style="letter-spacing: 1px;">@Localizer["ReadMore"] <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
         </div>
@@ -34,10 +36,10 @@
                     <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=800&auto=format&fit=crop" class="card-img-top w-100 h-100 object-fit-cover" alt="Blog 2">
                 </div>
                 <div class="card-body p-4">
-                    <span class="badge bg-black rounded-0 mb-2">Trend</span>
-                    <h5 class="card-title fw-bold mt-2" style="font-family: 'Times New Roman', serif;">2025 Mutfak Trendleri</h5>
-                    <p class="card-text text-muted small line-clamp-3">Bu yıl mutfaklarda beyaz Carrara mermeri mi yoksa koyu renkli granitler mi moda? İç mimarların seçimi.</p>
-                    <a href="#" class="text-uppercase text-dark fw-bold text-decoration-none small" style="letter-spacing: 1px;">Devamını Oku <i class="fas fa-arrow-right ms-1"></i></a>
+                    <span class="badge bg-black rounded-0 mb-2">@Localizer["Trend"]</span>
+                    <h5 class="card-title fw-bold mt-2" style="font-family: 'Times New Roman', serif;">@Localizer["BlogTitle2"]</h5>
+                    <p class="card-text text-muted small line-clamp-3">@Localizer["BlogDesc2"]</p>
+                    <a href="#" class="text-uppercase text-dark fw-bold text-decoration-none small" style="letter-spacing: 1px;">@Localizer["ReadMore"] <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
         </div>
@@ -48,10 +50,10 @@
                     <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop" class="card-img-top w-100 h-100 object-fit-cover" alt="Blog 3">
                 </div>
                 <div class="card-body p-4">
-                    <span class="badge bg-black rounded-0 mb-2">Tarihçe</span>
-                    <h5 class="card-title fw-bold mt-2" style="font-family: 'Times New Roman', serif;">Carrara Mermerinin Tarihi</h5>
-                    <p class="card-text text-muted small line-clamp-3">Michelangelo'nun Davut heykelinden günümüze uzanan beyaz altının, İtalya'dan dünyaya yayılan hikayesi.</p>
-                    <a href="#" class="text-uppercase text-dark fw-bold text-decoration-none small" style="letter-spacing: 1px;">Devamını Oku <i class="fas fa-arrow-right ms-1"></i></a>
+                    <span class="badge bg-black rounded-0 mb-2">@Localizer["History"]</span>
+                    <h5 class="card-title fw-bold mt-2" style="font-family: 'Times New Roman', serif;">@Localizer["BlogTitle3"]</h5>
+                    <p class="card-text text-muted small line-clamp-3">@Localizer["BlogDesc3"]</p>
+                    <a href="#" class="text-uppercase text-dark fw-bold text-decoration-none small" style="letter-spacing: 1px;">@Localizer["ReadMore"] <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
         </div>

@@ -8,14 +8,6 @@ html {
   }
 }
 
-.btn:focus,
-.btn:active:focus,
-.btn-link.nav-link:focus,
-.form-control:focus,
-.form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
 html {
   position: relative;
   min-height: 100%;
@@ -25,18 +17,18 @@ body {
   margin-bottom: 60px;
 }
 
-.form-floating>.form-control-plaintext::placeholder,
-.form-floating>.form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* --- BUTON VE INPUT ODAKLANMA (FOCUS) --- */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-.form-floating>.form-control-plaintext:focus::placeholder,
-.form-floating>.form-control:focus::placeholder {
-  text-align: start;
-}
+/* --- NAVBAR VE MENÜ STİLLERİ --- */
 
-/* Navbar Linkleri İçin Hover Efekti */
+/* Link Hover Rengi */
 .navbar-nav .nav-link {
   font-size: 0.85rem;
   letter-spacing: 1px;
@@ -45,13 +37,71 @@ body {
 
 .navbar-nav .nav-link:hover {
   color: #6c757d !important;
-  /* Gri tonlama */
 }
 
-/* Mobilde Logo Düzeni */
-@media (max-width: 991px) {
+/* Kayan Alt Çizgi Efekti (Nav Hover) */
+.nav-hover-effect {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
 
-  /* Mobilde logoyu yukarı alır, menüleri altına dizer */
+.nav-hover-effect::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.nav-hover-effect:hover::before {
+  width: 100%;
+}
+
+/* Bootstrap'in otomatik ok işaretini gizle */
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Dropdown Menü */
+.dropdown-menu {
+  border-radius: 0;
+  padding: 15px 0;
+  margin-top: 0px !important;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item {
+  font-size: 0.9rem;
+  padding: 8px 25px;
+  font-weight: 400;
+  transition: all 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #000 !important;
+  padding-left: 30px;
+}
+
+/* Masaüstünde Dropdown Hover ile açılsın */
+@media (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+
+  .dropdown .dropdown-menu {
+    margin-top: 0;
+  }
+}
+
+/* Mobil Düzen */
+@media (max-width: 991px) {
   .navbar-collapse {
     text-align: center;
   }
@@ -63,139 +113,192 @@ body {
 
   .navbar-brand {
     order: -1;
-    /* Logoyu en başa alır */
     margin-bottom: 1rem;
   }
 }
 
-/* --- NAVIGASYON HOVER EFEKTİ (Kayan Çizgi) --- */
-.nav-hover-effect {
-  position: relative;
-  /* Çizgiyi buna göre konumlandıracağız */
-  display: inline-block;
-  padding-bottom: 5px;
-  /* Çizgi ile yazı arasına biraz boşluk */
-}
-
-/* Çizginin başlangıç hali (Görünmez ve genişliği 0) */
-.nav-hover-effect::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  /* Çizgi kalınlığı */
-  display: block;
-  margin-top: 3px;
-  right: 0;
-  background: #000;
-  /* Çizgi rengi (Siyah) */
-  transition: width 0.3s ease;
-  /* Animasyon hızı */
-  -webkit-transition: width 0.3s ease;
-}
-
-/* Üzerine gelince (Hover) çizgi genişlesin */
-.nav-hover-effect:hover::after {
+/* --- SLIDER (ANA SAYFA) --- */
+.hero-img {
+  height: 500px;
+  object-fit: cover;
   width: 100%;
-  left: 0;
-  background: #000;
+  filter: brightness(0.9);
 }
 
-/* --- DROPDOWN MENÜ STİLİ (Görseldeki gibi sade) --- */
-.dropdown-menu {
-  border-radius: 0;
-  /* Köşeleri keskin yap */
-  padding: 15px 0;
-  /* İç boşluk */
-  margin-top: 0px !important;
-  /* Menüye yapışık olsun */
-}
-
-.dropdown-item {
-  font-size: 0.9rem;
-  /* Yazı boyutu */
-  padding: 8px 25px;
-  /* Satır boşlukları */
-  font-weight: 400;
-  transition: all 0.2s;
-}
-
-/* Dropdown elemanına gelince arka plan grileşsin */
-.dropdown-item:hover {
-  background-color: #f8f9fa;
-  color: #000 !important;
-  padding-left: 30px;
-  /* Hafif sağa kayma efekti */
-}
-
-/* --- GÜNCELLENMİŞ NAVIGASYON STİLİ --- */
-
-.nav-hover-effect {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-/* 1. Kayan Çizgi (Artık ::before kullanıyoruz, çakışma olmasın diye) */
-.nav-hover-effect::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  /* Çizgi kalınlığı */
-  bottom: 0;
-  /* Tam alt hizaya yapıştır */
-  left: 0;
-  background-color: #000;
-  /* Siyah renk */
-  transition: width 0.3s ease;
-}
-
-/* Hover olunca çizgi genişlesin */
-.nav-hover-effect:hover::before {
-  width: 100%;
-}
-
-/* 2. Siyah Lekeyi (Bootstrap Okunu) Kaldırma */
-/* Bu kod artık çizgiyi etkilemez çünkü çizgiyi ::before'a taşıdık */
-.dropdown-toggle::after {
-  display: none !important;
-}
-
-/* --- DROPDOWN MENÜ STİLİ (Aynı kalabilir) --- */
-.dropdown-menu {
-  border-radius: 0;
-  padding: 15px 0;
-  margin-top: 0px !important;
-  border: none;
-  /* Kenar çizgisini de kaldıralım daha temiz dursun */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  /* Hafif gölge */
-}
-
-.dropdown-item {
-  font-size: 0.9rem;
-  padding: 8px 25px;
-  font-weight: 400;
-  transition: all 0.2s;
-}
-
-.dropdown-item:hover {
-  background-color: #f8f9fa;
-  color: #000 !important;
-  padding-left: 30px;
-}
-
-/* Slider Numara Göstergesi */
 .slider-counter {
   bottom: 30px;
-  /* Slider'ın alt kısmına yaslar */
   z-index: 10;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  /* Yazıların okunması için gölge */
 }
 
-/* WhatsApp Sabit Buton */
+.slider-nav-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-nav-btn:hover {
+  background-color: #f8f9fa;
+}
+
+/* --- ÜRÜN VİTRİNİ --- */
+.product-img-box {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.product-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-img-box:hover img {
+  transform: scale(1.1);
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 900;
+  /* Kalın ve Etli Font */
+  color: #000;
+  margin-top: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-shadow: 0px 0px 1px #000;
+  letter-spacing: 0.5px;
+}
+
+/* --- SAYFA BAŞLIKLARI (HERO HEADER) --- */
+.page-header,
+.contact-header {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 350px;
+  position: relative;
+  color: white;
+}
+
+.contact-header {
+  height: 400px;
+  /* İletişim sayfası biraz daha yüksek */
+  background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop');
+}
+
+.about-header {
+  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop');
+}
+
+.blog-header {
+  background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1920&auto=format&fit=crop');
+}
+
+.page-header .overlay,
+.contact-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.page-header .z-index-1,
+.contact-header .z-index-1 {
+  z-index: 1;
+}
+
+/* --- BLOG KARTLARI --- */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .15) !important;
+}
+
+.hover-card img {
+  transition: transform 0.5s ease;
+}
+
+.hover-card:hover img {
+  transform: scale(1.1);
+}
+
+/* --- FOOTER --- */
+.bg-black {
+  background-color: #0d0d0d !important;
+}
+
+.footer-link {
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff !important;
+  padding-left: 5px;
+}
+
+.social-link {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  color: #ccc !important;
+}
+
+/* --- DÜZELTİLMİŞ CONTACT FORM (Floating Labels) --- */
+/* Burası önceki sorunu çözen kısımdır */
+
+.form-floating>.form-control {
+  border: none;
+  border-bottom: 2px solid #ddd;
+  border-radius: 0;
+  background-color: #fff !important;
+  /* Şeffaf değil BEYAZ */
+  box-shadow: none !important;
+  height: 50px;
+  padding-top: 25px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form-floating>.form-control:focus {
+  border-color: #000;
+  background-color: #fff;
+}
+
+.form-floating>label {
+  padding-left: 0;
+  color: #999;
+  font-size: 0.9rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label {
+  transform: scale(0.85) translateY(-0.5rem) translateX(0);
+  color: #000;
+  font-weight: bold;
+  opacity: 1;
+}
+
+/* Placeholder (Hayalet Yazı) Gizleme */
+.form-floating>.form-control::placeholder {
+  color: transparent !important;
+}
+
+/* --- DİĞER BUTONLAR --- */
 .whatsapp-float {
   position: fixed;
   width: 60px;
@@ -210,7 +313,6 @@ body {
   box-shadow: 2px 2px 3px #999;
   z-index: 1000;
   display: flex;
-  /* İkonu ortalamak için */
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
@@ -222,105 +324,10 @@ body {
   transform: scale(1.1);
 }
 
-/* Küçük Kontrol Butonları (Show 1/8 yanındakiler) */
-.slider-nav-btn {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider-nav-btn:hover {
-  background-color: #f8f9fa;
-}
-
-/* Slider Resim Ayarı */
-.hero-img {
-  height: 500px;
-  /* Yüksekliği 500 pikselle sınırladık (daha kısa olsun istersen 400px yap) */
-  object-fit: cover;
-  /* Resim basık görünmesin diye otomatik kırpar */
-  width: 100%;
-  /* Genişliği kutuya tam oturtur */
-  filter: brightness(0.9);
-  /* Yazılar okunsun diye hafif karartma */
-}
-
-/* --- DROPDOWN MENÜNÜN ÜZERİNE GELİNCE AÇILMASI --- */
-
-/* Sadece bilgisayar ekranlarında (992px ve üzeri) çalışsın */
-@media (min-width: 992px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-    /* Menü ile buton arasındaki boşluğu sıfırla */
-  }
-
-  /* Menünün hemen kapanmaması için görünmez bir köprü kuralım */
-  .dropdown .dropdown-menu {
-    margin-top: 0;
-  }
-}
-
-/* --- Ürün Vitrini Düzeltilmiş Stiller --- */
-
-/* Resim Kutusu: Boyutu sabitler */
-.product-img-box {
-  width: 100%;
-  height: 200px;
-  /* Dikdörtgen yüksekliği */
-  overflow: hidden;
-  /* Taşmayı engeller */
-  background-color: #f0f0f0;
-  /* Resim yüklenmezse gri zemin görünsün */
-}
-
-/* Resmin Kendisi: Kutuyu tamamen doldurur */
-.product-img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* Resmi ezmeden kutuya sığdırır (önemli!) */
-  transition: transform 0.5s ease;
-}
-
-/* Hover Efekti: Resim hafif yakınlaşır */
-.product-img-box:hover img {
-  transform: scale(1.1);
-}
-
-/* Ürün Başlıkları - Kalın Yazı Ayarı */
-.product-title {
-  font-size: 0.9rem;
-  /* Yazıyı çok az büyüttüm */
-  font-weight: 900;
-  /* 700 = Bold (Kalın) demektir */
-  color: #000;
-  /* Rengi tam siyah yaptım */
-  margin-top: 15px;
-  /* Resimle yazı arasına biraz daha boşluk */
-  font-family: 'Times New Roman', serif;
-  /* İstersen burayı sans-serif yaparak düz yazıya çevirebilirsin */
-  letter-spacing: 0.5px;
-  /* Harf aralarını çok az açarak daha şık durmasını sağladım */
-}
-
-.product-title {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #333;
-  margin-top: 10px;
-  font-family: sans-serif;
-  /* Görseldeki gibi sade font */
-}
-
-/* Yukarı Çık (Scroll Top) Butonu */
 .scroll-top-btn {
   position: fixed;
   bottom: 40px;
   right: 110px;
-  /* WhatsApp butonunun solunda dursun */
   width: 45px;
   height: 45px;
   background-color: #fff;
@@ -333,12 +340,10 @@ body {
   font-size: 18px;
   transition: all 0.3s;
   opacity: 0;
-  /* Başlangıçta gizli olsun */
   visibility: hidden;
   z-index: 999;
 }
 
-/* Görünür olduğunda çalışacak sınıf */
 .scroll-top-btn.show {
   opacity: 1;
   visibility: visible;
@@ -348,162 +353,4 @@ body {
   background-color: #f8f9fa;
   color: #000;
   transform: translateY(-3px);
-  /* Hafif yukarı kalksın */
-}
-
-/* --- FOOTER STİLLERİ --- */
-.bg-black {
-  background-color: #0d0d0d !important;
-  /* Tam siyah değil, çok koyu antrasit daha şık durur */
-}
-
-/* Footer Linkleri: Hover Efekti */
-.footer-link {
-  transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-  color: #fff !important;
-  /* Üzerine gelince beyaz olsun */
-  padding-left: 5px;
-  /* Hafif sağa kaysın */
-}
-
-/* Sosyal Medya İkonları */
-.social-link {
-  font-size: 1.1rem;
-  transition: transform 0.3s ease, color 0.3s ease;
-  display: inline-block;
-}
-
-.social-link:hover {
-  transform: translateY(-3px);
-  /* İkon yukarı zıplasın */
-  color: #ccc !important;
-}
-
-/* --- CONTACT SAYFASI STİLLERİ --- */
-
-/* 1. Başlık Alanı (Hero) */
-.contact-header {
-  background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop');
-  /* Ofis/Mermer görseli */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  /* Parallax efekti (kayarken sabit kalır) */
-  height: 400px;
-  /* Yüksekliği artırdık */
-  position: relative;
-  color: white;
-}
-
-/* Resmin üzerine siyah perde çekiyoruz ki yazı okunsun */
-.contact-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  /* %60 siyahlık */
-  z-index: 0;
-}
-
-.contact-header .z-index-1 {
-  z-index: 1;
-  /* Yazıyı perdenin üstüne çıkar */
-}
-
-/* 2. Modern Form Alanları (Floating Labels) */
-.form-floating>.form-control {
-  border: none;
-  border-bottom: 2px solid #ddd;
-  /* Sadece alt çizgi */
-  border-radius: 0;
-  padding-left: 0;
-  background-color: transparent;
-}
-
-.form-floating>.form-control:focus {
-  box-shadow: none;
-  border-color: #000;
-  /* Tıklayınca alt çizgi siyah olsun */
-}
-
-.form-floating>label {
-  padding-left: 0;
-  /* Etiketi sola yanaştır */
-  color: #999;
-}
-
-.form-floating>.form-control:focus~label,
-.form-floating>.form-control:not(:placeholder-shown)~label {
-  color: #000;
-  font-weight: bold;
-}
-
-/* --- ORTAK SAYFA BAŞLIKLARI (HERO) --- */
-.page-header {
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  /* Parallax efekti */
-  height: 350px;
-  /* Standart yükseklik */
-  position: relative;
-  color: white;
-}
-
-/* Her sayfa için farklı arka plan */
-.contact-header {
-  background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop');
-}
-
-.about-header {
-  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop');
-  /* Mermer ocağı/doku görseli */
-}
-
-.blog-header {
-  background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1920&auto=format&fit=crop');
-  /* Modern mimari görseli */
-}
-
-/* Ortak Overlay (Karartma) */
-.page-header .overlay,
-.contact-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /* Yarı saydam siyah */
-  z-index: 0;
-}
-
-.page-header .z-index-1 {
-  z-index: 1;
-}
-
-/* --- BLOG KART EFEKTLERİ --- */
-.hover-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-card:hover {
-  transform: translateY(-5px);
-  /* Kart yukarı kalkar */
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .15) !important;
-  /* Gölge derinleşir */
-}
-
-.hover-card img {
-  transition: transform 0.5s ease;
-}
-
-.hover-card:hover img {
-  transform: scale(1.1);
-  /* Resim içinde büyür */
 }

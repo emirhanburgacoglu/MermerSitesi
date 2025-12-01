@@ -1,44 +1,51 @@
-﻿@{
-    ViewData["Title"] = "Ana Sayfa";
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IHtmlLocalizer<MermerSitesi.SharedResource> Localizer
+@{
+    ViewData["Title"] = Localizer["Home"];
 }
-<div id="heroCarousel" class="carousel slide carousel-fade position-relative" data-bs-ride="carousel">
-   <div class="carousel-inner">
-        <div class="carousel-item active" data-interval="5000">
-            <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" class="d-block w-100 hero-img" alt="Mermer 1">
-        </div>
-        <div class="carousel-item" data-interval="5000">
-            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2000&auto=format&fit=crop" class="d-block w-100 hero-img" alt="Mermer 2">
-        </div>
-        <div class="carousel-item" data-interval="5000">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" class="d-block w-100 hero-img" alt="Mermer 3">
-        </div>
-        <div class="carousel-item" data-interval="5000">
-            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=2000&auto=format&fit=crop" class="d-block w-100 hero-img" alt="Mermer 4">
-        </div>
-    </div>
 
-    <div class="slider-counter position-absolute start-50 translate-middle-x text-white d-flex align-items-center">
-        <span id="currentSlide" class="fw-bold fs-5">01.</span>
-        <div class="progress mx-3" style="height: 2px; width: 100px; background: rgba(255,255,255,0.5);">
-            <div class="progress-bar bg-white" role="progressbar" style="width: 25%" id="progressBar"></div>
+<div class="container mt-4">
+    <div id="heroCarousel" class="carousel slide carousel-fade position-relative" data-bs-ride="carousel">
+        <div class="carousel-inner rounded shadow-sm">
+            <div class="carousel-item active" data-interval="5000">
+                <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" class="d-block w-100 hero-img" alt="Mermer 1">
+            </div>
+            <div class="carousel-item" data-interval="5000">
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2000&auto=format&fit=crop" class="d-block w-100 hero-img" alt="Mermer 2">
+            </div>
+            <div class="carousel-item" data-interval="5000">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" class="d-block w-100 hero-img" alt="Mermer 3">
+            </div>
+            <div class="carousel-item" data-interval="5000">
+                <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=2000&auto=format&fit=crop" class="d-block w-100 hero-img" alt="Mermer 4">
+            </div>
         </div>
-        <span class="fw-bold fs-5">04.</span>
+
+        <div class="slider-counter position-absolute start-50 translate-middle-x text-white d-flex align-items-center">
+            <span id="currentSlide" class="fw-bold fs-5">01.</span>
+            <div class="progress mx-3" style="height: 2px; width: 100px; background: rgba(255,255,255,0.5);">
+                <div class="progress-bar bg-white" role="progressbar" style="width: 25%" id="progressBar"></div>
+            </div>
+            <span class="fw-bold fs-5">04.</span>
+        </div>
     </div>
 </div>
 
 <section class="py-5 bg-white position-relative">
     <div class="container mt-4">
-        <h1 class="display-5 fw-bold mb-4" style="color: #000; font-family: 'Times New Roman', serif;">Holland Stone Mermer</h1>
+        <h1 class="display-5 fw-bold mb-4" style="color: #000; font-family: 'Times New Roman', serif;">
+            @Localizer["HollandStoneMarble"]
+        </h1>
         
         <p class="text-muted lead fs-6" style="line-height: 1.8; text-align: justify;">
-            Holland Stone Mermer Çözüm Ortağınız; mimari kitleyle mermeri üst düzey projelerde birleştirerek mimarlık ve danışmanlık hizmeti veren şirketlerin mermer projelerinde çözüm ortağı olmak amacı ile İstanbul faaliyete başlamıştır. Kuruluşundan bu yana özel ve resmi kurumlar için hizmet sunmaktadır. Ferhatpaşa'da 2000 m2 'lik ve Sancaktepe Yenidoğan mevkinde 5000 m2 'lik depolarında beyaz mermer, siyah mermer, gri mermer, kahverengi mermer, yeşil mermer, mavi mermer, yarı değerli taşların yanı sıra porselen plakalarınında satışını sağlamaktadır.
+            @Localizer["HomeDescription"]
         </p>
 
         <div class="d-flex justify-content-end align-items-center mt-4 mb-4">
             <button class="btn btn-outline-light text-dark border rounded-circle me-2 slider-nav-btn">
                 <i class="fas fa-chevron-left"></i>
             </button>
-            <span class="mx-3 fw-bold text-dark" style="font-size: 0.9rem;">Show 1/8</span>
+            <span class="mx-3 fw-bold text-dark" style="font-size: 0.9rem;">@Localizer["Show"] 1/8</span>
             <button class="btn btn-outline-light text-dark border rounded-circle ms-2 slider-nav-btn">
                 <i class="fas fa-chevron-right"></i>
             </button>
@@ -49,28 +56,28 @@
                 <div class="product-img-box">
                     <img src="/images/1.png" alt="Nero Marquina">
                 </div>
-                <h6 class="product-title mt-3">Nero Marquina (China) Mermer</h6>
+                <h6 class="product-title mt-3">@Localizer["Product1"]</h6>
             </div>
 
             <div class="col-6 col-md-3 text-center">
                 <div class="product-img-box">
                     <img src="/images/2.png" alt="Tropical Storm">
                 </div>
-                <h6 class="product-title mt-3">Tropical Storm Mermer</h6>
+                <h6 class="product-title mt-3">@Localizer["Product2"]</h6>
             </div>
 
             <div class="col-6 col-md-3 text-center">
                 <div class="product-img-box">
                     <img src="/images/3.png" alt="Bianco Gioia">
                 </div>
-                <h6 class="product-title mt-3">Bianco Gioia Mermer</h6>
+                <h6 class="product-title mt-3">@Localizer["Product3"]</h6>
             </div>
 
             <div class="col-6 col-md-3 text-center">
                 <div class="product-img-box">
                     <img src="/images/4.png" alt="Bianco Lasa">
                 </div>
-                <h6 class="product-title mt-3">Bianco Lasa Mermer</h6>
+                <h6 class="product-title mt-3">@Localizer["Product4"]</h6>
             </div>
         </div>
     </div>
