@@ -24,6 +24,13 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult Collection(string id)
+{
+    // Gelen kategori ismini (örn: "white", "black") View'a gönderiyoruz
+    // İlerde buraya veritabanı sorgusu gelecek.
+    ViewData["CategorySlug"] = id; 
+    return View();
+}
 public IActionResult About()
 {
     return View();

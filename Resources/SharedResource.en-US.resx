@@ -60,4 +60,13 @@
 
   <data name="BlogTitle3" xml:space="preserve"><value>History of Carrara Marble</value></data>
   <data name="BlogDesc3" xml:space="preserve"><value>The story of white gold spreading from Italy to the world, extending from Michelangelo's David statue to the present day.</value></data>
+<data name="WhiteMarble" xml:space="preserve"><value>White Marble</value></data>
+  <data name="BlackMarble" xml:space="preserve"><value>Black Marble</value></data>
+  <data name="BrownMarble" xml:space="preserve"><value>Brown Marble</value></data>
+  <data name="GrayMarble" xml:space="preserve"><value>Gray Marble</value></data>
+  <data name="OtherColors" xml:space="preserve"><value>Other Colors</value></data>
+  <data name="Porcelain" xml:space="preserve"><value>Porcelain</value></data>
+  
+  <data name="DiscoverCollection" xml:space="preserve"><value>Discover Our Collection</value></data>
+  <data name="ViewDetails" xml:space="preserve"><value>VIEW DETAILS</value></data>
 </root>

@@ -70,15 +70,15 @@
                             <a class="nav-link dropdown-toggle text-uppercase text-dark nav-hover-effect" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 @Localizer["Collection"] <i class="fas fa-caret-down ms-1" style="font-size: 0.8rem;"></i>
                             </a>
-                            <ul class="dropdown-menu rounded-0 border-0 shadow-sm mt-2" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item text-muted" href="#">Beyaz Mermer</a></li>
-                                <li><a class="dropdown-item text-muted" href="#">Siyah Mermer</a></li>
-                                <li><a class="dropdown-item text-muted" href="#">Kahverengi Mermer</a></li>
-                                <li><a class="dropdown-item text-muted" href="#">Gri Mermer</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item text-muted" href="#">Diğer Renkler</a></li>
-                                <li><a class="dropdown-item text-muted" href="#">Porselen</a></li>
-                            </ul>
+                           <ul class="dropdown-menu rounded-0 border-0 shadow-sm mt-2" aria-labelledby="navbarDropdown">
+    <li><a class="dropdown-item text-muted" asp-controller="Home" asp-action="Collection" asp-route-id="white">@Localizer["WhiteMarble"]</a></li>
+    <li><a class="dropdown-item text-muted" asp-controller="Home" asp-action="Collection" asp-route-id="black">@Localizer["BlackMarble"]</a></li>
+    <li><a class="dropdown-item text-muted" asp-controller="Home" asp-action="Collection" asp-route-id="brown">@Localizer["BrownMarble"]</a></li>
+    <li><a class="dropdown-item text-muted" asp-controller="Home" asp-action="Collection" asp-route-id="gray">@Localizer["GrayMarble"]</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item text-muted" asp-controller="Home" asp-action="Collection" asp-route-id="other">@Localizer["OtherColors"]</a></li>
+    <li><a class="dropdown-item text-muted" asp-controller="Home" asp-action="Collection" asp-route-id="porcelain">@Localizer["Porcelain"]</a></li>
+</ul>
                         </li>
                     </ul>
 
@@ -106,10 +106,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase fw-bold text-dark nav-hover-effect" href="#">
-                                <i class="fab fa-whatsapp me-1"></i> WHATSAPP
-                            </a>
-                        </li>
+    <a class="nav-link text-uppercase fw-bold text-dark nav-hover-effect" 
+       href="https://api.whatsapp.com/send?phone=905319191901&text=Merhaba,%20bilgi%20almak%20istiyorum." 
+       target="_blank">
+        <i class="fab fa-whatsapp me-1"></i> WHATSAPP
+    </a>
+</li>
                     </ul>
                 </div>
             </div>

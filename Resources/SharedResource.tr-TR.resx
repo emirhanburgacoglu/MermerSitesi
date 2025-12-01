@@ -60,4 +60,13 @@
 
   <data name="BlogTitle3" xml:space="preserve"><value>Carrara Mermerinin Tarihi</value></data>
   <data name="BlogDesc3" xml:space="preserve"><value>Michelangelo'nun Davut heykelinden günümüze uzanan beyaz altının, İtalya'dan dünyaya yayılan hikayesi.</value></data>
+<data name="WhiteMarble" xml:space="preserve"><value>Beyaz Mermer</value></data>
+  <data name="BlackMarble" xml:space="preserve"><value>Siyah Mermer</value></data>
+  <data name="BrownMarble" xml:space="preserve"><value>Kahverengi Mermer</value></data>
+  <data name="GrayMarble" xml:space="preserve"><value>Gri Mermer</value></data>
+  <data name="OtherColors" xml:space="preserve"><value>Diğer Renkler</value></data>
+  <data name="Porcelain" xml:space="preserve"><value>Porselen</value></data>
+  
+  <data name="DiscoverCollection" xml:space="preserve"><value>Koleksiyonumuzu Keşfedin</value></data>
+  <data name="ViewDetails" xml:space="preserve"><value>İNCELE</value></data>
 </root>
