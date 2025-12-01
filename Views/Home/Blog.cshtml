@@ -2,46 +2,56 @@
     ViewData["Title"] = "Blog";
 }
 
-<div class="bg-light py-5 mb-5">
-    <div class="container text-center">
-        <h1 class="display-4 fw-bold" style="font-family: 'Times New Roman', serif;">BLOG & HABERLER</h1>
-        <p class="lead text-muted">Doğal taş dünyasındaki son trendler ve bakım ipuçları.</p>
+<div class="page-header blog-header d-flex align-items-center justify-content-center mb-5">
+    <div class="text-center text-white position-relative z-index-1">
+        <h1 class="display-3 fw-bold" style="font-family: 'Times New Roman', serif; letter-spacing: 3px;">BLOG</h1>
+        <div class="divider mx-auto bg-white mt-3" style="width: 80px; height: 3px;"></div>
+        <p class="mt-3 lead text-uppercase" style="letter-spacing: 2px; font-size: 0.9rem;">Trendler, İpuçları ve Haberler</p>
     </div>
+    <div class="overlay"></div>
 </div>
 
 <div class="container mb-5">
-    <div class="row g-4"> <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm">
-                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="Mermer Temizliği" style="height: 250px; object-fit: cover;">
-                <div class="card-body">
-                    <div class="small text-muted mb-2">12 Mart 2025</div>
-                    <h5 class="card-title fw-bold" style="font-family: 'Times New Roman', serif;">Mermer Tezgah Nasıl Temizlenir?</h5>
-                    <p class="card-text text-muted small">Doğal taşlarınızı asitli temizleyicilerden koruyarak ömrünü nasıl uzatırsınız? İşte püf noktaları.</p>
-                    <a href="#" class="btn btn-outline-dark btn-sm rounded-0 mt-2">DEVAMINI OKU</a>
+    <div class="row g-4">
+        
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+                <div class="overflow-hidden" style="height: 250px;">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" class="card-img-top w-100 h-100 object-fit-cover" alt="Blog 1">
+                </div>
+                <div class="card-body p-4">
+                    <span class="badge bg-black rounded-0 mb-2">Bakım</span>
+                    <h5 class="card-title fw-bold mt-2" style="font-family: 'Times New Roman', serif;">Mermer Temizliğinde Altın Kurallar</h5>
+                    <p class="card-text text-muted small line-clamp-3">Doğal taşlarınızı asitli temizleyicilerden koruyarak ömrünü nasıl uzatırsınız? İşte uzmanından tavsiyeler.</p>
+                    <a href="#" class="text-uppercase text-dark fw-bold text-decoration-none small" style="letter-spacing: 1px;">Devamını Oku <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm">
-                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="Mutfak Trendleri" style="height: 250px; object-fit: cover;">
-                <div class="card-body">
-                    <div class="small text-muted mb-2">05 Mart 2025</div>
-                    <h5 class="card-title fw-bold" style="font-family: 'Times New Roman', serif;">2025 Mutfak Trendleri</h5>
-                    <p class="card-text text-muted small">Bu yıl mutfaklarda beyaz Carrara mermeri mi yoksa koyu renkli granitler mi moda?</p>
-                    <a href="#" class="btn btn-outline-dark btn-sm rounded-0 mt-2">DEVAMINI OKU</a>
+            <div class="card h-100 border-0 shadow-sm hover-card">
+                <div class="overflow-hidden" style="height: 250px;">
+                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=800&auto=format&fit=crop" class="card-img-top w-100 h-100 object-fit-cover" alt="Blog 2">
+                </div>
+                <div class="card-body p-4">
+                    <span class="badge bg-black rounded-0 mb-2">Trend</span>
+                    <h5 class="card-title fw-bold mt-2" style="font-family: 'Times New Roman', serif;">2025 Mutfak Trendleri</h5>
+                    <p class="card-text text-muted small line-clamp-3">Bu yıl mutfaklarda beyaz Carrara mermeri mi yoksa koyu renkli granitler mi moda? İç mimarların seçimi.</p>
+                    <a href="#" class="text-uppercase text-dark fw-bold text-decoration-none small" style="letter-spacing: 1px;">Devamını Oku <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm">
-                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="Carrara Tarihi" style="height: 250px; object-fit: cover;">
-                <div class="card-body">
-                    <div class="small text-muted mb-2">28 Şubat 2025</div>
-                    <h5 class="card-title fw-bold" style="font-family: 'Times New Roman', serif;">Carrara Mermerinin Tarihçesi</h5>
-                    <p class="card-text text-muted small">Michelangelo'nun Davut heykelinden günümüze uzanan beyaz altının hikayesi.</p>
-                    <a href="#" class="btn btn-outline-dark btn-sm rounded-0 mt-2">DEVAMINI OKU</a>
+            <div class="card h-100 border-0 shadow-sm hover-card">
+                <div class="overflow-hidden" style="height: 250px;">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop" class="card-img-top w-100 h-100 object-fit-cover" alt="Blog 3">
+                </div>
+                <div class="card-body p-4">
+                    <span class="badge bg-black rounded-0 mb-2">Tarihçe</span>
+                    <h5 class="card-title fw-bold mt-2" style="font-family: 'Times New Roman', serif;">Carrara Mermerinin Tarihi</h5>
+                    <p class="card-text text-muted small line-clamp-3">Michelangelo'nun Davut heykelinden günümüze uzanan beyaz altının, İtalya'dan dünyaya yayılan hikayesi.</p>
+                    <a href="#" class="text-uppercase text-dark fw-bold text-decoration-none small" style="letter-spacing: 1px;">Devamını Oku <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
         </div>
