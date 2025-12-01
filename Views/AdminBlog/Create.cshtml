@@ -1,0 +1,64 @@
+@model MermerSitesi.Models.Blog
+
+@{
+    ViewData["Title"] = "Yeni Yazı Ekle";
+}
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow border-0">
+                <div class="card-header bg-black text-white py-3">
+                    <h5 class="mb-0 fw-bold"><i class="fas fa-pen-nib me-2"></i> Yeni Blog Yazısı</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Create" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="row g-3">
+                            <div class="col-12 bg-light p-3 rounded mb-2 border">
+                                <label class="fw-bold mb-2 text-primary">TÜRKÇE İÇERİK</label>
+                                <div class="mb-3">
+                                    <label asp-for="TitleTr" class="form-label">Başlık</label>
+                                    <input asp-for="TitleTr" class="form-control" />
+                                    <span asp-validation-for="TitleTr" class="text-danger small"></span>
+                                </div>
+                                <div>
+                                    <label asp-for="ContentTr" class="form-label">İçerik</label>
+                                    <textarea asp-for="ContentTr" class="form-control" rows="4"></textarea>
+                                    <span asp-validation-for="ContentTr" class="text-danger small"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-12 bg-light p-3 rounded mb-2 border">
+                                <label class="fw-bold mb-2 text-danger">ENGLISH CONTENT</label>
+                                <div class="mb-3">
+                                    <label asp-for="TitleEn" class="form-label">Title</label>
+                                    <input asp-for="TitleEn" class="form-control" />
+                                    <span asp-validation-for="TitleEn" class="text-danger small"></span>
+                                </div>
+                                <div>
+                                    <label asp-for="ContentEn" class="form-label">Content</label>
+                                    <textarea asp-for="ContentEn" class="form-control" rows="4"></textarea>
+                                    <span asp-validation-for="ContentEn" class="text-danger small"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-bold">Kapak Görseli</label>
+                                <input type="file" name="file" class="form-control" accept="image/*" />
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 mt-4 d-md-flex justify-content-md-end">
+                            <a asp-action="Index" class="btn btn-outline-secondary px-4">İptal</a>
+                            <button type="submit" class="btn btn-dark px-5">Yayınla</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts { @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} }

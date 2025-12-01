@@ -1,0 +1,83 @@
+@model MermerSitesi.Models.Product
+
+@{
+    ViewData["Title"] = "Ürünü Düzenle";
+}
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow border-0">
+                <div class="card-header bg-primary text-white py-3">
+                    <h5 class="mb-0 fw-bold"><i class="fas fa-edit me-2"></i> Ürünü Düzenle</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Edit" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                        <input type="hidden" asp-for="Id" />
+                        
+                        <input type="hidden" asp-for="ImageUrl" />
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label asp-for="NameTr" class="form-label fw-bold">Ürün Adı (TR)</label>
+                                <input asp-for="NameTr" class="form-control bg-light" />
+                                <span asp-validation-for="NameTr" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="NameEn" class="form-label fw-bold">Product Name (EN)</label>
+                                <input asp-for="NameEn" class="form-control bg-light" />
+                                <span asp-validation-for="NameEn" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="Category" class="form-label fw-bold">Kategori</label>
+                                <select asp-for="Category" class="form-select bg-light">
+                                    <option value="white">white (Beyaz)</option>
+                                    <option value="black">black (Siyah)</option>
+                                    <option value="brown">brown (Kahverengi)</option>
+                                    <option value="gray">gray (Gri)</option>
+                                </select>
+                                <span asp-validation-for="Category" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="DisplayOrder" class="form-label fw-bold">Sıralama</label>
+                                <input asp-for="DisplayOrder" class="form-control bg-light" type="number" />
+                                <span asp-validation-for="DisplayOrder" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-bold d-block">Mevcut Resim</label>
+                                @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                                {
+                                    <img src="@Model.ImageUrl" class="img-thumbnail mb-2" style="height: 150px;">
+                                }
+                                else
+                                {
+                                    <span class="text-muted">Resim Yok</span>
+                                }
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-bold">Yeni Resim Yükle (İsteğe Bağlı)</label>
+                                <input type="file" name="file" class="form-control bg-light" accept="image/*" />
+                                <div class="form-text">Eğer resmi değiştirmek istemiyorsanız boş bırakın.</div>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 mt-4 d-md-flex justify-content-md-end">
+                            <a asp-action="Index" class="btn btn-outline-secondary px-4">İptal</a>
+                            <button type="submit" class="btn btn-primary px-5">Güncelle</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

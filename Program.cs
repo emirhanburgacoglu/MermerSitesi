@@ -1,13 +1,28 @@
 
 using Microsoft.AspNetCore.Localization; // <-- EN ÜSTE BUNU EKLE
 using System.Globalization;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using MermerSitesi.Data;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
-
+// Veritabanı Servisi (SQLite)
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Add services to the container.
 builder.Services.AddControllersWithViews()
     .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix);
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
     
+// ... Diğer servisler ...
+
+// KİMLİK DOĞRULAMA SERVİSİ
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Account/Login"; // Giriş yapmamış kişiyi buraya at
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(20); // 20 dakika sonra oturum düşsün
+    });
+
 
 var app = builder.Build();
 
@@ -29,6 +44,7 @@ app.UseRequestLocalization(localizationOptions);
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();

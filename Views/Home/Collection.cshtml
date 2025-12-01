@@ -1,13 +1,14 @@
 @using Microsoft.AspNetCore.Mvc.Localization
+@using System.Globalization
 @inject IHtmlLocalizer<MermerSitesi.SharedResource> Localizer
+@model IEnumerable<MermerSitesi.Models.Product>
+
 @{
-    // URL'den gelen kategori ismini alıyoruz (örn: white)
-// Eğer boş gelirse, "" (boş metin) olarak kabul et diyoruz (?? "" ekledik)
-string categorySlug = ViewData["CategorySlug"] as string ?? "";
+    string categorySlug = ViewData["CategorySlug"] as string ?? "";
     string categoryTitle = "";
     string headerImage = "";
 
-    // Kategoriye göre Başlık ve Arka Plan Resmi seçimi
+    // Kategoriye göre Başlık ve Resim
     switch (categorySlug)
     {
         case "white":
@@ -33,6 +34,9 @@ string categorySlug = ViewData["CategorySlug"] as string ?? "";
     }
 
     ViewData["Title"] = categoryTitle;
+
+    // Şu anki dil İngilizce mi kontrolü
+    bool isEnglish = CultureInfo.CurrentCulture.Name.StartsWith("en");
 }
 
 <div class="page-header d-flex align-items-center justify-content-center mb-5" 
@@ -46,21 +50,37 @@ string categorySlug = ViewData["CategorySlug"] as string ?? "";
 </div>
 
 <div class="container mb-5">
-    <div class="row g-4">
-        @for (int i = 1; i <= 6; i++)
-        {
-            <div class="col-6 col-md-4">
-                <div class="card border-0 shadow-sm h-100 product-card-hover">
-                    <div class="product-img-box">
-                        <img src="@headerImage" alt="Mermer">
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="product-title mt-2">@categoryTitle - @i</h5>
-                        <p class="text-muted small">Premium Seri</p>
-                        <a href="#" class="btn btn-outline-dark btn-sm rounded-0 px-4">@Localizer["ViewDetails"]</a>
+    
+    @if (!Model.Any())
+    {
+        <div class="alert alert-light text-center border p-5 shadow-sm">
+            <i class="fas fa-box-open fa-3x text-muted mb-3"></i>
+            <h4>Bu kategoride henüz ürün bulunmuyor.</h4>
+            <p class="text-muted">Lütfen daha sonra tekrar ziyaret ediniz.</p>
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+            @foreach (var item in Model)
+            {
+                <div class="col-6 col-md-4">
+                    <div class="card border-0 shadow-sm h-100 product-card-hover">
+                        <div class="product-img-box">
+                            <img src="@item.ImageUrl" alt="@item.NameTr">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="product-title mt-2">@(isEnglish ? item.NameEn : item.NameTr)</h5>
+                            
+                            <p class="text-muted small">Premium Seri</p>
+                            
+                            <a href="#" class="btn btn-dark rounded-0 px-5 py-2 shadow-sm text-uppercase fw-bold" style="letter-spacing: 1px; font-size: 0.85rem;">
+                                @Localizer["ViewDetails"]
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
-    </div>
+            }
+        </div>
+    }
 </div>
