@@ -31,6 +31,16 @@ public class HomeController : Controller
     ViewData["CategorySlug"] = id; 
     return View();
 }
+[HttpGet]
+public IActionResult Search(string q)
+{
+    // Arama kutusuna yazılan metin 'q' değişkeniyle buraya gelir.
+    // Şimdilik veritabanı olmadığı için sadece "Bunu aradınız: ..." diyeceğiz.
+    // Backend adımında burayı gerçek ürünleri getirecek şekilde güncelleyeceğiz.
+    
+    ViewData["Query"] = q; // Aranan kelimeyi sayfaya taşıyoruz
+    return View();
+}
 public IActionResult About()
 {
     return View();

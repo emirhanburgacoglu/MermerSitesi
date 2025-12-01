@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MermerSitesi.styles.css" asp-append-version="true" />
 </head>
+
 <body>
     <header>
         <div class="top-bar bg-light py-1 border-bottom d-none d-lg-block">
@@ -57,9 +58,28 @@
                     
                     <div class="offcanvas-body">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center w-100 justify-content-start">
-                            <li class="nav-item">
-                                <a class="nav-link text-uppercase fw-bold text-dark nav-hover-effect" href="#"><i class="fas fa-search me-1 d-none d-lg-inline"></i> @Localizer["Search"]</a>
-                            </li>
+                         <li class="nav-item dropdown">
+    <a class="nav-link text-uppercase fw-bold text-dark nav-hover-effect cursor-pointer" 
+       href="#" 
+       id="searchDropdown" 
+       role="button" 
+       data-bs-toggle="dropdown" 
+       aria-expanded="false">
+        <i class="fas fa-search me-1"></i> @Localizer["Search"]
+    </a>
+    
+    <div class="dropdown-menu p-3 border-0 shadow-lg mt-2 rounded-0" aria-labelledby="searchDropdown" style="min-width: 300px;">
+        <form asp-controller="Home" asp-action="Search" method="get">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control rounded-0 border-secondary" placeholder="@Localizer["SearchPlaceholder"]..." required>
+                <button class="btn btn-dark rounded-0" type="submit">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</li>
+   
                             <li class="nav-item ps-lg-4">
                                 <a class="nav-link text-uppercase text-dark nav-hover-effect" asp-controller="Home" asp-action="About">@Localizer["About"]</a>
                             </li>
