@@ -62,25 +62,31 @@
     else
     {
         <div class="row g-4">
-            @foreach (var item in Model)
-            {
-                <div class="col-6 col-md-4">
-                    <div class="card border-0 shadow-sm h-100 product-card-hover">
-                        <div class="product-img-box">
-                            <img src="@item.ImageUrl" alt="@item.NameTr">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="product-title mt-2">@(isEnglish ? item.NameEn : item.NameTr)</h5>
-                            
-                            <p class="text-muted small">Premium Seri</p>
-                            
-                            <a href="#" class="btn btn-dark rounded-0 px-5 py-2 shadow-sm text-uppercase fw-bold" style="letter-spacing: 1px; font-size: 0.85rem;">
-                                @Localizer["ViewDetails"]
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            }
+           @foreach (var item in Model)
+{
+    <div class="col-lg-3 col-md-4 col-6 mb-4"> <div class="luxury-card">
+            
+            <div class="luxury-image-wrapper">
+                @if (!string.IsNullOrEmpty(item.ImageUrl))
+                {
+                    <img src="@item.ImageUrl" alt="@item.NameTr">
+                }
+                else
+                {
+                    <img src="https://via.placeholder.com/400x500?text=No+Image" alt="Resim Yok">
+                }
+                <div class="luxury-overlay"></div> </div>
+
+            <div class="luxury-info">
+                <div class="luxury-category">Holland Stone</div>
+                <h3 class="luxury-title">@(isEnglish ? item.NameEn : item.NameTr)</h3>
+                
+                <span class="btn-luxury-link">@Localizer["ViewDetails"]</span>
+            </div>
+
+        </div>
+    </div>
+}
         </div>
     }
 </div>

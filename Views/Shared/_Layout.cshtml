@@ -81,6 +81,7 @@
 
 </ul>
 
+
 <a class="navbar-brand d-none d-lg-block mx-auto text-center text-dark text-decoration-none" asp-controller="Home" asp-action="Index" style="min-width: 250px;">
     <div style="font-family: 'Times New Roman', serif; font-size: 2rem; letter-spacing: 4px; line-height: 1; color: #000;">HOLLAND</div>
     <div style="font-family: 'Times New Roman', serif; font-size: 2rem; letter-spacing: 4px; line-height: 1; color: #000;">STONE</div>
@@ -95,6 +96,25 @@
         <a class="nav-link text-uppercase text-dark nav-hover-effect" asp-controller="Home" asp-action="Contact">@Localizer["Contact"]</a>
     </li>
     
+    <li class="nav-item d-lg-none mt-4 pt-3 border-top w-100">
+    <div class="d-flex align-items-center justify-content-between px-2">
+        <span class="text-muted fw-bold small">@Localizer["Language"]:</span>
+        <div class="d-flex gap-2">
+             <form asp-controller="Home" asp-action="ChangeLanguage" method="post" class="d-inline">
+                <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                <button type="submit" name="culture" value="tr-TR" class="btn btn-sm btn-outline-dark rounded-0 px-3 d-flex align-items-center gap-2">
+                    <img src="https://flagcdn.com/w20/tr.png" style="width: 20px;"> TR
+                </button>
+             </form>
+             <form asp-controller="Home" asp-action="ChangeLanguage" method="post" class="d-inline">
+                <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                <button type="submit" name="culture" value="en-US" class="btn btn-sm btn-outline-dark rounded-0 px-3 d-flex align-items-center gap-2">
+                    <img src="https://flagcdn.com/w20/us.png" style="width: 20px;"> EN
+                </button>
+             </form>
+        </div>
+    </div>
+</li>
     <li class="nav-item d-none d-lg-block">
         <a class="nav-link text-uppercase fw-bold text-dark nav-hover-effect" href="https://api.whatsapp.com/send?phone=905319191901" target="_blank">
             <i class="fab fa-whatsapp me-1"></i> WHATSAPP
