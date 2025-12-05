@@ -17,7 +17,33 @@ namespace MermerSitesi.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
 
-            modelBuilder.Entity("MermerSitesi.Models.Blog", b =>
+            modelBuilder.Entity("MermerSitesi.Models.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Category")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NameEn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NameTr")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("MermerSitesi.Models.ProjectItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -43,33 +69,7 @@ namespace MermerSitesi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Blogs");
-                });
-
-            modelBuilder.Entity("MermerSitesi.Models.Product", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Category")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("DisplayOrder")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("NameEn")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("NameTr")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Products");
+                    b.ToTable("ProjectItems");
                 });
 #pragma warning restore 612, 618
         }

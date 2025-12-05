@@ -3,92 +3,96 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authorization;
 using MermerSitesi.Data;
 using MermerSitesi.Models;
 using System.IO;
+using Microsoft.AspNetCore.Http; 
+using Microsoft.AspNetCore.Authorization; 
 
 namespace MermerSitesi.Controllers
 {
     [Authorize]
-    public class AdminBlogController : Controller
+    public class AdminProjectController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public AdminBlogController(ApplicationDbContext context)
+        public AdminProjectController(ApplicationDbContext context)
         {
             _context = context;
         }
 
+        // GET: AdminProject
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Blogs.ToListAsync());
+            return View(await _context.ProjectItems.ToListAsync());
         }
 
+        // GET: AdminProject/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null) return NotFound();
-            var blog = await _context.Blogs.FirstOrDefaultAsync(m => m.Id == id);
-            if (blog == null) return NotFound();
-            return View(blog);
+            var projectItem = await _context.ProjectItems.FirstOrDefaultAsync(m => m.Id == id);
+            if (projectItem == null) return NotFound();
+            return View(projectItem);
         }
 
+        // GET: AdminProject/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // --- CREATE (RESİM YÜKLEMELİ) ---
+        // POST: AdminProject/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TitleTr,ContentTr,TitleEn,ContentEn")] Blog blog, IFormFile file)
+        public async Task<IActionResult> Create([Bind("Id,TitleTr,ContentTr,TitleEn,ContentEn")] ProjectItem projectItem, IFormFile file)
         {
             if (file != null)
             {
                 var extension = Path.GetExtension(file.FileName);
                 var imageName = Guid.NewGuid() + extension;
                 var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
+                
                 if (!Directory.Exists(folderPath)) Directory.CreateDirectory(folderPath);
                 
                 using (var stream = new FileStream(Path.Combine(folderPath, imageName), FileMode.Create))
                 {
                     await file.CopyToAsync(stream);
                 }
-                blog.ImageUrl = "/images/" + imageName;
+                projectItem.ImageUrl = "/images/" + imageName;
             }
             else
             {
-                blog.ImageUrl = "";
+                projectItem.ImageUrl = "";
             }
 
-            // Tarihi otomatik ata
-            blog.CreatedDate = DateTime.Now;
+            projectItem.CreatedDate = DateTime.Now;
 
             if (ModelState.IsValid)
             {
-                _context.Add(blog);
+                _context.Add(projectItem);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(blog);
+            return View(projectItem);
         }
 
+        // GET: AdminProject/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
-            var blog = await _context.Blogs.FindAsync(id);
-            if (blog == null) return NotFound();
-            return View(blog);
+            var projectItem = await _context.ProjectItems.FindAsync(id);
+            if (projectItem == null) return NotFound();
+            return View(projectItem);
         }
 
-        // --- EDIT (RESİM GÜNCELLEMELİ) ---
+        // POST: AdminProject/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,TitleTr,ContentTr,TitleEn,ContentEn,ImageUrl,CreatedDate")] Blog blog, IFormFile? file)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,TitleTr,ContentTr,TitleEn,ContentEn,ImageUrl,CreatedDate")] ProjectItem projectItem, IFormFile? file)
         {
-            if (id != blog.Id) return NotFound();
+            if (id != projectItem.Id) return NotFound();
 
             if (ModelState.IsValid)
             {
@@ -105,42 +109,44 @@ namespace MermerSitesi.Controllers
                         {
                             await file.CopyToAsync(stream);
                         }
-                        blog.ImageUrl = "/images/" + imageName;
+                        projectItem.ImageUrl = "/images/" + imageName;
                     }
-                    _context.Update(blog);
+                    _context.Update(projectItem);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BlogExists(blog.Id)) return NotFound();
+                    if (!ProjectItemExists(projectItem.Id)) return NotFound();
                     else throw;
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(blog);
+            return View(projectItem);
         }
 
+        // GET: AdminProject/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
-            var blog = await _context.Blogs.FirstOrDefaultAsync(m => m.Id == id);
-            if (blog == null) return NotFound();
-            return View(blog);
+            var projectItem = await _context.ProjectItems.FirstOrDefaultAsync(m => m.Id == id);
+            if (projectItem == null) return NotFound();
+            return View(projectItem);
         }
 
+        // POST: AdminProject/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var blog = await _context.Blogs.FindAsync(id);
-            if (blog != null) _context.Blogs.Remove(blog);
+            var projectItem = await _context.ProjectItems.FindAsync(id);
+            if (projectItem != null) _context.ProjectItems.Remove(projectItem);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool BlogExists(int id)
+        private bool ProjectItemExists(int id)
         {
-            return _context.Blogs.Any(e => e.Id == id);
+            return _context.ProjectItems.Any(e => e.Id == id);
         }
     }
 }

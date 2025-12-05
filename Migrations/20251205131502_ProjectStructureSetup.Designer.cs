@@ -11,43 +11,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MermerSitesi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251201225125_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20251205131502_ProjectStructureSetup")]
+    partial class ProjectStructureSetup
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
-
-            modelBuilder.Entity("MermerSitesi.Models.Blog", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("ContentEn")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ContentTr")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TitleEn")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TitleTr")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Blogs");
-                });
 
             modelBuilder.Entity("MermerSitesi.Models.Product", b =>
                 {
@@ -73,6 +44,35 @@ namespace MermerSitesi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("MermerSitesi.Models.ProjectItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ContentEn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ContentTr")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TitleEn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TitleTr")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProjectItems");
                 });
 #pragma warning restore 612, 618
         }

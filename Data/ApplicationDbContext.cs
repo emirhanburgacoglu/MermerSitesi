@@ -11,6 +11,6 @@ namespace MermerSitesi.Data
 
         // Veritabanı Tablolarımız
         public DbSet<Product> Products { get; set; }
-        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<ProjectItem> ProjectItems { get; set; }
     }
 }

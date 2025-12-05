@@ -29,11 +29,12 @@ namespace MermerSitesi.Controllers
         {
             return View();
         }
-
-        public IActionResult Blog()
+        public IActionResult Projects()
         {
-            return View();
+            var projeler = _context.ProjectItems.ToList();
+            return View(projeler); // Listeyi View'ın içine koymalısın!
         }
+      
 
         public IActionResult Contact()
         {
@@ -64,17 +65,26 @@ namespace MermerSitesi.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult ChangeLanguage(string culture, string returnUrl)
-        {
-            Response.Cookies.Append(
-                CookieRequestCultureProvider.DefaultCookieName,
-                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
-                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
-            );
+       [HttpPost]
+public IActionResult ChangeLanguage(string culture, string returnUrl)
+{
+    // Gelen dil kodu (culture) boşsa veya null ise varsayılan olarak tr-TR yap
+    if (string.IsNullOrEmpty(culture))
+    {
+        culture = "tr-TR";
+    }
 
-            return LocalRedirect(returnUrl);
-        }
+    // Dil tercihini çerezlere (Cookie) kaydet
+    Response.Cookies.Append(
+        CookieRequestCultureProvider.DefaultCookieName,
+        CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+        new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+    );
+
+    // Kullanıcıyı geldiği sayfaya geri gönder
+    return LocalRedirect(returnUrl);
+}
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -3,7 +3,7 @@
   <data name="Home" xml:space="preserve"><value>HOME</value></data>
   <data name="About" xml:space="preserve"><value>ABOUT US</value></data>
   <data name="Collection" xml:space="preserve"><value>COLLECTION</value></data>
-  <data name="Blog" xml:space="preserve"><value>BLOG</value></data>
+  <data name="Projects" xml:space="preserve"><value>PROJECTS</value></data>
   <data name="Contact" xml:space="preserve"><value>CONTACT</value></data>
   <data name="Search" xml:space="preserve"><value>SEARCH</value></data>
   <data name="Language" xml:space="preserve"><value>LANGUAGE</value></data>
@@ -16,13 +16,14 @@
   <data name="YearsExperience" xml:space="preserve"><value>Years Experience</value></data>
   <data name="CompletedProjects" xml:space="preserve"><value>Completed Projects</value></data>
   <data name="ExportCountries" xml:space="preserve"><value>Countries Exported</value></data>
-  
   <data name="AboutText1" xml:space="preserve">
-    <value>Founded in 2010 inspired by the quarries in Carrara, Italy, our company set out with a passion to carry the raw beauty of natural stone to modern living spaces.</value>
+    <value>[Şirket Adı] is a foreign trade company built on a deep-rooted family tradition in marble export, centering on quality and trust. Thanks to the leadership and know-how of our mother, who has over 20 years of experience in the sector, we today deliver high-standard Turkish marble to various points across the globe.</value>
   </data>
   <data name="AboutText2" xml:space="preserve">
-    <value>In our 7000 m² facility in Istanbul, we process the most exclusive marble blocks from around the world, blending state-of-the-art technology with traditional craftsmanship. For us, marble is not just a building material, but a story written by nature over millions of years.</value>
+    <value>The trust, sustainability, and meticulousness that come with being a family business combine with our professional work ethic to ensure we always offer the right product at the right time. We manage all processes transparently, from production to packaging and shipment, based on international quality standards. Our vision is to introduce Turkey's natural stone potential globally and establish long-term partnerships. As [Şirket Adı], we don't just sell marble; we build value, trust, and lasting business relationships.</value>
   </data>
+  
+
   <data name="HollandStoneMarble" xml:space="preserve"><value>Holland Stone Marble</value></data>
   <data name="Show" xml:space="preserve"><value>Show</value></data>
   
@@ -34,6 +35,7 @@
   <data name="HomeDescription" xml:space="preserve">
     <value>Holland Stone Marble Solution Partner; started its operations in Istanbul with the aim of being a solution partner in marble projects of companies providing architecture and consultancy services by combining marble with the architectural audience in high-level projects. It has been serving private and official institutions since its establishment. In its 2000 m2 warehouse in Ferhatpaşa and 5000 m2 warehouse in Sancaktepe Yenidoğan location, it provides sales of white marble, black marble, gray marble, brown marble, green marble, blue marble, semi-precious stones as well as porcelain slabs.</value>
   </data>
+
   <data name="LetsBringProjectsToLife" xml:space="preserve"><value>Let's Bring Your Projects to Life</value></data>
   <data name="HeadOffice" xml:space="preserve"><value>HEAD OFFICE</value></data>
   <data name="Address" xml:space="preserve"><value>Address</value></data>
@@ -46,21 +48,24 @@
   <data name="Subject" xml:space="preserve"><value>Subject</value></data>
   <data name="YourMessage" xml:space="preserve"><value>Your Message</value></data>
   <data name="Send" xml:space="preserve"><value>SEND</value></data>
-  <data name="BlogSubtitle" xml:space="preserve"><value>Trends, Tips and News</value></data>
+
+  <data name="ProjectsSubtitle" xml:space="preserve"><value>Our latest completed projects and their stories.</value></data>
   <data name="ReadMore" xml:space="preserve"><value>Read More</value></data>
+  <data name="ViewProject" xml:space="preserve"><value>VIEW PROJECT</value></data>
   <data name="Maintenance" xml:space="preserve"><value>Maintenance</value></data>
   <data name="Trend" xml:space="preserve"><value>Trend</value></data>
   <data name="History" xml:space="preserve"><value>History</value></data>
 
-  <data name="BlogTitle1" xml:space="preserve"><value>Golden Rules of Marble Cleaning</value></data>
-  <data name="BlogDesc1" xml:space="preserve"><value>How to extend the life of your natural stones by protecting them from acidic cleaners? Here are tips from the expert.</value></data>
+  <data name="ProjectTitle1" xml:space="preserve"><value>Golden Rules of Marble Cleaning</value></data>
+  <data name="ProjectsDesc1" xml:space="preserve"><value>How to extend the life of your natural stones by protecting them from acidic cleaners? Here are tips from the expert.</value></data>
 
-  <data name="BlogTitle2" xml:space="preserve"><value>2025 Kitchen Trends</value></data>
-  <data name="BlogDesc2" xml:space="preserve"><value>Is white Carrara marble or dark colored granite fashionable in kitchens this year? The choice of interior designers.</value></data>
+  <data name="ProjectsTitle2" xml:space="preserve"><value>2025 Kitchen Trends</value></data>
+  <data name="ProjectsDesc2" xml:space="preserve"><value>Is white Carrara marble or dark colored granite fashionable in kitchens this year? The choice of interior designers.</value></data>
 
-  <data name="BlogTitle3" xml:space="preserve"><value>History of Carrara Marble</value></data>
-  <data name="BlogDesc3" xml:space="preserve"><value>The story of white gold spreading from Italy to the world, extending from Michelangelo's David statue to the present day.</value></data>
-<data name="WhiteMarble" xml:space="preserve"><value>White Marble</value></data>
+  <data name="ProjectsTitle3" xml:space="preserve"><value>History of Carrara Marble</value></data>
+  <data name="ProjectsDesc3" xml:space="preserve"><value>The story of white gold spreading from Italy to the world, extending from Michelangelo's David statue to the present day.</value></data>
+
+  <data name="WhiteMarble" xml:space="preserve"><value>White Marble</value></data>
   <data name="BlackMarble" xml:space="preserve"><value>Black Marble</value></data>
   <data name="BrownMarble" xml:space="preserve"><value>Brown Marble</value></data>
   <data name="GrayMarble" xml:space="preserve"><value>Gray Marble</value></data>
@@ -69,6 +74,7 @@
   
   <data name="DiscoverCollection" xml:space="preserve"><value>Discover Our Collection</value></data>
   <data name="ViewDetails" xml:space="preserve"><value>VIEW DETAILS</value></data>
+
   <data name="FooterDesc" xml:space="preserve"><value>We carry the art created by nature over millions of years to your modern living spaces. The address of quality, aesthetics, and trust.</value></data>
   <data name="Discover" xml:space="preserve"><value>Discover</value></data>
   <data name="FAQ" xml:space="preserve"><value>FAQ</value></data>
@@ -76,4 +82,10 @@
   <data name="AllRightsReserved" xml:space="preserve"><value>All Rights Reserved.</value></data>
   <data name="PrivacyPolicy" xml:space="preserve"><value>Privacy Policy</value></data>
   <data name="TermsOfUse" xml:space="preserve"><value>Terms of Use</value></data>
+  <data name="SearchPlaceholder" xml:space="preserve"><value>Search...</value></data>
+<data name="CategoryTravertine"><value>TRAVERTINE</value></data>
+<data name="CategoryMarble"><value>MARBLE</value></data>
+<data name="CategoryOnyx"><value>ONYX</value></data>
+<data name="CategoryLimestone"><value>LIMESTONE</value></data>
+
 </root>

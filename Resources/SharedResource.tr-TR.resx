@@ -3,7 +3,7 @@
   <data name="Home" xml:space="preserve"><value>ANA SAYFA</value></data>
   <data name="About" xml:space="preserve"><value>HAKKIMIZDA</value></data>
   <data name="Collection" xml:space="preserve"><value>KOLEKSİYON</value></data>
-  <data name="Blog" xml:space="preserve"><value>BLOG</value></data>
+  <data name="Projects" xml:space="preserve"><value>PROJELER</value></data>
   <data name="Contact" xml:space="preserve"><value>İLETİŞİM</value></data>
   <data name="Search" xml:space="preserve"><value>ARA</value></data>
   <data name="Language" xml:space="preserve"><value>DİL</value></data>
@@ -16,24 +16,21 @@
   <data name="YearsExperience" xml:space="preserve"><value>Yıllık Deneyim</value></data>
   <data name="CompletedProjects" xml:space="preserve"><value>Biten Proje</value></data>
   <data name="ExportCountries" xml:space="preserve"><value>Ülkeye İhracat</value></data>
-  
-  <data name="AboutText1" xml:space="preserve">
-    <value>2010 yılında İtalya'nın Carrara bölgesindeki ocaklardan ilham alarak kurulan firmamız, doğal taşın işlenmemiş ham güzelliğini modern yaşam alanlarına taşıma tutkusuyla yola çıkmıştır.</value>
+<data name="AboutText1" xml:space="preserve">
+    <value>[Şirket Adı], mermer ihracatı alanında köklü bir aile geleneğinin üzerine kurulmuş, kaliteyi ve güveni merkeze alan bir dış ticaret şirketidir. Sektörde 20 yılı aşkın tecrübesi bulunan annemizin liderliği ve bilgi birikimi sayesinde, bugün dünyanın çeşitli noktalarına yüksek standartlarda Türk mermeri ulaştırıyoruz.</value>
   </data>
   <data name="AboutText2" xml:space="preserve">
-    <value>İstanbul'daki 7000 m²'lik tesisimizde, dünyanın dört bir yanından gelen en seçkin mermer bloklarını, en son teknoloji ve geleneksel el işçiliğini harmanlayarak işliyoruz. Bizim için mermer sadece bir inşaat malzemesi değil, doğanın milyonlarca yılda yazdığı bir hikayedir.</value>
+    <value>Aile şirketi olmanın getirdiği güven, sürdürülebilirlik ve titizlik; profesyonel çalışma anlayışımızla birleşerek müşterilerimize her zaman en doğru ürünü, en doğru zamanda sunmamızı sağlıyor. Üretimden paketlemeye, yüklemeden sevkiyata kadar tüm süreçleri şeffaf bir şekilde yönetiyor; uluslararası kalite standartlarını esas alıyoruz. Vizyonumuz, Türkiye’nin doğal taş potansiyelini global ölçekte tanıtarak uzun soluklu iş ortaklıkları kurmak. Misyonumuz ise; müşterilerimizin her adımda yanında olmak. [Şirket Adı] olarak, sadece mermer satmıyor; değer, güven ve uzun vadeli iş ilişkileri inşa ediyoruz.</value>
   </data>
+
   <data name="HollandStoneMarble" xml:space="preserve"><value>Holland Stone Mermer</value></data>
   <data name="Show" xml:space="preserve"><value>Görüntüle</value></data>
-  
   <data name="Product1" xml:space="preserve"><value>Nero Marquina (China) Mermer</value></data>
   <data name="Product2" xml:space="preserve"><value>Tropical Storm Mermer</value></data>
   <data name="Product3" xml:space="preserve"><value>Bianco Gioia Mermer</value></data>
   <data name="Product4" xml:space="preserve"><value>Bianco Lasa Mermer</value></data>
+  <data name="HomeDescription" xml:space="preserve"><value>Holland Stone Mermer Çözüm Ortağınız; mimari kitleyle mermeri üst düzey projelerde birleştirerek mimarlık ve danışmanlık hizmeti veren şirketlerin mermer projelerinde çözüm ortağı olmak amacı ile İstanbul faaliyete başlamıştır. Kuruluşundan bu yana özel ve resmi kurumlar için hizmet sunmaktadır. Ferhatpaşa'da 2000 m2 'lik ve Sancaktepe Yenidoğan mevkinde 5000 m2 'lik depolarında beyaz mermer, siyah mermer, gri mermer, kahverengi mermer, yeşil mermer, mavi mermer, yarı değerli taşların yanı sıra porselen plakalarınında satışını sağlamaktadır.</value></data>
 
-  <data name="HomeDescription" xml:space="preserve">
-    <value>Holland Stone Mermer Çözüm Ortağınız; mimari kitleyle mermeri üst düzey projelerde birleştirerek mimarlık ve danışmanlık hizmeti veren şirketlerin mermer projelerinde çözüm ortağı olmak amacı ile İstanbul faaliyete başlamıştır. Kuruluşundan bu yana özel ve resmi kurumlar için hizmet sunmaktadır. Ferhatpaşa'da 2000 m2 'lik ve Sancaktepe Yenidoğan mevkinde 5000 m2 'lik depolarında beyaz mermer, siyah mermer, gri mermer, kahverengi mermer, yeşil mermer, mavi mermer, yarı değerli taşların yanı sıra porselen plakalarınında satışını sağlamaktadır.</value>
-  </data>
   <data name="LetsBringProjectsToLife" xml:space="preserve"><value>Projelerinizi Hayata Geçirelim</value></data>
   <data name="HeadOffice" xml:space="preserve"><value>MERKEZ OFİS</value></data>
   <data name="Address" xml:space="preserve"><value>Adres</value></data>
@@ -46,29 +43,30 @@
   <data name="Subject" xml:space="preserve"><value>Konu</value></data>
   <data name="YourMessage" xml:space="preserve"><value>Mesajınız</value></data>
   <data name="Send" xml:space="preserve"><value>GÖNDER</value></data>
-  <data name="BlogSubtitle" xml:space="preserve"><value>Trendler, İpuçları ve Haberler</value></data>
+
+  <data name="ProjectsSubtitle" xml:space="preserve"><value>Tamamlanan son projelerimiz ve hikayeleri.</value></data>
   <data name="ReadMore" xml:space="preserve"><value>Devamını Oku</value></data>
+  <data name="ViewProject" xml:space="preserve"><value>PROJEYİ GÖRÜNTÜLE</value></data>
   <data name="Maintenance" xml:space="preserve"><value>Bakım</value></data>
   <data name="Trend" xml:space="preserve"><value>Trend</value></data>
   <data name="History" xml:space="preserve"><value>Tarihçe</value></data>
 
-  <data name="BlogTitle1" xml:space="preserve"><value>Mermer Temizliğinde Altın Kurallar</value></data>
-  <data name="BlogDesc1" xml:space="preserve"><value>Doğal taşlarınızı asitli temizleyicilerden koruyarak ömrünü nasıl uzatırsınız? İşte uzmanından tavsiyeler.</value></data>
+  <data name="ProjectTitle1" xml:space="preserve"><value>Mermer Temizliğinde Altın Kurallar</value></data>
+  <data name="ProjectsDesc1" xml:space="preserve"><value>Doğal taşlarınızı asitli temizleyicilerden koruyarak ömrünü nasıl uzatırsınız? İşte uzmanından tavsiyeler.</value></data>
+  <data name="ProjectsTitle2" xml:space="preserve"><value>2025 Mutfak Trendleri</value></data>
+  <data name="ProjectsDesc2" xml:space="preserve"><value>Bu yıl mutfaklarda beyaz Carrara mermeri mi yoksa koyu renkli granitler mi moda? İç mimarların seçimi.</value></data>
+  <data name="ProjectsTitle3" xml:space="preserve"><value>Carrara Mermerinin Tarihi</value></data>
+  <data name="ProjectsDesc3" xml:space="preserve"><value>Michelangelo'nun Davut heykelinden günümüze uzanan beyaz altının, İtalya'dan dünyaya yayılan hikayesi.</value></data>
 
-  <data name="BlogTitle2" xml:space="preserve"><value>2025 Mutfak Trendleri</value></data>
-  <data name="BlogDesc2" xml:space="preserve"><value>Bu yıl mutfaklarda beyaz Carrara mermeri mi yoksa koyu renkli granitler mi moda? İç mimarların seçimi.</value></data>
-
-  <data name="BlogTitle3" xml:space="preserve"><value>Carrara Mermerinin Tarihi</value></data>
-  <data name="BlogDesc3" xml:space="preserve"><value>Michelangelo'nun Davut heykelinden günümüze uzanan beyaz altının, İtalya'dan dünyaya yayılan hikayesi.</value></data>
-<data name="WhiteMarble" xml:space="preserve"><value>Beyaz Mermer</value></data>
+  <data name="WhiteMarble" xml:space="preserve"><value>Beyaz Mermer</value></data>
   <data name="BlackMarble" xml:space="preserve"><value>Siyah Mermer</value></data>
   <data name="BrownMarble" xml:space="preserve"><value>Kahverengi Mermer</value></data>
   <data name="GrayMarble" xml:space="preserve"><value>Gri Mermer</value></data>
   <data name="OtherColors" xml:space="preserve"><value>Diğer Renkler</value></data>
   <data name="Porcelain" xml:space="preserve"><value>Porselen</value></data>
-  
   <data name="DiscoverCollection" xml:space="preserve"><value>Koleksiyonumuzu Keşfedin</value></data>
   <data name="ViewDetails" xml:space="preserve"><value>İNCELE</value></data>
+
   <data name="FooterDesc" xml:space="preserve"><value>Doğanın milyonlarca yılda oluşturduğu sanatı, modern yaşam alanlarınıza taşıyoruz. Kalite, estetik ve güvenin adresi.</value></data>
   <data name="Discover" xml:space="preserve"><value>Keşfet</value></data>
   <data name="FAQ" xml:space="preserve"><value>SSS</value></data>
@@ -76,4 +74,11 @@
   <data name="AllRightsReserved" xml:space="preserve"><value>Tüm Hakları Saklıdır.</value></data>
   <data name="PrivacyPolicy" xml:space="preserve"><value>Gizlilik Politikası</value></data>
   <data name="TermsOfUse" xml:space="preserve"><value>Kullanım Şartları</value></data>
+  <data name="SearchPlaceholder" xml:space="preserve"><value>Site içinde ara</value></data>
+<data name="CategoryTravertine"><value>TRAVERTEN</value></data>
+<data name="CategoryMarble"><value>MERMER</value></data>
+<data name="CategoryOnyx"><value>ONİKS</value></data>
+<data name="CategoryLimestone"><value>LİMESTONE</value></data>
+
+
 </root>

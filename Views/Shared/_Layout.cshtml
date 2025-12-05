@@ -27,12 +27,25 @@
                 </div>
                 <div class="language-selector">
                     <form asp-controller="Home" asp-action="ChangeLanguage" method="post" class="d-flex align-items-center">
-                        <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
-                        <span class="text-dark me-2" style="font-size: 0.75rem; font-weight: bold;">@Localizer["Language"]:</span>
-                        <button type="submit" name="culture" value="tr-TR" class="btn btn-link p-0 text-decoration-none me-2"><img src="https://flagcdn.com/w20/tr.png" alt="TR"></button>
-                        <span class="text-muted">|</span>
-                        <button type="submit" name="culture" value="en-US" class="btn btn-link p-0 text-decoration-none ms-2"><img src="https://flagcdn.com/w20/us.png" alt="EN"></button>
-                    </form>
+    <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+    <span class="text-dark me-2" style="font-size: 0.75rem; font-weight: bold;">@Localizer["Language"]:</span>
+
+    <button type="submit" name="culture" value="tr-TR" class="btn btn-link p-0 text-decoration-none me-2">
+        <img src="https://flagcdn.com/w20/tr.png" alt="TR">
+    </button>
+
+
+    <span class="text-muted">|</span>
+
+    <button type="submit" name="culture" value="en-US" class="btn btn-link p-0 text-decoration-none mx-2">
+        <img src="https://flagcdn.com/w20/us.png" alt="EN">
+    </button>
+    
+    <span class="text-muted">|</span>
+    <button type="submit" name="culture" value="nl-NL" class="btn btn-link p-0 text-decoration-none ms-2">
+        <img src="https://flagcdn.com/w20/nl.png" alt="NL">
+    </button>
+</form>
                 </div>
             </div>
         </div>
@@ -59,9 +72,9 @@
                     <div class="offcanvas-body">
                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center w-100 justify-content-start">
     
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link text-uppercase fw-bold text-dark nav-hover-effect" href="#"><i class="fas fa-search me-1 d-none d-lg-inline"></i> @Localizer["Search"]</a>
-    </li>
+    </li> -->
     <li class="nav-item ps-lg-3">
         <a class="nav-link text-uppercase text-dark nav-hover-effect" asp-controller="Home" asp-action="About">@Localizer["About"]</a>
     </li>
@@ -90,7 +103,7 @@
 
 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center w-100 justify-content-end">
     <li class="nav-item pe-lg-4">
-        <a class="nav-link text-uppercase text-dark nav-hover-effect" asp-controller="Home" asp-action="Blog">@Localizer["Blog"]</a>
+        <a class="nav-link text-uppercase text-dark nav-hover-effect" asp-controller="Home" asp-action="Projects">@Localizer["Projects"]</a>
     </li>
     <li class="nav-item pe-lg-4">
         <a class="nav-link text-uppercase text-dark nav-hover-effect" asp-controller="Home" asp-action="Contact">@Localizer["Contact"]</a>
@@ -111,7 +124,14 @@
                 <button type="submit" name="culture" value="en-US" class="btn btn-sm btn-outline-dark rounded-0 px-3 d-flex align-items-center gap-2">
                     <img src="https://flagcdn.com/w20/us.png" style="width: 20px;"> EN
                 </button>
+
              </form>
+                <form asp-controller="Home" asp-action="ChangeLanguage" method="post" class="d-inline">
+                    <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                    <button type="submit" name="culture" value="nl-NL" class="btn btn-sm btn-outline-dark rounded-0 px-3 d-flex align-items-center gap-2">
+                        <img src="https://flagcdn.com/w20/nl.png" style="width: 20px;"> NL
+                    </button>
+                </form>
         </div>
     </div>
 </li>
@@ -137,9 +157,9 @@
                 </a>
             </li>
             <li>
-                <a class="dropdown-item py-2" asp-controller="AdminBlog" asp-action="Index">
-                    <i class="fas fa-pen-nib me-2 text-success"></i> Blog Yazıları
-                </a>
+               <a class="dropdown-item py-2" asp-controller="AdminProject" asp-action="Index">
+    <i class="fas fa-pen-nib me-2 text-success"></i> Proje Yönetimi
+</a>
             </li>
             <li><hr class="dropdown-divider"></li>
             <li>
@@ -187,7 +207,7 @@
                         <ul class="list-unstyled">
                             <li class="mb-2"><a asp-controller="Home" asp-action="Index" class="footer-link">@Localizer["Home"]</a></li>
                             <li class="mb-2"><a asp-controller="Home" asp-action="About" class="footer-link">@Localizer["About"]</a></li>
-                            <li class="mb-2"><a asp-controller="Home" asp-action="Blog" class="footer-link">@Localizer["Blog"]</a></li>
+                            <li class="mb-2"><a asp-controller="Home" asp-action="Projects" class="footer-link">@Localizer["Projects"]</a></li>
                         </ul>
                     </div>
                     <div class="col-6">

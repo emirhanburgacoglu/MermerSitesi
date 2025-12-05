@@ -1,28 +1,28 @@
-
-using Microsoft.AspNetCore.Localization; // <-- EN ÜSTE BUNU EKLE
+using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using MermerSitesi.Data;
 using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
 // Veritabanı Servisi (SQLite)
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
-// Add services to the container.
+
+// MVC ve Dil Servisleri
 builder.Services.AddControllersWithViews()
     .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix);
+
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
-    
-// ... Diğer servisler ...
 
 // KİMLİK DOĞRULAMA SERVİSİ
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
-        options.LoginPath = "/Account/Login"; // Giriş yapmamış kişiyi buraya at
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(20); // 20 dakika sonra oturum düşsün
+        options.LoginPath = "/Account/Login";
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
     });
-
 
 var app = builder.Build();
 
@@ -30,29 +30,36 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
-}
+} // <--- DİKKAT: if bloğu burada kapanmalı!
+
+app.UseHttpsRedirection();
 app.UseStaticFiles();
-var supportedCultures = new[] { "tr-TR", "en-US" }; // Desteklediğimiz diller
+
+// --- DİL AYARLARI ---
+// Bu değişkeni if bloğunun DIŞINA aldık, artık herkes görebilir.
+// Not: Resource dosyaların (SharedResource.nl.resx) ile buradaki kodlar (nl veya nl-NL) uyumlu olmalı.
+// Genelde sadece "tr", "en", "nl" kullanmak daha garantidir ama dosya adın en-US ise böyle kalsın.
+var supportedCultures = new[] { "tr-TR", "en-US", "nl-NL" }; 
+
 var localizationOptions = new RequestLocalizationOptions()
-    .SetDefaultCulture("tr-TR") // Varsayılan dil Türkçe
+    .SetDefaultCulture("tr-TR")
     .AddSupportedCultures(supportedCultures)
     .AddSupportedUICultures(supportedCultures);
 
 app.UseRequestLocalization(localizationOptions);
-app.UseHttpsRedirection();
+// --------------------
+
 app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapStaticAssets();
+// .NET sürümüne göre burası değişebilir ama UseStaticFiles varken MapStaticAssets opsiyoneldir.
+// Hata verirse bu satırı silebilirsin: app.MapStaticAssets(); 
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

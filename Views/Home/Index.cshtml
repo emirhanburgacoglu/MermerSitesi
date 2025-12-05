@@ -4,6 +4,105 @@
     ViewData["Title"] = Localizer["Home"];
 }
 
+<style>
+    .slider-area {
+        overflow: hidden; /* Dışarı taşanları gizle */
+        padding: 40px 0;
+        background: #fff;
+        position: relative;
+    }
+
+    .slider-track {
+        display: flex;
+        width: max-content; /* İçerik kadar genişle */
+        animation: scroll 20s linear infinite; /* 20 saniyede bir tur at */
+    }
+
+    /* Mouse üzerine gelince akış dursun */
+    .slider-track:hover {
+        animation-play-state: paused;
+    }
+
+    .single-slide {
+        width: 280px; /* Her bir kutunun genişliği */
+        margin: 0 15px; /* Kutular arası boşluk */
+        flex-shrink: 0; /* Küçülmeyi engelle */
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .single-slide img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .single-slide:hover img {
+        transform: scale(1.03); /* Mouse gelince çok hafif büyüsün */
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .slide-title {
+        margin-top: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #333;
+        letter-spacing: 1px;
+    }
+
+    /* Animasyonun Kendisi */
+    @@keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); } /* İçeriğin yarısı kadar kaydır (çünkü 2 set var) */
+    }
+    /* --- MERMER ÇEŞİTLERİ İÇİN YENİ YAZI STİLİ --- */
+/* Bu sınıfı, ürün kartlarının altındaki h6 başlıklarına vereceğiz.
+   Eğer zaten bir sınıfı varsa (örn: .product-title), onu bulup bu stillerle güncellemelisin.
+*/
+h6.modern-stone-title {
+    /* Modern ve zarif bir font ailesi */
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+
+    /* Yazı rengi: Tam siyah yerine koyu antrasit daha yumuşak ve modern durur */
+    color: #2c3e50;
+
+    /* Yazı boyutu ve kalınlığı */
+    font-size: 1.1rem; /* Biraz daha büyük */
+    font-weight: 600; /* Orta kalınlıkta */
+
+    /* Metin hizalama ve dönüşüm */
+    text-align: center; /* Ortala */
+    text-transform: uppercase; /* Tümü büyük harf */
+
+    /* Harfler arası boşluk: Zarafet katar */
+    letter-spacing: 1.5px;
+
+    /* Kenar boşlukları */
+    margin-top: 20px; /* Resimden biraz uzaklaşsın */
+    margin-bottom: 10px;
+
+    /* Altına dekoratif ince bir çizgi ekleyelim */
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Alt çizginin kendisi (pseudo-element) */
+h6.modern-stone-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Ortadan başla */
+    transform: translateX(-50%); /* Tam merkeze hizala */
+    width: 40px; /* Çizginin uzunluğu */
+    height: 2px; /* Çizginin kalınlığı */
+    background-color: #d4af37; /* Altın rengi (Mermerle uyumlu) */
+    /* İstersen gri de yapabilirsin: background-color: #ccc; */
+}
+</style>
+
 <div class="container mt-4">
     <div id="heroCarousel" class="carousel slide carousel-fade position-relative" data-bs-ride="carousel">
         <div class="carousel-inner rounded shadow-sm">
@@ -20,14 +119,6 @@
                 <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=2000&auto=format&fit=crop" class="d-block w-100 hero-img" alt="Mermer 4">
             </div>
         </div>
-
-        <div class="slider-counter position-absolute start-50 translate-middle-x text-white d-flex align-items-center">
-            <span id="currentSlide" class="fw-bold fs-5">01.</span>
-            <div class="progress mx-3" style="height: 2px; width: 100px; background: rgba(255,255,255,0.5);">
-                <div class="progress-bar bg-white" role="progressbar" style="width: 25%" id="progressBar"></div>
-            </div>
-            <span class="fw-bold fs-5">04.</span>
-        </div>
     </div>
 </div>
 
@@ -41,46 +132,46 @@
             @Localizer["HomeDescription"]
         </p>
 
-        <div class="d-flex justify-content-end align-items-center mt-4 mb-4">
-            <button class="btn btn-outline-light text-dark border rounded-circle me-2 slider-nav-btn">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <span class="mx-3 fw-bold text-dark" style="font-size: 0.9rem;">@Localizer["Show"] 1/8</span>
-            <button class="btn btn-outline-light text-dark border rounded-circle ms-2 slider-nav-btn">
-                <i class="fas fa-chevron-right"></i>
-            </button>
+        <div class="slider-area mt-5">
+            <div class="slider-track">
+                
+                <div class="single-slide">
+                    <img src="/images/1.png" alt="Traverten">
+                    <h6 class="slide-title">@Localizer["CategoryTravertine"]</h6>
+                </div>
+                <div class="single-slide">
+                    <img src="/images/2.png" alt="Marble">
+                    <h6 class="slide-title">@Localizer["CategoryMarble"]</h6>
+                </div>
+                <div class="single-slide">
+                    <img src="/images/3.png" alt="Onyx">
+                    <h6 class="slide-title">@Localizer["CategoryOnyx"]</h6>
+                </div>
+                <div class="single-slide">
+                    <img src="/images/4.png" alt="Limestone">
+                    <h6 class="slide-title">@Localizer["CategoryLimestone"]</h6>
+                </div>
+
+                <div class="single-slide">
+                    <img src="/images/1.png" alt="Traverten">
+                    <h6 class="slide-title">@Localizer["CategoryTravertine"]</h6>
+                </div>
+                <div class="single-slide">
+                    <img src="/images/2.png" alt="Marble">
+                    <h6 class="slide-title">@Localizer["CategoryMarble"]</h6>
+                </div>
+                <div class="single-slide">
+                    <img src="/images/3.png" alt="Onyx">
+                    <h6 class="slide-title">@Localizer["CategoryOnyx"]</h6>
+                </div>
+                <div class="single-slide">
+                    <img src="/images/4.png" alt="Limestone">
+                    <h6 class="slide-title">@Localizer["CategoryLimestone"]</h6>
+                </div>
+
+            </div>
         </div>
-
-        <div class="row g-4">
-            <div class="col-6 col-md-3 text-center">
-                <div class="product-img-box">
-                    <img src="/images/1.png" alt="Nero Marquina">
-                </div>
-                <h6 class="product-title mt-3">@Localizer["Product1"]</h6>
-            </div>
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="product-img-box">
-                    <img src="/images/2.png" alt="Tropical Storm">
-                </div>
-                <h6 class="product-title mt-3">@Localizer["Product2"]</h6>
-            </div>
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="product-img-box">
-                    <img src="/images/3.png" alt="Bianco Gioia">
-                </div>
-                <h6 class="product-title mt-3">@Localizer["Product3"]</h6>
-            </div>
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="product-img-box">
-                    <img src="/images/4.png" alt="Bianco Lasa">
-                </div>
-                <h6 class="product-title mt-3">@Localizer["Product4"]</h6>
-            </div>
         </div>
-    </div>
 </section>
 
 <a href="https://wa.me/905555555555" class="whatsapp-float" target="_blank">

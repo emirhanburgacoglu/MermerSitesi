@@ -2,27 +2,29 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MermerSitesi.Models
 {
-    public class Blog
+    public class ProjectItem // Artık Blog değil, ProjectItem!
     {
         [Key]
         public int Id { get; set; }
 
-        // Türkçe Alanlar
-        [Display(Name = "Başlık (TR)")]
+        // Türkçe Başlık/İçerik
+        [Display(Name = "Proje Adı (TR)")]
         public string TitleTr { get; set; }
 
-        [Display(Name = "İçerik (TR)")]
+        [Display(Name = "Açıklama (TR)")]
         public string ContentTr { get; set; }
 
-        // İngilizce Alanlar
-        [Display(Name = "Title (EN)")]
+        // İngilizce Başlık/İçerik
+        [Display(Name = "Project Name (EN)")]
         public string TitleEn { get; set; }
 
         [Display(Name = "Content (EN)")]
         public string ContentEn { get; set; }
 
-        // Ortak
+        [Display(Name = "Resim URL")]
         public string ImageUrl { get; set; }
+
+        [Display(Name = "Tarih")]
         public DateTime CreatedDate { get; set; } = DateTime.Now;
     }
 }

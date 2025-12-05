@@ -1,0 +1,33 @@
+@model MermerSitesi.Models.ProjectItem
+
+@{ ViewData["Title"] = "Projeyi Sil"; }
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow border-0 border-top border-5 border-danger">
+                <div class="card-body text-center p-5">
+                    <i class="fas fa-exclamation-triangle text-danger fa-4x mb-4"></i>
+                    <h3 class="fw-bold">Silmek İstediğinize Emin misiniz?</h3>
+                    <p class="text-muted">Bu işlem geri alınamaz. Proje kalıcı olarak silinecektir.</p>
+                    
+                    <div class="border rounded p-3 my-4 bg-light text-start">
+                        @if(!string.IsNullOrEmpty(Model.ImageUrl)) {
+                            <div class="text-center mb-3">
+                                <img src="@Model.ImageUrl" class="img-fluid rounded" style="max-height: 150px;">
+                            </div>
+                        }
+                        <h5 class="fw-bold mb-1">@Model.TitleTr</h5>
+                        <p class="text-muted mb-0 small">@Model.TitleEn</p>
+                    </div>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <a asp-action="Index" class="btn btn-outline-secondary px-4 me-2">İptal</a>
+                        <button type="submit" class="btn btn-danger px-4">Evet, Sil</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
