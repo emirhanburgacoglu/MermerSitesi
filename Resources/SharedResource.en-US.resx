@@ -12,28 +12,35 @@
   <data name="OurStory" xml:space="preserve"><value>OUR STORY</value></data>
   <data name="ProcessingArtOfNature" xml:space="preserve"><value>Processing the Art of Nature</value></data>
   <data name="TouchingHeartOfStone" xml:space="preserve"><value>Touching the heart of stone.</value></data>
-  <data name="WhoIsHollandStone" xml:space="preserve"><value>Who is Holland Stone?</value></data>
+  
   <data name="YearsExperience" xml:space="preserve"><value>Years Experience</value></data>
   <data name="CompletedProjects" xml:space="preserve"><value>Completed Projects</value></data>
   <data name="ExportCountries" xml:space="preserve"><value>Countries Exported</value></data>
-  <data name="AboutText1" xml:space="preserve">
-    <value>[Şirket Adı] is a foreign trade company built on a deep-rooted family tradition in marble export, centering on quality and trust. Thanks to the leadership and know-how of our mother, who has over 20 years of experience in the sector, we today deliver high-standard Turkish marble to various points across the globe.</value>
-  </data>
-  <data name="AboutText2" xml:space="preserve">
-    <value>The trust, sustainability, and meticulousness that come with being a family business combine with our professional work ethic to ensure we always offer the right product at the right time. We manage all processes transparently, from production to packaging and shipment, based on international quality standards. Our vision is to introduce Turkey's natural stone potential globally and establish long-term partnerships. As [Şirket Adı], we don't just sell marble; we build value, trust, and lasting business relationships.</value>
-  </data>
-  
 
-  <data name="HollandStoneMarble" xml:space="preserve"><value>Holland Stone Marble</value></data>
+  <data name="WhoIsHollandStone" xml:space="preserve">
+    <value>Who is R<span style="color: #c9a961 !important; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export?</value>
+  </data>
+
+  <data name="AboutText1" xml:space="preserve">
+    <value>R&amp;Y Stone Export is a foreign trade company built on a deep-rooted family tradition in marble export, centering on quality and trust. Thanks to the leadership and know-how of our mother, who has over 20 years of experience in the sector, we today deliver high-standard Turkish marble to various points across the globe. The trust, sustainability, and meticulousness that come with being a family business combine with our professional work ethic to ensure we always offer the right product at the right time. We manage all processes transparently, from production to packaging and shipment, based on international quality standards.</value>
+  </data>
+
+  <data name="AboutText2" xml:space="preserve">
+    <value>Our vision is to introduce Turkey's natural stone potential globally and establish long-term partnerships. Our mission is to stand by our customers at every step with high quality, reliable delivery, and strong communication principles. As R&amp;Y Stone Export, we don't just sell marble; we build value, trust, and lasting business relationships. We provide sustainable value to our business partners with the innovative projects we develop.</value>
+  </data>
+ 
   <data name="Show" xml:space="preserve"><value>Show</value></data>
-  
   <data name="Product1" xml:space="preserve"><value>Nero Marquina (China) Marble</value></data>
   <data name="Product2" xml:space="preserve"><value>Tropical Storm Marble</value></data>
   <data name="Product3" xml:space="preserve"><value>Bianco Gioia Marble</value></data>
   <data name="Product4" xml:space="preserve"><value>Bianco Lasa Marble</value></data>
+  
+  <data name="HollandStoneMarble" xml:space="preserve">
+    <value>R<span style="color: #c9a961; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export</value>
+  </data>
 
   <data name="HomeDescription" xml:space="preserve">
-    <value>Holland Stone Marble Solution Partner; started its operations in Istanbul with the aim of being a solution partner in marble projects of companies providing architecture and consultancy services by combining marble with the architectural audience in high-level projects. It has been serving private and official institutions since its establishment. In its 2000 m2 warehouse in Ferhatpaşa and 5000 m2 warehouse in Sancaktepe Yenidoğan location, it provides sales of white marble, black marble, gray marble, brown marble, green marble, blue marble, semi-precious stones as well as porcelain slabs.</value>
+    <value>R<span style="color: #c9a961; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export started its operations in Istanbul with the aim of being a solution partner in marble projects for companies providing architecture and consultancy services by combining marble with the architectural audience in high-level projects. It has been serving private and official institutions since its establishment. In its 2000 m2 warehouse in Ferhatpaşa and 5000 m2 warehouse in Sancaktepe Yenidoğan location, it provides sales of white marble, black marble, gray marble, brown marble, green marble, blue marble, semi-precious stones as well as porcelain slabs.</value>
   </data>
 
   <data name="LetsBringProjectsToLife" xml:space="preserve"><value>Let's Bring Your Projects to Life</value></data>
@@ -83,9 +90,8 @@
   <data name="PrivacyPolicy" xml:space="preserve"><value>Privacy Policy</value></data>
   <data name="TermsOfUse" xml:space="preserve"><value>Terms of Use</value></data>
   <data name="SearchPlaceholder" xml:space="preserve"><value>Search...</value></data>
-<data name="CategoryTravertine"><value>TRAVERTINE</value></data>
-<data name="CategoryMarble"><value>MARBLE</value></data>
-<data name="CategoryOnyx"><value>ONYX</value></data>
-<data name="CategoryLimestone"><value>LIMESTONE</value></data>
-
+  <data name="Travertine" xml:space="preserve"><value>TRAVERTINE</value></data>
+  <data name="Marble" xml:space="preserve"><value>MARBLE</value></data>
+  <data name="Onyx" xml:space="preserve"><value>ONYX</value></data>
+  <data name="Limestone" xml:space="preserve"><value>LIMESTONE</value></data>
 </root>

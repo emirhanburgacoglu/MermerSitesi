@@ -3,11 +3,16 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - HollandStone</title>
-    
+    <title>@ViewData["Title"] - R&Y Stone Export</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -16,255 +21,355 @@
 
 <body>
     <header>
-        <div class="top-bar bg-light py-1 border-bottom d-none d-lg-block">
+        <div class="top-bar bg-light py-2 border-bottom d-none d-lg-block">
             <div class="container-fluid px-lg-5 d-flex justify-content-between align-items-center">
                 <div class="social-icons">
-                    <a href="#" class="text-dark me-2"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon-top"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon-top"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon-top"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon-top"><i class="fab fa-pinterest-p"></i></a>
                 </div>
-                <div class="slogan text-uppercase text-muted" style="font-size: 0.75rem; letter-spacing: 2px;">
+                <div class="slogan-top">
                     @Localizer["Slogan"]
                 </div>
                 <div class="language-selector">
-                    <form asp-controller="Home" asp-action="ChangeLanguage" method="post" class="d-flex align-items-center">
-    <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
-    <span class="text-dark me-2" style="font-size: 0.75rem; font-weight: bold;">@Localizer["Language"]:</span>
-
-    <button type="submit" name="culture" value="tr-TR" class="btn btn-link p-0 text-decoration-none me-2">
-        <img src="https://flagcdn.com/w20/tr.png" alt="TR">
-    </button>
-
-
-    <span class="text-muted">|</span>
-
-    <button type="submit" name="culture" value="en-US" class="btn btn-link p-0 text-decoration-none mx-2">
-        <img src="https://flagcdn.com/w20/us.png" alt="EN">
-    </button>
-    
-    <span class="text-muted">|</span>
-    <button type="submit" name="culture" value="nl-NL" class="btn btn-link p-0 text-decoration-none ms-2">
-        <img src="https://flagcdn.com/w20/nl.png" alt="NL">
-    </button>
-</form>
+                    <form asp-controller="Home" asp-action="ChangeLanguage" method="post"
+                        class="d-flex align-items-center">
+                        <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                        <span class="lang-label">@Localizer["Language"]:</span>
+                        <button type="submit" name="culture" value="tr-TR" class="lang-btn">
+                            <img src="https://flagcdn.com/w20/tr.png" alt="TR">
+                        </button>
+                        <span class="lang-divider">|</span>
+                        <button type="submit" name="culture" value="en-US" class="lang-btn">
+                            <img src="https://flagcdn.com/w20/us.png" alt="EN">
+                        </button>
+                        <span class="lang-divider">|</span>
+                        <button type="submit" name="culture" value="nl-NL" class="lang-btn">
+                            <img src="https://flagcdn.com/w20/nl.png" alt="NL">
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm position-relative">
-            <div class="container-fluid px-3 px-lg-5"> <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
-                    <span class="navbar-toggler-icon" style="width: 1.5em; height: 1.5em;"></span>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm position-relative main-navbar">
+            <div class="container-fluid px-3 px-lg-5 position-relative">
+
+                <button class="navbar-toggler modern-menu-btn" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="menu-line top-line"></span>
+                    <span class="menu-line middle-line"></span>
+                    <span class="menu-line bottom-line"></span>
                 </button>
 
-                <a class="navbar-brand d-lg-none position-absolute start-50 translate-middle-x text-center text-dark mx-0" asp-controller="Home" asp-action="Index">
-                    <div style="font-family: 'Times New Roman', serif; font-size: 1.4rem; letter-spacing: 1px; font-weight: bold; color: #000;">
-                        HOLLAND STONE
+                <a class="navbar-brand d-lg-none position-absolute start-50 translate-middle-x text-center text-dark mx-0"
+                    asp-controller="Home" asp-action="Index"
+                    style="top: 50%; transform: translate(-50%, -50%) !important;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0;">
+                        <span
+                            style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: #1a1a1a; letter-spacing: -1px;">R</span>
+                        <span
+                            style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-style: italic; color: #c9a961; margin: 0 4px;">&</span>
+                        <span
+                            style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: #1a1a1a; letter-spacing: -1px;">Y</span>
+                    </div>
+                    <div
+                        style="font-family: 'Montserrat', sans-serif; font-size: 0.5rem; font-weight: 600; letter-spacing: 3px; color: #2c2c2c; text-transform: uppercase; margin-top: 2px;">
+                        STONE EXPORT
                     </div>
                 </a>
 
                 <div class="d-lg-none" style="width: 24px;"></div>
 
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
-                    <div class="offcanvas-header justify-content-between">
-                        <h5 class="offcanvas-title font-serif fw-bold">HOLLAND STONE</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <div class="offcanvas-header justify-content-between border-bottom">
+                        <div class="brand-mobile">
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 0;">
+                                <span
+                                    style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: #1a1a1a; letter-spacing: -1px;">R</span>
+                                <span
+                                    style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-style: italic; color: #c9a961; margin: 0 4px;">&</span>
+                                <span
+                                    style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: #1a1a1a; letter-spacing: -1px;">Y</span>
+                            </div>
+                            <div
+                                style="font-family: 'Montserrat', sans-serif; font-size: 0.5rem; font-weight: 600; letter-spacing: 3px; color: #2c2c2c; text-transform: uppercase; margin-top: 2px;">
+                                STONE EXPORT
+                            </div>
+                        </div>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
                     </div>
-                    
+
                     <div class="offcanvas-body">
-                       <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center w-100 justify-content-start">
-    
-    <!-- <li class="nav-item">
-        <a class="nav-link text-uppercase fw-bold text-dark nav-hover-effect" href="#"><i class="fas fa-search me-1 d-none d-lg-inline"></i> @Localizer["Search"]</a>
-    </li> -->
-    <li class="nav-item ps-lg-3">
-        <a class="nav-link text-uppercase text-dark nav-hover-effect" asp-controller="Home" asp-action="About">@Localizer["About"]</a>
-    </li>
-    <li class="nav-item ps-lg-3 dropdown">
-        <a class="nav-link dropdown-toggle text-uppercase text-dark nav-hover-effect" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-            @Localizer["Collection"] <i class="fas fa-caret-down ms-1"></i>
-        </a>
-        <ul class="dropdown-menu rounded-0 border-0 shadow-sm mt-2">
-            <li><a class="dropdown-item" asp-controller="Home" asp-action="Collection" asp-route-id="white">@Localizer["WhiteMarble"]</a></li>
-            <li><a class="dropdown-item" asp-controller="Home" asp-action="Collection" asp-route-id="black">@Localizer["BlackMarble"]</a></li>
-            <li><a class="dropdown-item" asp-controller="Home" asp-action="Collection" asp-route-id="brown">@Localizer["BrownMarble"]</a></li>
-            <li><a class="dropdown-item" asp-controller="Home" asp-action="Collection" asp-route-id="gray">@Localizer["GrayMarble"]</a></li>
-        </ul>
-    </li>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center w-100 justify-content-start">
+                            <li class="nav-item ps-lg-3">
+                                <a class="nav-link-modern" asp-controller="Home" asp-action="About">
+                                    @Localizer["About"]
+                                </a>
+                            </li>
+                            <li class="nav-item ps-lg-3 dropdown d-none d-lg-block">
+                                <a class="nav-link-modern dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    @Localizer["Collection"]
+                                </a>
+                                <ul class="dropdown-menu dropdown-modern">
+                                    <li><a class="dropdown-item-modern" asp-controller="Home" asp-action="Collection"
+                                            asp-route-id="travertine">@Localizer["Travertine"]</a></li>
+                                    <li><a class="dropdown-item-modern" asp-controller="Home" asp-action="Collection"
+                                            asp-route-id="marble">@Localizer["Marble"]</a></li>
+                                    <li><a class="dropdown-item-modern" asp-controller="Home" asp-action="Collection"
+                                            asp-route-id="limestone">@Localizer["Limestone"]</a></li>
+                                    <li><a class="dropdown-item-modern" asp-controller="Home" asp-action="Collection"
+                                            asp-route-id="onyx">@Localizer["Onyx"]</a></li>
+                                </ul>
+                            </li>
 
-  
+                            <li class="nav-item ps-lg-3 mb-2 d-lg-none">
+                                <a class="nav-link-modern d-flex justify-content-between align-items-center collapsed"
+                                    data-bs-toggle="collapse" href="#mobileCollectionMenu" role="button"
+                                    aria-expanded="false" aria-controls="mobileCollectionMenu" style="cursor: pointer;">
 
-</ul>
+                                    <span>@Localizer["Collection"]</span>
+                                    <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
+                                </a>
 
+                                <div class="collapse mt-2" id="mobileCollectionMenu">
+                                    <ul class="list-unstyled ps-3 border-start border-2 border-secondary ms-2"
+                                        style="border-color: #eee !important;">
+                                        <li class="mb-2">
+                                            <a class="dropdown-item-modern bg-transparent p-0 py-1"
+                                                asp-controller="Home" asp-action="Collection" asp-route-id="travertine">
+                                                - @Localizer["Travertine"]
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a class="dropdown-item-modern bg-transparent p-0 py-1"
+                                                asp-controller="Home" asp-action="Collection" asp-route-id="marble">
+                                                - @Localizer["Marble"]
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a class="dropdown-item-modern bg-transparent p-0 py-1"
+                                                asp-controller="Home" asp-action="Collection" asp-route-id="limestone">
+                                                - @Localizer["Limestone"]
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item-modern bg-transparent p-0 py-1"
+                                                asp-controller="Home" asp-action="Collection" asp-route-id="onyx">
+                                                - @Localizer["Onyx"]
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
 
-<a class="navbar-brand d-none d-lg-block mx-auto text-center text-dark text-decoration-none" asp-controller="Home" asp-action="Index" style="min-width: 250px;">
-    <div style="font-family: 'Times New Roman', serif; font-size: 2rem; letter-spacing: 4px; line-height: 1; color: #000;">HOLLAND</div>
-    <div style="font-family: 'Times New Roman', serif; font-size: 2rem; letter-spacing: 4px; line-height: 1; color: #000;">STONE</div>
-    <div class="text-muted mt-1" style="font-size: 0.55rem; letter-spacing: 3px; font-family: sans-serif;">BEAUTY OF NATURE</div>
-</a>
+                        <a class="navbar-brand d-none d-lg-flex text-center text-dark text-decoration-none brand-center"
+                            asp-controller="Home" asp-action="Index"
+                            style="position: absolute; left: 50%; transform: translateX(-50%); margin: 0; z-index: 10;">
+                            <div class="luxury-logo">
+                                <div class="logo-main">
+                                    <span class="logo-r">R</span>
+                                    <span class="logo-ampersand">&</span>
+                                    <span class="logo-y">Y</span>
+                                </div>
+                                <div class="logo-subtitle">STONE EXPORT</div>
+                                <div class="logo-tagline">Timeless Elegance</div>
+                            </div>
+                        </a>
 
-<ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center w-100 justify-content-end">
-    <li class="nav-item pe-lg-4">
-        <a class="nav-link text-uppercase text-dark nav-hover-effect" asp-controller="Home" asp-action="Projects">@Localizer["Projects"]</a>
-    </li>
-    <li class="nav-item pe-lg-4">
-        <a class="nav-link text-uppercase text-dark nav-hover-effect" asp-controller="Home" asp-action="Contact">@Localizer["Contact"]</a>
-    </li>
-    
-    <li class="nav-item d-lg-none mt-4 pt-3 border-top w-100">
-    <div class="d-flex align-items-center justify-content-between px-2">
-        <span class="text-muted fw-bold small">@Localizer["Language"]:</span>
-        <div class="d-flex gap-2">
-             <form asp-controller="Home" asp-action="ChangeLanguage" method="post" class="d-inline">
-                <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
-                <button type="submit" name="culture" value="tr-TR" class="btn btn-sm btn-outline-dark rounded-0 px-3 d-flex align-items-center gap-2">
-                    <img src="https://flagcdn.com/w20/tr.png" style="width: 20px;"> TR
-                </button>
-             </form>
-             <form asp-controller="Home" asp-action="ChangeLanguage" method="post" class="d-inline">
-                <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
-                <button type="submit" name="culture" value="en-US" class="btn btn-sm btn-outline-dark rounded-0 px-3 d-flex align-items-center gap-2">
-                    <img src="https://flagcdn.com/w20/us.png" style="width: 20px;"> EN
-                </button>
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center w-100 justify-content-end">
+                            <li class="nav-item pe-lg-4">
+                                <a class="nav-link-modern" asp-controller="Home" asp-action="Projects">
+                                    @Localizer["Projects"]
+                                </a>
+                            </li>
+                            <li class="nav-item pe-lg-4">
+                                <a class="nav-link-modern" asp-controller="Home" asp-action="Contact">
+                                    @Localizer["Contact"]
+                                </a>
+                            </li>
 
-             </form>
-                <form asp-controller="Home" asp-action="ChangeLanguage" method="post" class="d-inline">
-                    <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
-                    <button type="submit" name="culture" value="nl-NL" class="btn btn-sm btn-outline-dark rounded-0 px-3 d-flex align-items-center gap-2">
-                        <img src="https://flagcdn.com/w20/nl.png" style="width: 20px;"> NL
-                    </button>
-                </form>
-        </div>
-    </div>
-</li>
-    <li class="nav-item d-none d-lg-block">
-        <a class="nav-link text-uppercase fw-bold text-dark nav-hover-effect" href="https://api.whatsapp.com/send?phone=905319191901" target="_blank">
-            <i class="fab fa-whatsapp me-1"></i> WHATSAPP
-        </a>
-    </li>
-    @if (User.Identity.IsAuthenticated)
-{
-    <li class="nav-item dropdown ms-lg-3">
-        <a class="nav-link dropdown-toggle text-dark fw-bold d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
-            <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px;">
-                <i class="fas fa-user-cog"></i>
-            </div>
-            <span>YÖNETİM</span>
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg mt-2 rounded-0">
-            <li><h6 class="dropdown-header text-muted text-uppercase small">İçerik Yönetimi</h6></li>
-            <li>
-                <a class="dropdown-item py-2" asp-controller="AdminProduct" asp-action="Index">
-                    <i class="fas fa-box me-2 text-primary"></i> Ürünler
-                </a>
-            </li>
-            <li>
-               <a class="dropdown-item py-2" asp-controller="AdminProject" asp-action="Index">
-    <i class="fas fa-pen-nib me-2 text-success"></i> Proje Yönetimi
-</a>
-            </li>
-            <li><hr class="dropdown-divider"></li>
-            <li>
-                <a class="dropdown-item py-2 text-danger fw-bold" asp-controller="Account" asp-action="Logout">
-                    <i class="fas fa-sign-out-alt me-2"></i> ÇIKIŞ YAP
-                </a>
-            </li>
-        </ul>
-    </li>
-}
-</ul>
+                            <li class="nav-item d-lg-none mt-4 pt-3 border-top w-100">
+                                <div class="d-flex align-items-center justify-content-between px-2">
+                                    <span class="text-muted fw-bold small">@Localizer["Language"]:</span>
+                                    <div class="d-flex gap-2">
+                                        <form asp-controller="Home" asp-action="ChangeLanguage" method="post"
+                                            class="d-inline">
+                                            <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                                            <button type="submit" name="culture" value="tr-TR"
+                                                class="btn btn-sm btn-outline-dark rounded-0 px-3 d-flex align-items-center gap-2">
+                                                <img src="https://flagcdn.com/w20/tr.png" style="width: 20px;"> TR
+                                            </button>
+                                        </form>
+                                        <form asp-controller="Home" asp-action="ChangeLanguage" method="post"
+                                            class="d-inline">
+                                            <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                                            <button type="submit" name="culture" value="en-US"
+                                                class="btn btn-sm btn-outline-dark rounded-0 px-3 d-flex align-items-center gap-2">
+                                                <img src="https://flagcdn.com/w20/us.png" style="width: 20px;"> EN
+                                            </button>
+                                        </form>
+                                        <form asp-controller="Home" asp-action="ChangeLanguage" method="post"
+                                            class="d-inline">
+                                            <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                                            <button type="submit" name="culture" value="nl-NL"
+                                                class="btn btn-sm btn-outline-dark rounded-0 px-3 d-flex align-items-center gap-2">
+                                                <img src="https://flagcdn.com/w20/nl.png" style="width: 20px;"> NL
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item d-none d-lg-block">
+                                <a class="whatsapp-nav-btn" href="https://api.whatsapp.com/send?phone=905459739353"
+                                    target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WHATSAPP</span>
+                                </a>
+                            </li>
+
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <li class="nav-item dropdown ms-lg-3">
+                                    <a class="nav-link dropdown-toggle text-dark fw-bold d-flex align-items-center" href="#"
+                                        role="button" data-bs-toggle="dropdown">
+                                        <div class="admin-avatar">
+                                            <i class="fas fa-user-cog"></i>
+                                        </div>
+                                        <span>YÖNETİM</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-modern">
+                                        <li>
+                                            <h6 class="dropdown-header text-muted text-uppercase small">İçerik Yönetimi
+                                            </h6>
+                                        </li>
+                                        <li><a class="dropdown-item-modern" asp-controller="AdminProduct"
+                                                asp-action="Index"><i class="fas fa-box me-2 text-primary"></i>
+                                                Ürünler</a>
+                                        </li>
+                                        <li><a class="dropdown-item-modern" asp-controller="AdminProject"
+                                                asp-action="Index"><i class="fas fa-pen-nib me-2 text-success"></i>
+                                                Proje
+                                                Yönetimi</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item-modern text-danger fw-bold" asp-controller="Account"
+                                                asp-action="Logout"><i class="fas fa-sign-out-alt me-2"></i> ÇIKIŞ
+                                                YAP</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            }
+                        </ul>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-    
+
     <div class="container-fluid p-0">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-<footer class="bg-black text-white pt-5 pb-3 mt-5 border-top border-secondary">
-    <div class="container">
-        <div class="row g-4">
-            
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h3 class="h4 mb-4" style="font-family: 'Times New Roman', serif; letter-spacing: 2px;">HOLLAND STONE</h3>
-                <p class="text-secondary small" style="line-height: 1.8; max-width: 350px;">
-                    @Localizer["FooterDesc"]
-                </p>
-                <div class="mt-4 d-flex gap-3">
-                    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-btn"><i class="fab fa-pinterest-p"></i></a>
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <span class="logo-r">R</span><span class="logo-ampersand">&</span><span
+                                class="logo-y">Y</span>
+                        </div>
+                        <div class="footer-subtitle">STONE EXPORT</div>
+                    </div>
+                    <p class="footer-description">
+                        @Localizer["FooterDesc"]
+                    </p>
+                    <div class="social-icons-footer">
+                        <a href="#" class="social-icon-footer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon-footer"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon-footer"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon-footer"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="footer-title">@Localizer["Discover"]</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="footer-links">
+                                <li><a asp-controller="Home" asp-action="Index">@Localizer["Home"]</a></li>
+                                <li><a asp-controller="Home" asp-action="About">@Localizer["About"]</a></li>
+                                <li><a asp-controller="Home" asp-action="Projects">@Localizer["Projects"]</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="footer-links">
+                                <li><a asp-controller="Home" asp-action="Collection"
+                                        asp-route-id="white">@Localizer["Collection"]</a></li>
+                                <li><a asp-controller="Home" asp-action="Contact">@Localizer["Contact"]</a></li>
+                                <li><a href="#">@Localizer["FAQ"]</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="footer-title">@Localizer["ContactUs"]</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ferhatpaşa Mah. Yeditepe Cad. No: 123<br>Ataşehir / İSTANBUL</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+90 545 973 93 53</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@rystonexport.com</span>
+                        </li>
+                    </ul>
+
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="@Localizer["EmailPlaceholder"]">
+                        <button type="button"><i class="fas fa-arrow-right"></i></button>
+                    </form>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4 fw-bold small text-white-50 letter-spacing-1">@Localizer["Discover"]</h5>
-                <div class="row">
-                    <div class="col-6">
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a asp-controller="Home" asp-action="Index" class="footer-link">@Localizer["Home"]</a></li>
-                            <li class="mb-2"><a asp-controller="Home" asp-action="About" class="footer-link">@Localizer["About"]</a></li>
-                            <li class="mb-2"><a asp-controller="Home" asp-action="Projects" class="footer-link">@Localizer["Projects"]</a></li>
-                        </ul>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">
+                            &copy; 2025 R&Y Stone Export. @Localizer["AllRightsReserved"]
+                            <a asp-controller="Account" asp-action="Login" class="admin-link" title="Yönetim Paneli">
+                                <i class="fas fa-lock fa-xs"></i>
+                            </a>
+                        </p>
                     </div>
-                    <div class="col-6">
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a asp-controller="Home" asp-action="Collection" asp-route-id="white" class="footer-link">@Localizer["Collection"]</a></li>
-                            <li class="mb-2"><a asp-controller="Home" asp-action="Contact" class="footer-link">@Localizer["Contact"]</a></li>
-                            <li class="mb-2"><a href="#" class="footer-link">@Localizer["FAQ"]</a></li>
-                        </ul>
+                    <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+                        <a href="#" class="footer-legal-link">@Localizer["PrivacyPolicy"]</a>
+                        <span class="mx-2">|</span>
+                        <a href="#" class="footer-legal-link">@Localizer["TermsOfUse"]</a>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-4 col-md-12">
-                <h5 class="text-uppercase mb-4 fw-bold small text-white-50 letter-spacing-1">@Localizer["ContactUs"]</h5>
-                <ul class="list-unstyled text-secondary small mb-4">
-                    <li class="mb-3 d-flex align-items-center">
-                        <i class="fas fa-map-marker-alt me-3 text-white"></i>
-                        <span>Ferhatpaşa Mah. Yeditepe Cad. No: 123<br>Ataşehir / İSTANBUL</span>
-                    </li>
-                    <li class="mb-3 d-flex align-items-center">
-                        <i class="fas fa-phone-alt me-3 text-white"></i>
-                        <span>+90 216 555 55 55</span>
-                    </li>
-                    <li class="mb-3 d-flex align-items-center">
-                        <i class="fas fa-envelope me-3 text-white"></i>
-                        <span>info@hollandstone.com</span>
-                    </li>
-                </ul>
-
-                <form class="input-group">
-                    <input type="email" class="form-control bg-dark border-secondary text-white rounded-0" placeholder="@Localizer["EmailPlaceholder"]" style="font-size: 0.9rem;">
-                    <button class="btn btn-light rounded-0 px-3" type="button"><i class="fas fa-arrow-right"></i></button>
-                </form>
-            </div>
         </div>
+    </footer>
 
-        <hr class="border-secondary my-5 opacity-25">
-
-        <div class="row align-items-center small text-secondary">
-            <div class="col-md-6 text-center text-md-start">
-               <p class="mb-0">
-    &copy; 2025 Holland Stone. @Localizer["AllRightsReserved"]
-    <a asp-controller="Account" asp-action="Login" class="text-secondary ms-2 text-decoration-none" title="Yönetim Paneli">
-        <i class="fas fa-lock fa-xs"></i>
-    </a>
-</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-                <a href="#" class="text-secondary text-decoration-none me-3 hover-white">@Localizer["PrivacyPolicy"]</a>
-                <a href="#" class="text-secondary text-decoration-none hover-white">@Localizer["TermsOfUse"]</a>
-            </div>
-        </div>
-    </div>
-</footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

@@ -22,7 +22,23 @@ namespace MermerSitesi.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            // 1. Veritabanındaki tüm ürünleri çekelim
+            var allProducts = _context.Products.ToList();
+
+            // 2. ViewModel (Sepetimizi) oluşturalım ve içini dolduralım
+            // Not: .Take(4) diyerek her kategoriden sadece ilk 4 ürünü ana sayfaya çekiyoruz.
+            // Hepsini göstermek istersen .Take(4) kısımlarını silebilirsin.
+
+            var model = new MermerSitesi.ViewModels.HomeCollectionViewModel
+            {
+                Travertines = allProducts.Where(p => p.Category == "travertine").Take(4).ToList(),
+                Marbles = allProducts.Where(p => p.Category == "marble").Take(4).ToList(),
+                Limestones = allProducts.Where(p => p.Category == "limestone").Take(4).ToList(),
+                Onyxes = allProducts.Where(p => p.Category == "onyx").Take(4).ToList()
+            };
+
+            // 3. Modeli sayfaya gönderelim
+            return View(model);
         }
 
         public IActionResult About()
@@ -34,7 +50,7 @@ namespace MermerSitesi.Controllers
             var projeler = _context.ProjectItems.ToList();
             return View(projeler); // Listeyi View'ın içine koymalısın!
         }
-      
+
 
         public IActionResult Contact()
         {
@@ -65,26 +81,26 @@ namespace MermerSitesi.Controllers
             return View();
         }
 
-       [HttpPost]
-public IActionResult ChangeLanguage(string culture, string returnUrl)
-{
-    // Gelen dil kodu (culture) boşsa veya null ise varsayılan olarak tr-TR yap
-    if (string.IsNullOrEmpty(culture))
-    {
-        culture = "tr-TR";
-    }
+        [HttpPost]
+        public IActionResult ChangeLanguage(string culture, string returnUrl)
+        {
+            // Gelen dil kodu (culture) boşsa veya null ise varsayılan olarak tr-TR yap
+            if (string.IsNullOrEmpty(culture))
+            {
+                culture = "tr-TR";
+            }
 
-    // Dil tercihini çerezlere (Cookie) kaydet
-    Response.Cookies.Append(
-        CookieRequestCultureProvider.DefaultCookieName,
-        CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
-        new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
-    );
+            // Dil tercihini çerezlere (Cookie) kaydet
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+            );
 
-    // Kullanıcıyı geldiği sayfaya geri gönder
-    return LocalRedirect(returnUrl);
-}
-       
+            // Kullanıcıyı geldiği sayfaya geri gönder
+            return LocalRedirect(returnUrl);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

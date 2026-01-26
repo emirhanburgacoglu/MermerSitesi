@@ -4,92 +4,249 @@
     ViewData["Title"] = Localizer["Contact"];
 }
 
-<div class="contact-header d-flex align-items-center justify-content-center mb-5">
+<style>
+    /* HEADER AYARI */
+    .contact-header {
+        background-image: url('/images/contact-header.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 450px;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        position: relative;
+        margin-bottom: 80px;
+    }
+
+    /* ORTAK GOLD RENK */
+    :root {
+        --gold-color: #c9a961;
+    }
+
+    .text-gold {
+        color: var(--gold-color) !important;
+    }
+
+    /* SOL KUTU (BİLGİLER) */
+    .contact-info-box-modern {
+        background-color: #fff;
+        padding: 3rem;
+        height: 100%;
+        border-left: 5px solid var(--gold-color);
+        /* Sabit, temiz gölge */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border-radius: 0 12px 12px 0;
+        transition: transform 0.3s ease;
+    }
+
+    .contact-info-box-modern:hover {
+        transform: translateY(-5px);
+        /* Hafif hareket */
+    }
+
+    /* İKONLAR */
+    .icon-box-modern {
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        color: var(--gold-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 1px solid #f0f0f0;
+    }
+
+    .d-flex:hover .icon-box-modern {
+        background-color: var(--gold-color);
+        color: #fff;
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(201, 169, 97, 0.3);
+    }
+
+    /* --- SAĞ FORM KUTUSU (GÖLGELİ YAPI BURADA) --- */
+    .contact-form-wrapper-modern {
+        background: #fff;
+        padding: 3rem;
+        border-radius: 12px;
+        position: relative;
+
+        /* 1. Normal Durum: Derin ve Yumuşak Siyah Gölge */
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1),
+            0 0 0 1px rgba(0, 0, 0, 0.02);
+        /* İnce sınır çizgisi */
+
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        /* Yaylanma efekti */
+    }
+
+    /* 2. Hover Durumu: Gold Yansımalı Gölge */
+    .contact-form-wrapper-modern:hover {
+        transform: translateY(-8px);
+        /* Yukarı kalkar */
+        /* Gölge rengi hafif Gold'a döner ve yayılır */
+        box-shadow: 0 30px 60px rgba(201, 169, 97, 0.15),
+            0 0 0 1px rgba(201, 169, 97, 0.1);
+    }
+
+    /* INPUT (KUTUCUK) MODERNİZASYONU */
+    .form-control-modern {
+        border: 1px solid #e9ecef;
+        padding: 1rem 1.25rem;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        background-color: #fcfcfc;
+    }
+
+    .form-control-modern:focus {
+        background-color: #fff;
+        border-color: var(--gold-color);
+        box-shadow: 0 0 0 4px rgba(201, 169, 97, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .form-floating>label {
+        padding-left: 1.25rem;
+        color: #999;
+    }
+
+    .form-floating>.form-control-modern:focus~label {
+        color: var(--gold-color);
+    }
+
+    /* GOLD BUTON */
+    .btn-gold-modern {
+        background: var(--gold-color);
+        background: linear-gradient(135deg, #d4b875 0%, #c9a961 100%);
+        color: white;
+        border: none;
+        padding: 1rem;
+        transition: all 0.3s ease;
+        border-radius: 6px;
+        box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+    }
+
+    .btn-gold-modern:hover {
+        background: linear-gradient(135deg, #c9a961 0%, #a88a4d 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(201, 169, 97, 0.5);
+    }
+
+    /* Harita Çerçevesi */
+    .map-frame-modern {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #eee;
+    }
+</style>
+
+<div class="contact-header d-flex align-items-center justify-content-center">
     <div class="text-center text-white position-relative z-index-1">
-        <h1 class="display-3 fw-bold" style="font-family: 'Times New Roman', serif; letter-spacing: 3px;">@Localizer["Contact"]</h1>
+        <h1 class="display-3 fw-bold" style="font-family: 'Times New Roman', serif; letter-spacing: 3px;">
+            @Localizer["Contact"]
+        </h1>
         <div class="divider mx-auto bg-white mt-3" style="width: 80px; height: 3px;"></div>
-        <p class="mt-3 lead text-uppercase" style="letter-spacing: 2px; font-size: 0.9rem;">@Localizer["LetsBringProjectsToLife"]</p>
+        <p class="mt-4 lead text-uppercase" style="letter-spacing: 2px; font-size: 0.9rem; opacity: 0.9;">
+            @Localizer["LetsBringProjectsToLife"]
+        </p>
     </div>
-    <div class="overlay"></div>
+    <div class="overlay"
+        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6);"></div>
 </div>
 
-<div class="container mb-5">
-    <div class="row gx-5">
-        
-        <div class="col-lg-5 mb-5 mb-lg-0">
-            <div class="p-4 bg-light h-100 border-start border-5 border-dark shadow-sm">
-                <h3 class="h4 mb-4 text-uppercase fw-bold" style="font-family: 'Times New Roman', serif;">@Localizer["HeadOffice"]</h3>
-                
-                <div class="d-flex align-items-start mb-4">
-                    <div class="icon-box bg-white shadow-sm text-dark me-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+<div class="container mb-5 pb-5">
+    <div class="row gx-lg-5 gy-5 align-items-stretch">
+        <div class="col-lg-5">
+            <div class="contact-info-box-modern h-100 d-flex flex-column">
+                <h3 class="h4 mb-5 text-uppercase fw-bold text-dark" style="font-family: 'Times New Roman', serif;">
+                    @Localizer["HeadOffice"]
+                </h3>
+
+                <div class="d-flex align-items-start mb-4 pb-2">
+                    <div class="icon-box-modern me-4 flex-shrink-0">
                         <i class="fas fa-map-marker-alt fa-lg"></i>
                     </div>
                     <div>
-                        <h6 class="fw-bold mb-1">@Localizer["Address"]</h6>
-                        <p class="text-muted small mb-0">Ferhatpaşa Mah. Yeditepe Cad. No: 123<br>Ataşehir / İSTANBUL</p>
+                        <h6 class="fw-bold mb-2 text-dark" style="letter-spacing: 1px;">@Localizer["Address"]</h6>
+                        <p class="text-muted mb-0" style="line-height: 1.6;">Ferhatpaşa Mah. Yeditepe Cad. No:
+                            123<br>Ataşehir / İSTANBUL</p>
                     </div>
                 </div>
 
-                <div class="d-flex align-items-start mb-4">
-                    <div class="icon-box bg-white shadow-sm text-dark me-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                <div class="d-flex align-items-start mb-4 pb-2">
+                    <div class="icon-box-modern me-4 flex-shrink-0">
                         <i class="fas fa-phone-alt fa-lg"></i>
                     </div>
                     <div>
-                        <h6 class="fw-bold mb-1">@Localizer["Phone"]</h6>
-                        <p class="text-muted small mb-0">+90 216 555 55 55</p>
+                        <h6 class="fw-bold mb-2 text-dark" style="letter-spacing: 1px;">@Localizer["Phone"]</h6>
+                        <p class="text-muted mb-0" style="font-size: 1.05rem;">+90 545 973 93 53</p>
                     </div>
                 </div>
 
-                <div class="d-flex align-items-start mb-4">
-                    <div class="icon-box bg-white shadow-sm text-dark me-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                <div class="d-flex align-items-start mb-5">
+                    <div class="icon-box-modern me-4 flex-shrink-0">
                         <i class="fas fa-envelope fa-lg"></i>
                     </div>
                     <div>
-                        <h6 class="fw-bold mb-1">@Localizer["Email"]</h6>
-                        <p class="text-muted small mb-0">info@hollandstone.com</p>
+                        <h6 class="fw-bold mb-2 text-dark" style="letter-spacing: 1px;">@Localizer["Email"]</h6>
+                        <p class="text-muted mb-0">info@rystonexport.com</p>
                     </div>
                 </div>
 
-                <div class="mt-4 shadow-sm border p-1 bg-white">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.650490016624!2d29.1594!3d40.9905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzI1LjgiTiAyOcKwMDknMzMuOCJF!5e0!3m2!1str!2str!4v1630000000000!5m2!1str!2str" 
-                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="mt-auto map-frame-modern">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.650490016624!2d29.1594!3d40.9905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzI1LjgiTiAyOcKwMDknMzMuOCJF!5e0!3m2!1str!2str!4v1630000000000!5m2!1str!2str"
+                        width="100%" height="220" style="border:0; display: block;" allowfullscreen=""
+                        loading="lazy"></iframe>
                 </div>
             </div>
         </div>
 
         <div class="col-lg-7">
-            <div class="bg-white p-5 shadow-lg position-relative contact-form-wrapper">
-                <h3 class="h4 mb-2" style="font-family: 'Times New Roman', serif;">@Localizer["ContactUs"]</h3>
-                <p class="text-muted small mb-5">@Localizer["ContactFormDesc"]</p>
-                
+            <div class="contact-form-wrapper-modern h-100 d-flex flex-column justify-content-center">
+                <div class="mb-4">
+                    <h3 class="h4 mb-2 text-dark" style="font-family: 'Times New Roman', serif;">@Localizer["ContactUs"]
+                    </h3>
+                    <p class="text-muted">@Localizer["ContactFormDesc"]</p>
+                </div>
+
                 <form>
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="nameInput" placeholder=".">
+                                <input type="text" class="form-control form-control-modern" id="nameInput"
+                                    placeholder=".">
                                 <label for="nameInput">@Localizer["NameSurname"]</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="emailInput" placeholder=".">
+                                <input type="email" class="form-control form-control-modern" id="emailInput"
+                                    placeholder=".">
                                 <label for="emailInput">@Localizer["YourEmail"]</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="subjectInput" placeholder=".">
+                                <input type="text" class="form-control form-control-modern" id="subjectInput"
+                                    placeholder=".">
                                 <label for="subjectInput">@Localizer["Subject"]</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating mb-4">
-                                <textarea class="form-control" placeholder="." id="messageInput" style="height: 150px"></textarea>
+                                <textarea class="form-control form-control-modern" placeholder="." id="messageInput"
+                                    style="height: 160px"></textarea>
                                 <label for="messageInput">@Localizer["YourMessage"]</label>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn btn-dark w-100 py-3 text-uppercase fw-bold" style="letter-spacing: 2px;">
+                            <button type="submit" class="btn btn-gold-modern w-100 text-uppercase fw-bold"
+                                style="letter-spacing: 2px;">
                                 @Localizer["Send"] <i class="fas fa-paper-plane ms-2"></i>
                             </button>
                         </div>

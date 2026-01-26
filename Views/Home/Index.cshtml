@@ -1,179 +1,376 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
-@inject IHtmlLocalizer<MermerSitesi.SharedResource> Localizer
+﻿@model MermerSitesi.ViewModels.HomeCollectionViewModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<MermerSitesi.SharedResource> Localizer
 @{
     ViewData["Title"] = Localizer["Home"];
 }
 
 <style>
-    .slider-area {
-        overflow: hidden; /* Dışarı taşanları gizle */
-        padding: 40px 0;
-        background: #fff;
+    /* Kayan Şerit Kapsayıcısı */
+    .marquee-slider {
+        overflow: hidden;
+        width: 100%;
         position: relative;
+        padding: 10px 0;
+        /* Kart gölgeleri kesilmesin diye boşluk */
     }
 
-    .slider-track {
+    /* Kayan Ray */
+    .marquee-track {
         display: flex;
-        width: max-content; /* İçerik kadar genişle */
-        animation: scroll 20s linear infinite; /* 20 saniyede bir tur at */
+        width: max-content;
+        gap: 24px;
+        /* Kartlar arası boşluk (g-4 yerine) */
+        animation: scroll 15s linear infinite;
+        /* Hız ayarı: 35s */
     }
 
-    /* Mouse üzerine gelince akış dursun */
-    .slider-track:hover {
+    /* Mouse üzerine gelince durdur */
+    .marquee-track:hover {
         animation-play-state: paused;
     }
 
-    .single-slide {
-        width: 280px; /* Her bir kutunun genişliği */
-        margin: 0 15px; /* Kutular arası boşluk */
-        flex-shrink: 0; /* Küçülmeyi engelle */
-        text-align: center;
-        cursor: pointer;
+    /* Tekil Ürün Kutusu Genişliği */
+    .slide-item {
+        width: 280px;
+        /* Kart genişliği */
+        flex-shrink: 0;
     }
 
-    .single-slide img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    /* Animasyon Tanımı (Razor uyumlu @@ ile) */
+    @@keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    /* SENİN MEVCUT CSS'LERİN */
+    .product-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .product-card {
+        transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-title {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .category-block a:hover i {
+        transform: translateX(3px);
         transition: transform 0.3s ease;
     }
 
-    .single-slide:hover img {
-        transform: scale(1.03); /* Mouse gelince çok hafif büyüsün */
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    .product-card:hover .card-title {
+        color: #c9a961;
+        transition: color 0.3s ease;
     }
-
-    .slide-title {
-        margin-top: 15px;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #333;
-        letter-spacing: 1px;
-    }
-
-    /* Animasyonun Kendisi */
-    @@keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); } /* İçeriğin yarısı kadar kaydır (çünkü 2 set var) */
-    }
-    /* --- MERMER ÇEŞİTLERİ İÇİN YENİ YAZI STİLİ --- */
-/* Bu sınıfı, ürün kartlarının altındaki h6 başlıklarına vereceğiz.
-   Eğer zaten bir sınıfı varsa (örn: .product-title), onu bulup bu stillerle güncellemelisin.
-*/
-h6.modern-stone-title {
-    /* Modern ve zarif bir font ailesi */
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-
-    /* Yazı rengi: Tam siyah yerine koyu antrasit daha yumuşak ve modern durur */
-    color: #2c3e50;
-
-    /* Yazı boyutu ve kalınlığı */
-    font-size: 1.1rem; /* Biraz daha büyük */
-    font-weight: 600; /* Orta kalınlıkta */
-
-    /* Metin hizalama ve dönüşüm */
-    text-align: center; /* Ortala */
-    text-transform: uppercase; /* Tümü büyük harf */
-
-    /* Harfler arası boşluk: Zarafet katar */
-    letter-spacing: 1.5px;
-
-    /* Kenar boşlukları */
-    margin-top: 20px; /* Resimden biraz uzaklaşsın */
-    margin-bottom: 10px;
-
-    /* Altına dekoratif ince bir çizgi ekleyelim */
-    position: relative;
-    padding-bottom: 10px;
-}
-
-/* Alt çizginin kendisi (pseudo-element) */
-h6.modern-stone-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%; /* Ortadan başla */
-    transform: translateX(-50%); /* Tam merkeze hizala */
-    width: 40px; /* Çizginin uzunluğu */
-    height: 2px; /* Çizginin kalınlığı */
-    background-color: #d4af37; /* Altın rengi (Mermerle uyumlu) */
-    /* İstersen gri de yapabilirsin: background-color: #ccc; */
-}
 </style>
 
-<div class="container mt-4">
-    <div id="heroCarousel" class="carousel slide carousel-fade position-relative" data-bs-ride="carousel">
-        <div class="carousel-inner rounded shadow-sm">
-            <div class="carousel-item active" data-interval="5000">
-                <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" class="d-block w-100 hero-img" alt="Mermer 1">
+<div class="container-fluid p-0 mb-5">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop"
+                    class="d-block w-100" style="height: 600px; object-fit: cover;" alt="Mermer 1">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
+                    <h2 class="display-4 fw-bold"
+                        style="font-family: 'Cormorant Garamond', serif; letter-spacing: 2px;">
+                        @Localizer["ProcessingArtOfNature"]</h2>
+                    <p class="lead" style="font-family: 'Playfair Display', serif; font-style: italic;">
+                        @Localizer["TouchingHeartOfStone"]</p>
+                </div>
             </div>
-            <div class="carousel-item" data-interval="5000">
-                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2000&auto=format&fit=crop" class="d-block w-100 hero-img" alt="Mermer 2">
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2000&auto=format&fit=crop"
+                    class="d-block w-100" style="height: 600px; object-fit: cover;" alt="Mermer 2">
             </div>
-            <div class="carousel-item" data-interval="5000">
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" class="d-block w-100 hero-img" alt="Mermer 3">
-            </div>
-            <div class="carousel-item" data-interval="5000">
-                <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=2000&auto=format&fit=crop" class="d-block w-100 hero-img" alt="Mermer 4">
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
+                    class="d-block w-100" style="height: 600px; object-fit: cover;" alt="Mermer 3">
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </div>
 
-<section class="py-5 bg-white position-relative">
-    <div class="container mt-4">
-        <h1 class="display-5 fw-bold mb-4" style="color: #000; font-family: 'Times New Roman', serif;">
-            @Localizer["HollandStoneMarble"]
-        </h1>
-        
-        <p class="text-muted lead fs-6" style="line-height: 1.8; text-align: justify;">
-            @Localizer["HomeDescription"]
-        </p>
-
-        <div class="slider-area mt-5">
-            <div class="slider-track">
-                
-                <div class="single-slide">
-                    <img src="/images/1.png" alt="Traverten">
-                    <h6 class="slide-title">@Localizer["CategoryTravertine"]</h6>
-                </div>
-                <div class="single-slide">
-                    <img src="/images/2.png" alt="Marble">
-                    <h6 class="slide-title">@Localizer["CategoryMarble"]</h6>
-                </div>
-                <div class="single-slide">
-                    <img src="/images/3.png" alt="Onyx">
-                    <h6 class="slide-title">@Localizer["CategoryOnyx"]</h6>
-                </div>
-                <div class="single-slide">
-                    <img src="/images/4.png" alt="Limestone">
-                    <h6 class="slide-title">@Localizer["CategoryLimestone"]</h6>
-                </div>
-
-                <div class="single-slide">
-                    <img src="/images/1.png" alt="Traverten">
-                    <h6 class="slide-title">@Localizer["CategoryTravertine"]</h6>
-                </div>
-                <div class="single-slide">
-                    <img src="/images/2.png" alt="Marble">
-                    <h6 class="slide-title">@Localizer["CategoryMarble"]</h6>
-                </div>
-                <div class="single-slide">
-                    <img src="/images/3.png" alt="Onyx">
-                    <h6 class="slide-title">@Localizer["CategoryOnyx"]</h6>
-                </div>
-                <div class="single-slide">
-                    <img src="/images/4.png" alt="Limestone">
-                    <h6 class="slide-title">@Localizer["CategoryLimestone"]</h6>
-                </div>
-
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h1 class="display-5 fw-bold mb-4"
+                    style="color: #1a1a1a; font-family: 'Cormorant Garamond', serif; letter-spacing: 1px;">
+                    R<span
+                        style="color: #c9a961; font-style: italic; margin: 0 8px; font-family: 'Playfair Display', serif;">&</span>Y
+                    Stone Export
+                </h1>
+                <p class="text-muted lead fs-5" style="line-height: 1.8; font-family: 'Montserrat', sans-serif;">
+                    @Html.Raw(Localizer["HomeDescription"])
+                </p>
             </div>
         </div>
-        </div>
+    </div>
 </section>
 
-<a href="https://wa.me/905555555555" class="whatsapp-float" target="_blank">
+<section class="py-5 bg-light overflow-hidden">
+    <div class="container-fluid">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold text-uppercase ls-2"
+                style="font-family: 'Cormorant Garamond', serif; letter-spacing: 3px;">@Localizer["Collection"]</h2>
+            <div style="width: 60px; height: 3px; background-color: #c9a961; margin: 20px auto;"></div>
+        </div>
+
+        @if (Model.Travertines != null && Model.Travertines.Any())
+        {
+            <div class="category-block mb-5">
+                <div class="container d-flex justify-content-between align-items-end mb-4 border-bottom pb-2">
+                    <h3 class="h4 fw-bold text-uppercase m-0"
+                        style="color: #2c3e50; font-family: 'Montserrat', sans-serif; letter-spacing: 2px;">
+                        @Localizer["Travertine"]</h3>
+                    <a asp-controller="Home" asp-action="Collection" asp-route-id="travertine"
+                        class="text-decoration-none text-dark small fw-bold"
+                        style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">
+                        @Localizer["Show"] <i class="fas fa-arrow-right ms-1 text-warning"></i>
+                    </a>
+                </div>
+
+                <div class="marquee-slider">
+                    <div class="marquee-track">
+                        @* 1. TUR: Ürünleri Listele *@
+                        @foreach (var item in Model.Travertines)
+                        {
+                            <div class="slide-item">
+                                <div class="card h-100 border-0 shadow-sm product-card">
+                                    <div class="overflow-hidden position-relative" style="height: 250px;">
+                                        <img src="~/images/@item.ImageUrl" class="card-img-top w-100 h-100" alt="@item.NameTr"
+                                            style="object-fit: cover; transition: transform 0.5s;">
+                                    </div>
+                                    <div class="card-body text-center p-3">
+                                        <h5 class="card-title fs-6 fw-bold text-uppercase m-0"
+                                            style="font-family: 'Montserrat', sans-serif; letter-spacing: 1.5px;">
+                                            @(System.Globalization.CultureInfo.CurrentCulture.Name.StartsWith("tr") ?
+                                                                                item.NameTr : item.NameEn)
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @* 2. TUR: Sonsuz döngü için aynı ürünleri tekrar listele *@
+                        @foreach (var item in Model.Travertines)
+                        {
+                            <div class="slide-item">
+                                <div class="card h-100 border-0 shadow-sm product-card">
+                                    <div class="overflow-hidden position-relative" style="height: 250px;">
+                                        <img src="~/images/@item.ImageUrl" class="card-img-top w-100 h-100" alt="@item.NameTr"
+                                            style="object-fit: cover; transition: transform 0.5s;">
+                                    </div>
+                                    <div class="card-body text-center p-3">
+                                        <h5 class="card-title fs-6 fw-bold text-uppercase m-0"
+                                            style="font-family: 'Montserrat', sans-serif; letter-spacing: 1.5px;">
+                                            @(System.Globalization.CultureInfo.CurrentCulture.Name.StartsWith("tr") ?
+                                                                                item.NameTr : item.NameEn)
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.Marbles != null && Model.Marbles.Any())
+        {
+            <div class="category-block mb-5">
+                <div class="container d-flex justify-content-between align-items-end mb-4 border-bottom pb-2">
+                    <h3 class="h4 fw-bold text-uppercase m-0"
+                        style="color: #2c3e50; font-family: 'Montserrat', sans-serif; letter-spacing: 2px;">
+                        @Localizer["Marble"]</h3>
+                    <a asp-controller="Home" asp-action="Collection" asp-route-id="marble"
+                        class="text-decoration-none text-dark small fw-bold"
+                        style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">
+                        @Localizer["Show"] <i class="fas fa-arrow-right ms-1 text-warning"></i>
+                    </a>
+                </div>
+
+                <div class="marquee-slider">
+                    <div class="marquee-track">
+                        @foreach (var item in Model.Marbles)
+                        {
+                            <div class="slide-item">
+                                <div class="card h-100 border-0 shadow-sm product-card">
+                                    <div class="overflow-hidden position-relative" style="height: 250px;">
+                                        <img src="~/images/@item.ImageUrl" class="card-img-top w-100 h-100" alt="@item.NameTr"
+                                            style="object-fit: cover; transition: transform 0.5s;">
+                                    </div>
+                                    <div class="card-body text-center p-3">
+                                        <h5 class="card-title fs-6 fw-bold text-uppercase m-0"
+                                            style="font-family: 'Montserrat', sans-serif; letter-spacing: 1.5px;">
+                                            @(System.Globalization.CultureInfo.CurrentCulture.Name.StartsWith("tr") ?
+                                                                                item.NameTr : item.NameEn)
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @foreach (var item in Model.Marbles)
+                        {
+                            <div class="slide-item">
+                                <div class="card h-100 border-0 shadow-sm product-card">
+                                    <div class="overflow-hidden position-relative" style="height: 250px;">
+                                        <img src="~/images/@item.ImageUrl" class="card-img-top w-100 h-100" alt="@item.NameTr"
+                                            style="object-fit: cover; transition: transform 0.5s;">
+                                    </div>
+                                    <div class="card-body text-center p-3">
+                                        <h5 class="card-title fs-6 fw-bold text-uppercase m-0"
+                                            style="font-family: 'Montserrat', sans-serif; letter-spacing: 1.5px;">
+                                            @(System.Globalization.CultureInfo.CurrentCulture.Name.StartsWith("tr") ?
+                                                                                item.NameTr : item.NameEn)
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.Limestones != null && Model.Limestones.Any())
+        {
+            <div class="category-block mb-5">
+                <div class="container d-flex justify-content-between align-items-end mb-4 border-bottom pb-2">
+                    <h3 class="h4 fw-bold text-uppercase m-0"
+                        style="color: #2c3e50; font-family: 'Montserrat', sans-serif; letter-spacing: 2px;">
+                        @Localizer["Limestone"]</h3>
+                    <a asp-controller="Home" asp-action="Collection" asp-route-id="limestone"
+                        class="text-decoration-none text-dark small fw-bold"
+                        style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">
+                        @Localizer["Show"] <i class="fas fa-arrow-right ms-1 text-warning"></i>
+                    </a>
+                </div>
+
+                <div class="marquee-slider">
+                    <div class="marquee-track">
+                        @foreach (var item in Model.Limestones)
+                        {
+                            <div class="slide-item">
+                                <div class="card h-100 border-0 shadow-sm product-card">
+                                    <div class="overflow-hidden position-relative" style="height: 250px;">
+                                        <img src="~/images/@item.ImageUrl" class="card-img-top w-100 h-100" alt="@item.NameTr"
+                                            style="object-fit: cover; transition: transform 0.5s;">
+                                    </div>
+                                    <div class="card-body text-center p-3">
+                                        <h5 class="card-title fs-6 fw-bold text-uppercase m-0"
+                                            style="font-family: 'Montserrat', sans-serif; letter-spacing: 1.5px;">
+                                            @(System.Globalization.CultureInfo.CurrentCulture.Name.StartsWith("tr") ?
+                                                                                item.NameTr : item.NameEn)
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @foreach (var item in Model.Limestones)
+                        {
+                            <div class="slide-item">
+                                <div class="card h-100 border-0 shadow-sm product-card">
+                                    <div class="overflow-hidden position-relative" style="height: 250px;">
+                                        <img src="~/images/@item.ImageUrl" class="card-img-top w-100 h-100" alt="@item.NameTr"
+                                            style="object-fit: cover; transition: transform 0.5s;">
+                                    </div>
+                                    <div class="card-body text-center p-3">
+                                        <h5 class="card-title fs-6 fw-bold text-uppercase m-0"
+                                            style="font-family: 'Montserrat', sans-serif; letter-spacing: 1.5px;">
+                                            @(System.Globalization.CultureInfo.CurrentCulture.Name.StartsWith("tr") ?
+                                                                                item.NameTr : item.NameEn)
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.Onyxes != null && Model.Onyxes.Any())
+        {
+            <div class="category-block">
+                <div class="container d-flex justify-content-between align-items-end mb-4 border-bottom pb-2">
+                    <h3 class="h4 fw-bold text-uppercase m-0"
+                        style="color: #2c3e50; font-family: 'Montserrat', sans-serif; letter-spacing: 2px;">
+                        @Localizer["Onyx"]</h3>
+                    <a asp-controller="Home" asp-action="Collection" asp-route-id="onyx"
+                        class="text-decoration-none text-dark small fw-bold"
+                        style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">
+                        @Localizer["Show"] <i class="fas fa-arrow-right ms-1 text-warning"></i>
+                    </a>
+                </div>
+
+                <div class="marquee-slider">
+                    <div class="marquee-track">
+                        @foreach (var item in Model.Onyxes)
+                        {
+                            <div class="slide-item">
+                                <div class="card h-100 border-0 shadow-sm product-card">
+                                    <div class="overflow-hidden position-relative" style="height: 250px;">
+                                        <img src="~/images/@item.ImageUrl" class="card-img-top w-100 h-100" alt="@item.NameTr"
+                                            style="object-fit: cover; transition: transform 0.5s;">
+                                    </div>
+                                    <div class="card-body text-center p-3">
+                                        <h5 class="card-title fs-6 fw-bold text-uppercase m-0"
+                                            style="font-family: 'Montserrat', sans-serif; letter-spacing: 1.5px;">
+                                            @(System.Globalization.CultureInfo.CurrentCulture.Name.StartsWith("tr") ?
+                                                                                item.NameTr : item.NameEn)
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @foreach (var item in Model.Onyxes)
+                        {
+                            <div class="slide-item">
+                                <div class="card h-100 border-0 shadow-sm product-card">
+                                    <div class="overflow-hidden position-relative" style="height: 250px;">
+                                        <img src="~/images/@item.ImageUrl" class="card-img-top w-100 h-100" alt="@item.NameTr"
+                                            style="object-fit: cover; transition: transform 0.5s;">
+                                    </div>
+                                    <div class="card-body text-center p-3">
+                                        <h5 class="card-title fs-6 fw-bold text-uppercase m-0"
+                                            style="font-family: 'Montserrat', sans-serif; letter-spacing: 1.5px;">
+                                            @(System.Globalization.CultureInfo.CurrentCulture.Name.StartsWith("tr") ?
+                                                                                item.NameTr : item.NameEn)
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</section>
+
+<a href="https://wa.me/905459739353" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
