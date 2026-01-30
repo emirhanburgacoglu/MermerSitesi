@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using MermerSitesi.Data;
 using Microsoft.AspNetCore.Authorization;
 using MermerSitesi.Models;
-using System.IO; // Dosya işlemleri için gerekli
+using System.IO;
 
 namespace MermerSitesi.Controllers
 {
@@ -22,31 +22,21 @@ namespace MermerSitesi.Controllers
             _context = context;
         }
 
-        // GET: AdminProduct
         public async Task<IActionResult> Index()
         {
             return View(await _context.Products.ToListAsync());
         }
 
-        // GET: AdminProduct/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (product == null)
-            {
-                return NotFound();
-            }
+            var product = await _context.Products.FirstOrDefaultAsync(m => m.Id == id);
+            if (product == null) return NotFound();
 
             return View(product);
         }
 
-        // GET: AdminProduct/Create
         public IActionResult Create()
         {
             return View();
@@ -55,17 +45,15 @@ namespace MermerSitesi.Controllers
         // POST: AdminProduct/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NameTr,NameEn,Category,DisplayOrder")] Product product, IFormFile file)
+        // DÜZELTME: NameNl buraya eklendi
+        public async Task<IActionResult> Create([Bind("Id,NameTr,NameEn,NameNl,Category,DisplayOrder")] Product product, IFormFile file)
         {
             if (file != null)
             {
                 var extension = Path.GetExtension(file.FileName);
                 var imageName = Guid.NewGuid() + extension;
-                
-                // Klasör yolunu al (wwwroot/images)
                 var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
-                
-                // Klasör yoksa oluştur (Hata almamak için)
+
                 if (!Directory.Exists(folderPath))
                 {
                     Directory.CreateDirectory(folderPath);
@@ -76,12 +64,12 @@ namespace MermerSitesi.Controllers
                 {
                     await file.CopyToAsync(stream);
                 }
-                
+
                 product.ImageUrl = "/images/" + imageName;
             }
             else
             {
-                product.ImageUrl = ""; 
+                product.ImageUrl = "";
             }
 
             if (ModelState.IsValid)
@@ -93,31 +81,22 @@ namespace MermerSitesi.Controllers
             return View(product);
         }
 
-        // GET: AdminProduct/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
             var product = await _context.Products.FindAsync(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
+            if (product == null) return NotFound();
             return View(product);
         }
 
         // POST: AdminProduct/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NameTr,NameEn,ImageUrl,Category,DisplayOrder")] Product product, IFormFile? file)
+        // DÜZELTME: NameNl buraya eklendi
+        public async Task<IActionResult> Edit(int id, [Bind("Id,NameTr,NameEn,NameNl,ImageUrl,Category,DisplayOrder")] Product product, IFormFile? file)
         {
-            if (id != product.Id)
-            {
-                return NotFound();
-            }
+            if (id != product.Id) return NotFound();
 
             if (ModelState.IsValid)
             {
@@ -125,63 +104,49 @@ namespace MermerSitesi.Controllers
                 {
                     if (file != null)
                     {
+                        // Yeni resim yüklendiyse işlemleri yap
                         var extension = Path.GetExtension(file.FileName);
                         var imageName = Guid.NewGuid() + extension;
                         var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
-                        
+
                         if (!Directory.Exists(folderPath))
                         {
                             Directory.CreateDirectory(folderPath);
                         }
 
                         var location = Path.Combine(folderPath, imageName);
-
                         using (var stream = new FileStream(location, FileMode.Create))
                         {
                             await file.CopyToAsync(stream);
                         }
-                        
+
                         product.ImageUrl = "/images/" + imageName;
                     }
+                    // DÜZELTME: Eğer resim yüklenmediyse, ImageUrl zaten hidden input'tan eski değeriyle geliyor olacak.
 
                     _context.Update(product);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductExists(product.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    if (!ProductExists(product.Id)) return NotFound();
+                    else throw;
                 }
                 return RedirectToAction(nameof(Index));
             }
             return View(product);
         }
 
-        // GET: AdminProduct/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (product == null)
-            {
-                return NotFound();
-            }
+            var product = await _context.Products.FirstOrDefaultAsync(m => m.Id == id);
+            if (product == null) return NotFound();
 
             return View(product);
         }
 
-        // POST: AdminProduct/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

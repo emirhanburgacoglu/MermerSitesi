@@ -7,8 +7,9 @@
   <data name="Contact" xml:space="preserve"><value>CONTACT</value></data>
   <data name="Search" xml:space="preserve"><value>ZOEKEN</value></data>
   <data name="Language" xml:space="preserve"><value>TAAL</value></data>
-  <data name="Slogan" xml:space="preserve"><value>Wij staan tot uw dienst om een stap voor te blijven met onze innovatieve projecten.</value></data>
-
+ <data name="Slogan" xml:space="preserve">
+    <value>Wij exporteren de elegantie van de natuur naar de wereld voor prestigieuze projecten.</value>
+</data>
   <data name="OurStory" xml:space="preserve"><value>ONS VERHAAL</value></data>
   <data name="ProcessingArtOfNature" xml:space="preserve"><value>De kunst van de natuur verwerken</value></data>
   <data name="TouchingHeartOfStone" xml:space="preserve"><value>Het hart van steen raken.</value></data>
@@ -21,13 +22,7 @@
     <value>Wie is R<span style="color: #c9a961 !important; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export?</value>
   </data>
 
-  <data name="AboutText1" xml:space="preserve">
-    <value>R&amp;Y Stone Export is een buitenlands handelsbedrijf gebouwd op een diepgewortelde familietraditie in de marmerexport, met kwaliteit en vertrouwen als middelpunt. Dankzij het leiderschap en de kennis van onze moeder, die meer dan 20 jaar ervaring in de sector heeft, leveren wij vandaag de dag Turks marmer van hoge kwaliteit aan diverse locaties wereldwijd. Het vertrouwen, de duurzaamheid en de nauwgezetheid van een familiebedrijf worden gecombineerd met onze professionele werkethiek, zodat wij onze klanten altijd het juiste product op het juiste moment kunnen bieden. Wij beheren alle processen transparant, van productie tot verpakking en verzending, gebaseerd op internationale kwaliteitsnormen.</value>
-  </data>
-
-  <data name="AboutText2" xml:space="preserve">
-    <value>Onze visie is om het natuursteenpotentieel van Turkije wereldwijd te introduceren en langdurige partnerschappen aan te gaan. Onze missie is om onze klanten bij elke stap bij te staan met principes van hoge kwaliteit, betrouwbare levering en sterke communicatie. Als R&amp;Y Stone Export verkopen wij niet alleen marmer; wij bouwen waarde, vertrouwen en langdurige zakelijke relaties op. Met de innovatieve projecten die wij ontwikkelen, bieden wij duurzame waarde aan onze zakenpartners.</value>
-  </data>
+ 
 
   <data name="Show" xml:space="preserve"><value>Tonen</value></data>
   
@@ -39,10 +34,17 @@
   <data name="HollandStoneMarble" xml:space="preserve">
     <value>R<span style="color: #c9a961; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export</value>
   </data>
-
-  <data name="HomeDescription" xml:space="preserve">
-    <value>R<span style="color: #c9a961; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export startte haar activiteiten in Istanbul met als doel een oplossingspartner te zijn in marmerprojecten van bedrijven die architectuur- en adviesdiensten verlenen door marmer te combineren met het architecturale publiek in projecten van hoog niveau. Het bedient sinds de oprichting particuliere en officiële instellingen. In het 2000 m2 grote magazijn in Ferhatpaşa en het 5000 m2 grote magazijn in Sancaktepe Yenidoğan, verzorgt het de verkoop van wit marmer, zwart marmer, grijs marmer, bruin marmer, groen marmer, blauw marmer, halfedelstenen en porseleinen platen.</value>
+<data name="AboutText1" xml:space="preserve">
+    <value>R&amp;Y Stone Export is een handelsonderneming gebouwd op een diepgewortelde familietraditie in de marmerexport, waarbij kwaliteit en vertrouwen centraal staan. Dankzij onze kennis gebaseerd op meer dan 20 jaar ervaring in de sector en onze sterke organisatiestructuur, leveren wij vandaag de dag Turks marmer van de hoogste standaard naar vele bestemmingen wereldwijd. Het vertrouwen, de duurzaamheid en de zorgvuldigheid van een familiebedrijf, gecombineerd met onze professionele werkaanpak, stelt ons in staat om onze klanten altijd het juiste product op het juiste moment aan te bieden. Wij beheren alle processen — van productie tot verpakking en van belading tot verzending — op een transparante wijze, conform internationale kwaliteitsnormen.</value>
   </data>
+
+  <data name="AboutText2" xml:space="preserve">
+    <value>Onze visie is om het potentieel van Turkse natuursteen op mondiale schaal te promoten en langdurige, sterke zakelijke partnerschappen op te bouwen. Onze missie is om onze klanten bij elke stap bij te staan met principes van hoge kwaliteit, betrouwbare levering en sterke communicatie. Als R&amp;Y Stone Export exporteren wij niet alleen marmer; wij bouwen aan waarde, vertrouwen en duurzame zakelijke relaties. Wij streven ernaar om een blijvende bijdrage te leveren aan onze zakenpartners via de innovatieve projecten die wij ontwikkelen.</value>
+  </data>
+
+<data name="HomeDescription" xml:space="preserve">
+  <value>R&amp;Y Stone Export is een handelsmerk gebouwd op familiewaarden, waarbij de marmeruitvoer is gebaseerd op kwaliteit, vertrouwen en continuïteit. Met meer dan 20 jaar sectorervaring selecteren wij zorgvuldig Turks marmer en voegen wij waarde toe aan prestigieuze projecten wereldwijd door alle processen van productie tot verzending volgens hoge standaarden te beheren.</value>
+</data>
 
   <data name="LetsBringProjectsToLife" xml:space="preserve"><value>Laten we uw projecten tot leven brengen</value></data>
   <data name="HeadOffice" xml:space="preserve"><value>HOOFDKANTOOR</value></data>

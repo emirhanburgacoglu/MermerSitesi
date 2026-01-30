@@ -7,58 +7,64 @@
 <div class="container mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">
-            
+
             <div class="card shadow border-0">
                 <div class="card-header bg-black text-white py-3">
                     <h5 class="mb-0 fw-bold"><i class="fas fa-box-open me-2"></i> Yeni Ürün Ekle</h5>
                 </div>
                 <div class="card-body p-4">
                     <form asp-action="Create" enctype="multipart/form-data">
-    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
-    <div class="row g-3">
-        <div class="col-md-6">
-            <label asp-for="NameTr" class="form-label fw-bold">Ürün Adı (Türkçe)</label>
-            <input asp-for="NameTr" class="form-control bg-light" placeholder="Örn: Beyaz Mermer" />
-            <span asp-validation-for="NameTr" class="text-danger small"></span>
-        </div>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label asp-for="NameTr" class="form-label fw-bold">Ürün Adı (Türkçe)</label>
+                                <input asp-for="NameTr" class="form-control bg-light" placeholder="Örn: Beyaz Mermer" />
+                                <span asp-validation-for="NameTr" class="text-danger small"></span>
+                            </div>
 
-        <div class="col-md-6">
-            <label asp-for="NameEn" class="form-label fw-bold">Product Name (English)</label>
-            <input asp-for="NameEn" class="form-control bg-light" placeholder="Ex: White Marble" />
-            <span asp-validation-for="NameEn" class="text-danger small"></span>
-        </div>
+                            <div class="col-md-4">
+                                <label asp-for="NameEn" class="form-label fw-bold">Product Name (English)</label>
+                                <input asp-for="NameEn" class="form-control bg-light" placeholder="Ex: White Marble" />
+                                <span asp-validation-for="NameEn" class="text-danger small"></span>
+                            </div>
 
-        <div class="col-md-6">
-            <label asp-for="Category" class="form-label fw-bold">Kategori</label>
-            <select asp-for="Category" class="form-select bg-light">
-                <option value="">Seçiniz...</option>
-                <option value="white">white (Beyaz)</option>
-                <option value="black">black (Siyah)</option>
-                <option value="brown">brown (Kahverengi)</option>
-                <option value="gray">gray (Gri)</option>
-            </select>
-            <span asp-validation-for="Category" class="text-danger small"></span>
-        </div>
+                            <div class="col-md-4">
+                                <label asp-for="NameNl" class="form-label fw-bold">Product Naam (Dutch)</label>
+                                <input asp-for="NameNl" class="form-control bg-light" placeholder="Bijv: Wit Marmer" />
+                                <span asp-validation-for="NameNl" class="text-danger small"></span>
+                            </div>
 
-        <div class="col-md-6">
-            <label asp-for="DisplayOrder" class="form-label fw-bold">Sıralama</label>
-            <input asp-for="DisplayOrder" class="form-control bg-light" type="number" value="0" />
-            <span asp-validation-for="DisplayOrder" class="text-danger small"></span>
-        </div>
+                            <div class="col-md-6">
+                                <label asp-for="Category" class="form-label fw-bold">Kategori</label>
+                                <select asp-for="Category" class="form-select bg-light">
+                                    <option value="">Seçiniz...</option>
+                                    <option value="marble">Marble (Mermer)</option>
+                                    <option value="travertine">Travertine (Traverten)</option>
+                                    <option value="limestone">Limestone (Kireç Taşı)</option>
+                                    <option value="onyx">Onyx (Oniks)</option>
+                                </select>
+                                <span asp-validation-for="Category" class="text-danger small"></span>
+                            </div>
 
-        <div class="col-12">
-            <label class="form-label fw-bold">Ürün Görseli</label>
-            <input type="file" name="file" class="form-control bg-light" accept="image/*" />
-            <div class="form-text">Lütfen .jpg, .jpeg veya .png formatında bir resim seçin.</div>
-        </div>
-    </div>
+                            <div class="col-md-6">
+                                <label asp-for="DisplayOrder" class="form-label fw-bold">Sıralama</label>
+                                <input asp-for="DisplayOrder" class="form-control bg-light" type="number" value="0" />
+                                <span asp-validation-for="DisplayOrder" class="text-danger small"></span>
+                            </div>
 
-    <div class="d-grid gap-2 mt-4 d-md-flex justify-content-md-end">
-        <a asp-action="Index" class="btn btn-outline-secondary px-4">İptal</a>
-        <button type="submit" class="btn btn-black px-5 text-white bg-dark">Kaydet</button>
-    </div>
-</form>
+                            <div class="col-12">
+                                <label class="form-label fw-bold">Ürün Görseli</label>
+                                <input type="file" name="file" class="form-control bg-light" accept="image/*" />
+                                <div class="form-text">Lütfen .jpg, .jpeg veya .png formatında bir resim seçin.</div>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 mt-4 d-md-flex justify-content-md-end">
+                            <a asp-action="Index" class="btn btn-outline-secondary px-4">İptal</a>
+                            <button type="submit" class="btn btn-black px-5 text-white bg-dark">Kaydet</button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -67,5 +73,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

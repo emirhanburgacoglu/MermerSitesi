@@ -7,8 +7,9 @@
   <data name="Contact" xml:space="preserve"><value>CONTACT</value></data>
   <data name="Search" xml:space="preserve"><value>SEARCH</value></data>
   <data name="Language" xml:space="preserve"><value>LANGUAGE</value></data>
-  <data name="Slogan" xml:space="preserve"><value>We are at your service to be one step ahead with our innovative projects.</value></data>
-
+<data name="Slogan" xml:space="preserve">
+    <value>We export the elegance of nature to the world for distinguished projects.</value>
+</data>
   <data name="OurStory" xml:space="preserve"><value>OUR STORY</value></data>
   <data name="ProcessingArtOfNature" xml:space="preserve"><value>Processing the Art of Nature</value></data>
   <data name="TouchingHeartOfStone" xml:space="preserve"><value>Touching the heart of stone.</value></data>
@@ -21,13 +22,7 @@
     <value>Who is R<span style="color: #c9a961 !important; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export?</value>
   </data>
 
-  <data name="AboutText1" xml:space="preserve">
-    <value>R&amp;Y Stone Export is a foreign trade company built on a deep-rooted family tradition in marble export, centering on quality and trust. Thanks to the leadership and know-how of our mother, who has over 20 years of experience in the sector, we today deliver high-standard Turkish marble to various points across the globe. The trust, sustainability, and meticulousness that come with being a family business combine with our professional work ethic to ensure we always offer the right product at the right time. We manage all processes transparently, from production to packaging and shipment, based on international quality standards.</value>
-  </data>
-
-  <data name="AboutText2" xml:space="preserve">
-    <value>Our vision is to introduce Turkey's natural stone potential globally and establish long-term partnerships. Our mission is to stand by our customers at every step with high quality, reliable delivery, and strong communication principles. As R&amp;Y Stone Export, we don't just sell marble; we build value, trust, and lasting business relationships. We provide sustainable value to our business partners with the innovative projects we develop.</value>
-  </data>
+  
  
   <data name="Show" xml:space="preserve"><value>Show</value></data>
   <data name="Product1" xml:space="preserve"><value>Nero Marquina (China) Marble</value></data>
@@ -39,10 +34,17 @@
     <value>R<span style="color: #c9a961; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export</value>
   </data>
 
-  <data name="HomeDescription" xml:space="preserve">
-    <value>R<span style="color: #c9a961; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export started its operations in Istanbul with the aim of being a solution partner in marble projects for companies providing architecture and consultancy services by combining marble with the architectural audience in high-level projects. It has been serving private and official institutions since its establishment. In its 2000 m2 warehouse in Ferhatpaşa and 5000 m2 warehouse in Sancaktepe Yenidoğan location, it provides sales of white marble, black marble, gray marble, brown marble, green marble, blue marble, semi-precious stones as well as porcelain slabs.</value>
+<data name="AboutText1" xml:space="preserve">
+    <value>R&amp;Y Stone Export is a foreign trade company built on a deep-rooted family tradition in marble export, centering on quality and trust. Thanks to our knowledge based on more than 20 years of experience in the sector and our strong organizational structure, we deliver high-standard Turkish marble to many points of the world today. The trust, sustainability, and meticulousness brought by being a family business, combined with our professional working approach, always allow us to offer our customers the right product at the right time. We manage all processes from production to packaging, from loading to shipment transparently, based on international quality standards.</value>
   </data>
 
+  <data name="AboutText2" xml:space="preserve">
+    <value>Our vision is to establish long-term and strong business partnerships by promoting Turkey's natural stone potential on a global scale. Our mission is to stand by our customers at every step with the principles of high quality, reliable delivery, and strong communication. As R&amp;Y Stone Export, we do not only export marble; we build value, trust, and long-term business relationships. We aim to provide sustainable contributions to our business partners through the innovative projects we develop.</value>
+  </data>
+
+<data name="HomeDescription" xml:space="preserve">
+  <value>R&amp;Y Stone Export is a foreign trade brand built on family values, basing its marble exports on quality, trust, and continuity. With over 20 years of sector experience, we meticulously select Turkish marble and add value to prestigious projects worldwide by managing all processes from production to shipment at high standards.</value>
+</data>
   <data name="LetsBringProjectsToLife" xml:space="preserve"><value>Let's Bring Your Projects to Life</value></data>
   <data name="HeadOffice" xml:space="preserve"><value>HEAD OFFICE</value></data>
   <data name="Address" xml:space="preserve"><value>Address</value></data>

@@ -7,8 +7,9 @@
   <data name="Contact" xml:space="preserve"><value>İLETİŞİM</value></data>
   <data name="Search" xml:space="preserve"><value>ARA</value></data>
   <data name="Language" xml:space="preserve"><value>DİL</value></data>
-  <data name="Slogan" xml:space="preserve"><value>Yenilikçi projelerimizle bir adım önde olmak için sizlere hizmet vermek isteriz.</value></data>
-
+<data name="Slogan" xml:space="preserve">
+    <value>Doğanın zarafetini, seçkin projeler için dünyaya ihraç ediyoruz.</value>
+</data>
   <data name="OurStory" xml:space="preserve"><value>HİKAYEMİZ</value></data>
   <data name="ProcessingArtOfNature" xml:space="preserve"><value>Doğanın Sanatını İşliyoruz</value></data>
   <data name="TouchingHeartOfStone" xml:space="preserve"><value>Taşın kalbine dokunuyoruz.</value></data>
@@ -17,18 +18,20 @@
     <value>R<span style="color: #c9a961 !important; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export Kimdir?</value>
   </data>
 
-  <data name="YearsExperience" xml:space="preserve"><value>Yıllık Deneyim</value></data>
-  <data name="CompletedProjects" xml:space="preserve"><value>Biten Proje</value></data>
-  <data name="ExportCountries" xml:space="preserve"><value>Ülkeye İhracat</value></data>
 
-  <data name="AboutText1" xml:space="preserve">
-    <value>R&amp;Y Stone Export, mermer ihracatı alanında köklü bir aile geleneğinin üzerine kurulmuş, kaliteyi ve güveni merkeze alan bir dış ticaret şirketidir. Sektörde 20 yılı aşkın tecrübesi bulunan annemizin liderliği ve bilgi birikimi sayesinde, bugün dünyanın çeşitli noktalarına yüksek standartlarda Türk mermeri ulaştırıyoruz. Aile şirketi olmanın getirdiği güven, sürdürülebilirlik ve titizlik; profesyonel çalışma anlayışımızla birleşerek müşterilerimize her zaman en doğru ürünü, en doğru zamanda sunmamızı sağlıyor. Üretimden paketlemeye, yüklemeden sevkiyata kadar tüm süreçleri şeffaf bir şekilde yönetiyor; uluslararası kalite standartlarını esas alıyoruz.</value>
-  </data>
+  
+ <data name="AboutText1" xml:space="preserve">
+  <value>R&amp;Y Stone Export, mermer ihracatı alanında köklü bir aile geleneği üzerine kurulmuş, kaliteyi ve güveni merkeze alan bir dış ticaret şirketidir. Sektörde 20 yılı aşkın tecrübeye dayanan bilgi birikimimiz ve güçlü organizasyon yapımız sayesinde, bugün dünyanın birçok noktasına yüksek standartlarda Türk mermeri ulaştırıyoruz. Aile şirketi olmanın getirdiği güven, sürdürülebilirlik ve titizlik; profesyonel çalışma anlayışımızla birleşerek müşterilerimize her zaman en doğru ürünü, en doğru zamanda sunmamızı sağlamaktadır. Üretimden paketlemeye, yüklemeden sevkiyata kadar tüm süreçleri şeffaf bir şekilde yönetiyor; uluslararası kalite standartlarını esas alıyoruz.</value>
+</data>
 
-  <data name="AboutText2" xml:space="preserve">
-    <value>Vizyonumuz, Türkiye’nin doğal taş potansiyelini global ölçekte tanıtarak uzun soluklu iş ortaklıkları kurmak. Misyonumuz ise; yüksek kalite, güvenilir teslimat ve güçlü iletişim prensipleriyle müşterilerimizin her adımda yanında olmak. R&amp;Y Stone Export olarak, sadece mermer satmıyor; değer, güven ve uzun vadeli iş ilişkileri inşa ediyoruz. Geliştirdiğimiz yenilikçi projelerle iş ortaklarımıza sürdürülebilir değer sağlıyoruz.</value>
-  </data>
- 
+<data name="AboutText2" xml:space="preserve">
+  <value>Vizyonumuz, Türkiye’nin doğal taş potansiyelini global ölçekte tanıtarak uzun soluklu ve güçlü iş ortaklıkları kurmaktır. Misyonumuz ise; yüksek kalite, güvenilir teslimat ve güçlü iletişim prensipleriyle müşterilerimizin her adımda yanında olmaktır. R&amp;Y Stone Export olarak yalnızca mermer ihraç etmiyor; değer, güven ve uzun vadeli iş ilişkileri inşa ediyoruz. Geliştirdiğimiz yenilikçi projelerle iş ortaklarımıza sürdürülebilir katkı sağlamayı hedefliyoruz.</value>
+</data>
+
+<data name="HomeDescription" xml:space="preserve">
+  <value>R&amp;Y Stone Export, aile değerleri üzerine inşa edilmiş, mermer ihracatında kaliteyi, güveni ve sürekliliği esas alan bir dış ticaret markasıdır. 20 yılı aşkın sektör tecrübemizle Türk mermerini titizlikle seçiyor; üretimden sevkiyata kadar tüm süreçleri yüksek standartlarda yöneterek dünya genelindeki seçkin projelere değer katıyoruz.</value>
+</data>
+
   <data name="Show" xml:space="preserve"><value>Görüntüle</value></data>
   <data name="Product1" xml:space="preserve"><value>Nero Marquina (China) Mermer</value></data>
   <data name="Product2" xml:space="preserve"><value>Tropical Storm Mermer</value></data>
@@ -39,9 +42,7 @@
     <value>R<span style="color: #c9a961; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export</value>
   </data>
 
-  <data name="HomeDescription" xml:space="preserve">
-    <value>R<span style="color: #c9a961; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export, mimari kitleyle mermeri üst düzey projelerde birleştirerek mimarlık ve danışmanlık hizmeti veren şirketlerin mermer projelerinde çözüm ortağı olmak amacı ile İstanbul'da faaliyete başlamıştır. Kuruluşundan bu yana özel ve resmi kurumlar için hizmet sunmaktadır. Ferhatpaşa'da 2000 m2'lik ve Sancaktepe Yenidoğan mevkiinde 5000 m2'lik depolarında beyaz mermer, siyah mermer, gri mermer, kahverengi mermer, yeşil mermer, mavi mermer, yarı değerli taşların yanı sıra porselen plakalarının da satışını sağlamaktadır.</value>
-  </data>
+ 
 
   <data name="LetsBringProjectsToLife" xml:space="preserve"><value>Projelerinizi Hayata Geçirelim</value></data>
   <data name="HeadOffice" xml:space="preserve"><value>MERKEZ OFİS</value></data>
