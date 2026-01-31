@@ -96,4 +96,9 @@
   <data name="Marble" xml:space="preserve"><value>MARBLE</value></data>
   <data name="Onyx" xml:space="preserve"><value>ONYX</value></data>
   <data name="Limestone" xml:space="preserve"><value>LIMESTONE</value></data>
+<data name="NaturalStoneWarning" xml:space="preserve">
+    <value>Natural stone products may show variations in color, pattern, and veining due to their nature; this is a result of the product's natural origin.</value>
+  </data>
+
+
 </root>

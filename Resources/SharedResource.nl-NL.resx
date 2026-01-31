@@ -97,4 +97,9 @@
   <data name="Marble" xml:space="preserve"><value>MARMER</value></data>
   <data name="Onyx" xml:space="preserve"><value>ONYX</value></data>
   <data name="Limestone" xml:space="preserve"><value>KALKSTEEN</value></data>
+<data name="NaturalStoneWarning" xml:space="preserve">
+    <value>Natuursteenproducten kunnen variaties in kleur, patroon en adering vertonen vanwege hun aard; dit is een resultaat van de natuurlijke oorsprong van het product.</value>
+  </data>
+
+
 </root>

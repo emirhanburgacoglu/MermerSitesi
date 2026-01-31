@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /Account/Login
+Disallow: /Admin/
+
+# Arama motorlarının koleksiyon ve projeleri görmesine izin ver
+Allow: /
+Sitemap: https://rystonexport.com/sitemap.xml

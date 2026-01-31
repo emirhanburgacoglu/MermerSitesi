@@ -27,10 +27,10 @@ namespace MermerSitesi.Controllers
             // Böylece veritabanında "Travertine" de yazsa, "travertine" de yazsa bulur.
             var model = new MermerSitesi.ViewModels.HomeCollectionViewModel
             {
-                Travertines = allProducts.Where(p => p.Category?.ToLower() == "travertine").Take(4).ToList(),
-                Marbles = allProducts.Where(p => p.Category?.ToLower() == "marble").Take(4).ToList(),
-                Limestones = allProducts.Where(p => p.Category?.ToLower() == "limestone").Take(4).ToList(),
-                Onyxes = allProducts.Where(p => p.Category?.ToLower() == "onyx").Take(4).ToList()
+                Travertines = allProducts.Where(p => p.Category?.ToLower() == "travertine").Take(20).ToList(),
+                Marbles = allProducts.Where(p => p.Category?.ToLower() == "marble").Take(20).ToList(),
+                Limestones = allProducts.Where(p => p.Category?.ToLower() == "limestone").Take(20).ToList(),
+                Onyxes = allProducts.Where(p => p.Category?.ToLower() == "onyx").Take(20).ToList()
             };
 
             return View(model);

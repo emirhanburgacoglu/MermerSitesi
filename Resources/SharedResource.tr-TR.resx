@@ -92,4 +92,8 @@
   <data name="Marble" xml:space="preserve"><value>MERMER</value></data>
   <data name="Onyx" xml:space="preserve"><value>ONİKS</value></data>
   <data name="Limestone" xml:space="preserve"><value>LİMESTONE</value></data>
+<data name="NaturalStoneWarning" xml:space="preserve">
+    <value>Doğaltaş ürünler, doğal yapıları gereği renk, desen ve damar farklılıkları gösterebilir; bu durum ürünün doğallığının bir sonucudur.</value>
+  </data>
+
 </root>

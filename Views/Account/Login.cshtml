@@ -1,6 +1,9 @@
 @{
     ViewData["Title"] = "Admin Girişi";
 }
+@section HeaderCustom {
+    <meta name="robots" content="noindex, nofollow">
+}
 
 <div class="container mt-5">
     <div class="row justify-content-center">
@@ -11,7 +14,7 @@
                     <small>Yönetim Paneli</small>
                 </div>
                 <div class="card-body p-4">
-                    
+
                     @if (ViewBag.Error != null)
                     {
                         <div class="alert alert-danger text-center small">@ViewBag.Error</div>
@@ -20,7 +23,8 @@
                     <form asp-action="Login" method="post">
                         <div class="mb-3">
                             <label class="form-label small fw-bold text-muted">KULLANICI ADI</label>
-                            <input type="text" name="username" class="form-control rounded-0 bg-light" required autofocus>
+                            <input type="text" name="username" class="form-control rounded-0 bg-light" required
+                                autofocus>
                         </div>
                         <div class="mb-4">
                             <label class="form-label small fw-bold text-muted">ŞİFRE</label>

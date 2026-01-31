@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MermerSitesi.styles.css" asp-append-version="true" />
+    @await RenderSectionAsync("HeaderCustom", required: false)
 </head>
 
 <body>
@@ -273,6 +274,8 @@
         </nav>
     </header>
 
+
+
     <div class="container-fluid p-0">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -314,7 +317,7 @@
                         <div class="col-6">
                             <ul class="footer-links">
                                 <li><a asp-controller="Home" asp-action="Collection"
-                                        asp-route-id="white">@Localizer["Collection"]</a></li>
+                                        asp-route-id="travertine">@Localizer["Collection"]</a></li>
                                 <li><a asp-controller="Home" asp-action="Contact">@Localizer["Contact"]</a></li>
                                 <li><a href="#">@Localizer["FAQ"]</a></li>
                             </ul>
@@ -327,7 +330,11 @@
                     <ul class="footer-contact">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Ferhatpaşa Mah. Yeditepe Cad. No: 123<br>Ataşehir / İSTANBUL</span>
+                            <span>
+                                Paşa Alanı Mah. 455. Sk.<br>
+                                Şirinevler Sitesi P Blok No: 10-12/3<br>
+                                Karesi / BALIKESİR
+                            </span>
                         </li>
                         <li>
                             <i class="fas fa-phone-alt"></i>
@@ -350,7 +357,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 text-center text-md-start">
                         <p class="mb-0">
-                            &copy; 2025 R&Y Stone Export. @Localizer["AllRightsReserved"]
+                            &copy; 2026 R&Y Stone Export. @Localizer["AllRightsReserved"]
                             <a asp-controller="Account" asp-action="Login" class="admin-link" title="Yönetim Paneli">
                                 <i class="fas fa-lock fa-xs"></i>
                             </a>

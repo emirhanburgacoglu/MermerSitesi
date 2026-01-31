@@ -7,11 +7,11 @@
 <style>
     /* HEADER AYARI */
     .contact-header {
-        background-image: url('/images/.png');
+        background-image: url('/images/ContactUs.jpg');
         background-size: cover;
         background-position: center;
-        background-attachment: fixed;
-        height: 450px;
+        background-attachment: scroll;
+        height: 400px;
         width: 100vw;
         margin-left: calc(-50vw + 50%);
         margin-right: calc(-50vw + 50%);
@@ -34,7 +34,6 @@
         padding: 3rem;
         height: 100%;
         border-left: 5px solid var(--gold-color);
-        /* Sabit, temiz gölge */
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         border-radius: 0 12px 12px 0;
         transition: transform 0.3s ease;
@@ -42,7 +41,6 @@
 
     .contact-info-box-modern:hover {
         transform: translateY(-5px);
-        /* Hafif hareket */
     }
 
     /* İKONLAR */
@@ -67,32 +65,21 @@
         box-shadow: 0 10px 20px rgba(201, 169, 97, 0.3);
     }
 
-    /* --- SAĞ FORM KUTUSU (GÖLGELİ YAPI BURADA) --- */
+    /* SAĞ FORM KUTUSU */
     .contact-form-wrapper-modern {
         background: #fff;
         padding: 3rem;
         border-radius: 12px;
         position: relative;
-
-        /* 1. Normal Durum: Derin ve Yumuşak Siyah Gölge */
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1),
-            0 0 0 1px rgba(0, 0, 0, 0.02);
-        /* İnce sınır çizgisi */
-
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.02);
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        /* Yaylanma efekti */
     }
 
-    /* 2. Hover Durumu: Gold Yansımalı Gölge */
     .contact-form-wrapper-modern:hover {
         transform: translateY(-8px);
-        /* Yukarı kalkar */
-        /* Gölge rengi hafif Gold'a döner ve yayılır */
-        box-shadow: 0 30px 60px rgba(201, 169, 97, 0.15),
-            0 0 0 1px rgba(201, 169, 97, 0.1);
+        box-shadow: 0 30px 60px rgba(201, 169, 97, 0.15), 0 0 0 1px rgba(201, 169, 97, 0.1);
     }
 
-    /* INPUT (KUTUCUK) MODERNİZASYONU */
     .form-control-modern {
         border: 1px solid #e9ecef;
         padding: 1rem 1.25rem;
@@ -117,7 +104,6 @@
         color: var(--gold-color);
     }
 
-    /* GOLD BUTON */
     .btn-gold-modern {
         background: var(--gold-color);
         background: linear-gradient(135deg, #d4b875 0%, #c9a961 100%);
@@ -135,7 +121,6 @@
         box-shadow: 0 8px 25px rgba(201, 169, 97, 0.5);
     }
 
-    /* Harita Çerçevesi */
     .map-frame-modern {
         border-radius: 8px;
         overflow: hidden;
@@ -155,7 +140,7 @@
         </p>
     </div>
     <div class="overlay"
-        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6);"></div>
+        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2);"></div>
 </div>
 
 <div class="container mb-5 pb-5">
@@ -172,8 +157,11 @@
                     </div>
                     <div>
                         <h6 class="fw-bold mb-2 text-dark" style="letter-spacing: 1px;">@Localizer["Address"]</h6>
-                        <p class="text-muted mb-0" style="line-height: 1.6;">Ferhatpaşa Mah. Yeditepe Cad. No:
-                            123<br>Ataşehir / İSTANBUL</p>
+                        <p class="text-muted mb-0" style="line-height: 1.6;">
+                            Paşa Alanı Mah. 455. Sk.<br>
+                            Şirinevler Sitesi P Blok No: 10-12/3<br>
+                            Karesi / BALIKESİR
+                        </p>
                     </div>
                 </div>
 
@@ -198,10 +186,12 @@
                 </div>
 
                 <div class="mt-auto map-frame-modern">
+                    @* Yeni doğrulanan konuma göre güncellenmiş harita *@
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.650490016624!2d29.1594!3d40.9905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzI1LjgiTiAyOcKwMDknMzMuOCJF!5e0!3m2!1str!2str!4v1630000000000!5m2!1str!2str"
-                        width="100%" height="220" style="border:0; display: block;" allowfullscreen=""
-                        loading="lazy"></iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.8152575239!2d27.9068!3d39.6644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b7003440787341%3A0x673c09b7c85268c1!2sPa%C5%9Fa%20Alan%C4%B1%2C%20455.%20Sk.%2C%2010110%20Karesi%2FBal%C4%B1kesir!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str"
+                        width="100%" height="220" style="border:0; display: block;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -254,6 +244,5 @@
                 </form>
             </div>
         </div>
-
     </div>
 </div>

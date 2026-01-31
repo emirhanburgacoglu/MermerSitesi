@@ -17,7 +17,7 @@
             break;
         case "marble":
             categoryTitle = Localizer["Marble"].Value;
-            headerImage = "/images/collection-header.jpg";
+            headerImage = "/images/marble-header.jpg";
             break;
         case "limestone":
             categoryTitle = Localizer["Limestone"].Value;
@@ -35,8 +35,7 @@
 
     ViewData["Title"] = categoryTitle;
 
-    // DİL KONTROLÜ:
-    // Türkçe ("tr") ise Türkçe ismi, diğer tüm dillerde (en, nl vs.) İngilizce ismi göster.
+    // DİL KONTROLÜ
     bool isTurkish = CultureInfo.CurrentCulture.Name.StartsWith("tr");
 }
 
@@ -98,7 +97,6 @@
         z-index: 10;
         cursor: pointer;
         white-space: nowrap;
-        /* Yazı uzunsa alt satıra geçmesin */
     }
 
     .luxury-card:hover .zoom-btn {
@@ -111,7 +109,7 @@
         color: #fff;
     }
 
-    /* MARKA ADI */
+    /* MARKA VE BAŞLIK */
     .brand-name {
         color: #999;
         font-family: 'Times New Roman', serif;
@@ -123,7 +121,6 @@
         margin-top: 15px;
     }
 
-    /* ÜRÜN BAŞLIĞI - HEP SİYAH VE SABİT */
     .luxury-title {
         font-family: 'Times New Roman', serif;
         font-weight: 600;
@@ -134,14 +131,9 @@
         margin-bottom: 0;
         text-decoration: none !important;
         display: inline-block;
-        transition: none;
     }
 
-    .luxury-title:hover {
-        color: #000 !important;
-    }
-
-    /* --- LIGHTBOX (DEV EKRAN RESİM) --- */
+    /* LIGHTBOX */
     .lightbox-modal {
         display: none;
         position: fixed;
@@ -158,14 +150,9 @@
     }
 
     .lightbox-content {
-        width: 95vw;
-        /* ZORLA GENİŞLET */
-        height: 95vh;
-        /* ZORLA GENİŞLET */
-        border: none;
-        box-shadow: 0 0 60px rgba(0, 0, 0, 1);
+        max-width: 90vw;
+        max-height: 90vh;
         object-fit: contain;
-        background-color: transparent;
     }
 
     .close-lightbox {
@@ -174,16 +161,15 @@
         right: 40px;
         color: #fff;
         font-size: 60px;
-        font-weight: bold;
-        transition: 0.3s;
         cursor: pointer;
-        z-index: 10001;
-        opacity: 0.7;
     }
 
-    .close-lightbox:hover {
-        color: #c9a961;
-        opacity: 1;
+    /* UYARI NOTU STİLİ */
+    .natural-stone-disclaimer {
+        border: 1px solid #e0e0e0;
+        border-top: 3px solid #c9a961;
+        background-color: #fcfcfc;
+        border-radius: 4px;
     }
 
     @@keyframes fadeIn {
@@ -198,7 +184,7 @@
 </style>
 
 <div class="page-header d-flex align-items-center justify-content-center mb-5"
-    style="background-image: url('@headerImage'); background-size: cover; background-position: center;">
+    style="background-image: url('@headerImage'); background-size: cover; background-position: center; min-height: 300px; position: relative;">
     <div class="text-center text-white position-relative z-index-1">
         <h1 class="display-3 fw-bold text-uppercase"
             style="font-family: 'Times New Roman', serif; letter-spacing: 3px;">@categoryTitle</h1>
@@ -207,15 +193,15 @@
             @Localizer["DiscoverCollection"]
         </p>
     </div>
-    <div class="overlay" style="background: rgba(0,0,0,0.4);"></div>
+    <div class="overlay"
+        style="background: rgba(0,0,0,0.4); position: absolute; top:0; left:0; width:100%; height:100%;"></div>
 </div>
 
 <div class="container mb-5">
-
     @if (!Model.Any())
     {
         <div class="alert alert-light text-center border p-5 shadow-sm rounded-3">
-            <i class="fas fa-search fa-3x text-muted mb-3" style="color: #c9a961;"></i>
+            <i class="fas fa-search fa-3x mb-3" style="color: #c9a961;"></i>
             <h4 class="fw-bold">@categoryTitle @Localizer["NoProductsFound"]</h4>
             <p class="text-muted">@Localizer["PleaseCheckBackLater"]</p>
         </div>
@@ -227,12 +213,10 @@
             {
                 <div class="col-lg-3 col-md-4 col-6 mb-4">
                     <div class="luxury-card">
-
                         <div class="luxury-image-wrapper" onclick="openLightbox('@item.ImageUrl')">
                             @if (!string.IsNullOrEmpty(item.ImageUrl))
                             {
                                 <img src="@item.ImageUrl" alt="@item.NameTr">
-
                                 <button class="zoom-btn" onclick="openLightbox('@item.ImageUrl'); event.stopPropagation();">
                                     <i class="fas fa-search-plus me-2"></i> @Localizer["ViewDetails"]
                                 </button>
@@ -245,7 +229,6 @@
 
                         <div class="text-center">
                             <span class="brand-name">R & Y STONE</span>
-
                             <a asp-action="Details" asp-route-id="@item.Id" class="luxury-title">
                                 @(isTurkish? item.NameTr: item.NameEn)
                             </a>
@@ -257,6 +240,21 @@
     }
 </div>
 
+<div class="container mb-4 mt-2">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="text-center p-2" style="border-top: 1px solid #eee; opacity: 0.8;">
+                <p class="text-muted mb-0"
+                    style="font-family: 'Times New Roman', serif; font-size: 0.8rem; letter-spacing: 0.5px;">
+                    <i class="fas fa-info-circle me-1" style="color: #c9a961; font-size: 0.75rem;"></i>
+                    @Localizer["NaturalStoneWarning"]
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
 <div id="myLightbox" class="lightbox-modal" onclick="closeLightbox()">
     <span class="close-lightbox">&times;</span>
     <img class="lightbox-content" id="img01" onclick="event.stopPropagation()">
@@ -266,7 +264,6 @@
     function openLightbox(imageUrl) {
         var modal = document.getElementById("myLightbox");
         var modalImg = document.getElementById("img01");
-
         modal.style.display = "flex";
         modalImg.src = imageUrl;
     }

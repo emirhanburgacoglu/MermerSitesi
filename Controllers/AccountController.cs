@@ -33,8 +33,8 @@ namespace MermerSitesi.Controllers
 
                 // Sisteme giriş yap (Cookie oluştur)
                 await HttpContext.SignInAsync(
-                    CookieAuthenticationDefaults.AuthenticationScheme, 
-                    new ClaimsPrincipal(claimsIdentity), 
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity),
                     authProperties);
 
                 // Admin paneline yönlendir

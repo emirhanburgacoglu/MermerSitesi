@@ -76,20 +76,76 @@
         letter-spacing: 1px;
     }
 </style>
-
 <div class="container-fluid p-0 mb-5">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="5000">
-                <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop"
-                    class="d-block w-100" style="height: 600px; object-fit: cover;" alt="Hero">
-                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
-                    <h2 class="display-4 fw-bold" style="font-family: 'Cormorant Garamond', serif;">
-                        @Localizer["ProcessingArtOfNature"]</h2>
-                    <p class="lead" style="font-style: italic;">@Localizer["TouchingHeartOfStone"]</p>
+                <img src="/images/2.jpg" class="d-block w-100" style="height: 600px; object-fit: cover;" alt="Görsel 1">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded-pill"
+                    style="width: 80%; left: 10%; bottom: 10%; border: 1px solid rgba(255,255,255,0.1);">
+                    <div class="d-flex align-items-center justify-content-center gap-4">
+                        <h2 class="mb-0 fw-bold"
+                            style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 2px;">
+                            @Localizer["ProcessingArtOfNature"]
+                        </h2>
+                        <div style="width: 2px; height: 30px; background-color: #c9a961;"></div>
+                        <p class="mb-0 fw-light text-uppercase"
+                            style="font-style: italic; font-size: 0.85rem; letter-spacing: 1px;">
+                            @Localizer["TouchingHeartOfStone"]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="/images/1.jpg" class="d-block w-100" style="height: 600px; object-fit: cover;" alt="Görsel 2">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded-pill"
+                    style="width: 80%; left: 10%; bottom: 10%; border: 1px solid rgba(255,255,255,0.1);">
+                    <div class="d-flex align-items-center justify-content-center gap-4">
+                        <h2 class="mb-0 fw-bold"
+                            style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 2px;">
+                            @Localizer["ProcessingArtOfNature"]
+                        </h2>
+                        <div style="width: 2px; height: 30px; background-color: #c9a961;"></div>
+                        <p class="mb-0 fw-light text-uppercase"
+                            style="font-style: italic; font-size: 0.85rem; letter-spacing: 1px;">
+                            @Localizer["TouchingHeartOfStone"]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="/images/3.jpg" class="d-block w-100" style="height: 600px; object-fit: cover;" alt="Görsel 3">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded-pill"
+                    style="width: 80%; left: 10%; bottom: 10%; border: 1px solid rgba(255,255,255,0.1);">
+                    <div class="d-flex align-items-center justify-content-center gap-4">
+                        <h2 class="mb-0 fw-bold"
+                            style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 2px;">
+                            @Localizer["ProcessingArtOfNature"]
+                        </h2>
+                        <div style="width: 2px; height: 30px; background-color: #c9a961;"></div>
+                        <p class="mb-0 fw-light text-uppercase"
+                            style="font-style: italic; font-size: 0.85rem; letter-spacing: 1px;">
+                            @Localizer["TouchingHeartOfStone"]
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
 </div>
 
