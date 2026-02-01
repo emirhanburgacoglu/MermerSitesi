@@ -117,5 +117,22 @@ namespace MermerSitesi.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        // Gizlilik Politikası
+        [Route("privacy-policy")]
+        [Route("gizlilik-politikasi")]
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        // Kullanım Şartları
+        [Route("terms-of-use")]
+        [Route("kullanim-sartlari")]
+        public IActionResult Terms()
+        {
+            return View();
+        }
     }
+
 }
+

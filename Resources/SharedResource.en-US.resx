@@ -109,5 +109,16 @@
   <data name="ContactUsBtn" xml:space="preserve">
     <value>CONTACT US</value>
   </data>
-
+<data name="PrivacyPolicy" xml:space="preserve">
+    <value>Privacy Policy &amp; GDPR</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>Terms of Use</value>
+  </data>
+  <data name="PrivacyFullContent" xml:space="preserve">
+    <value>&lt;h3&gt;1. Data Controller&lt;/h3&gt;&lt;p&gt;At R&amp;Y Stone Export, we process your personal data in accordance with the GDPR (General Data Protection Regulation).&lt;/p&gt;&lt;h3&gt;2. Purpose of Processing&lt;/h3&gt;&lt;p&gt;Information collected via contact forms or WhatsApp is used solely for processing your business inquiries and managing export documentation.&lt;/p&gt;&lt;h3&gt;3. Your Rights&lt;/h3&gt;&lt;p&gt;You have the right to request the deletion or correction of your personal information at any time by contacting us.&lt;/p&gt;</value>
+  </data>
+  <data name="TermsFullContent" xml:space="preserve">
+    <value>&lt;h3&gt;1. Usage&lt;/h3&gt;&lt;p&gt;By accessing this website, you agree to comply with our business terms regarding natural stone supply.&lt;/p&gt;&lt;h3&gt;2. Quotations&lt;/h3&gt;&lt;p&gt;Product details provided on this site are for informational purposes. Formal quotations are required for all international orders.&lt;/p&gt;&lt;h3&gt;3. Intellectual Property&lt;/h3&gt;&lt;p&gt;All designs, stone textures, and logos displayed are the property of R&amp;Y Stone Export.&lt;/p&gt;</value>
+  </data>
 </root>

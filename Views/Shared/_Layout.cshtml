@@ -372,9 +372,13 @@
                         </p>
                     </div>
                     <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-                        <a href="#" class="footer-legal-link">@Localizer["PrivacyPolicy"]</a>
+                        <a asp-controller="Home" asp-action="Privacy" class="footer-legal-link">
+                            @Localizer["PrivacyPolicy"]
+                        </a>
                         <span class="mx-2">|</span>
-                        <a href="#" class="footer-legal-link">@Localizer["TermsOfUse"]</a>
+                        <a asp-controller="Home" asp-action="Terms" class="footer-legal-link">
+                            @Localizer["TermsOfUse"]
+                        </a>
                     </div>
                 </div>
             </div>

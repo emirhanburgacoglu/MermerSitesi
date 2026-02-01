@@ -111,4 +111,16 @@
     <value>NEEM CONTACT OP</value>
   </data>
 
+<data name="PrivacyPolicy" xml:space="preserve">
+    <value>Privacybeleid &amp; AVG</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>Gebruiksvoorwaarden</value>
+  </data>
+  <data name="PrivacyFullContent" xml:space="preserve">
+    <value>&lt;h3&gt;1. Gegevensbeheerder&lt;/h3&gt;&lt;p&gt;R&amp;Y Stone Export respecteert uw privacy volgens de Algemene Verordening Gegevensbescherming (AVG/GDPR).&lt;/p&gt;&lt;h3&gt;2. Gebruik van Gegevens&lt;/h3&gt;&lt;p&gt;Uw contactgegevens worden uitsluitend gebruikt voor zakelijke correspondentie en exportorders.&lt;/p&gt;&lt;h3&gt;3. Beveiliging&lt;/h3&gt;&lt;p&gt;Wij delen uw gegevens niet met derden zonder uw uitdrukkelijke toestemming.&lt;/p&gt;</value>
+  </data>
+  <data name="TermsFullContent" xml:space="preserve">
+    <value>&lt;h3&gt;1. Voorwaarden&lt;/h3&gt;&lt;p&gt;De inhoud van deze website is uitsluitend bedoeld voor algemene informatie over onze natuursteenproducten.&lt;/p&gt;&lt;h3&gt;2. Offertes&lt;/h3&gt;&lt;p&gt;Prijzen op de website zijn indicatief. Neem contact op voor een definitieve offerte inclusief transportkosten.&lt;/p&gt;&lt;h3&gt;3. Auteursrecht&lt;/h3&gt;&lt;p&gt;Alle afbeeldingen en teksten zijn eigendom van R&amp;Y Stone Export.&lt;/p&gt;</value>
+  </data>
 </root>

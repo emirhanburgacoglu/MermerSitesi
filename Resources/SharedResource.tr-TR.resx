@@ -105,5 +105,16 @@
   <data name="ContactUsBtn" xml:space="preserve">
     <value>İLETİŞİME GEÇİN</value>
   </data>
-
+<data name="PrivacyPolicy" xml:space="preserve">
+    <value>Gizlilik Politikası ve KVKK</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>Kullanım Şartları</value>
+  </data>
+  <data name="PrivacyFullContent" xml:space="preserve">
+    <value>&lt;h3&gt;1. Veri Sorumlusu&lt;/h3&gt;&lt;p&gt;R&amp;Y Stone Export olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca, kişisel verilerinizi güvenli bir şekilde işliyoruz.&lt;/p&gt;&lt;h3&gt;2. İşlenen Veriler ve Amaç&lt;/h3&gt;&lt;p&gt;Web sitemizdeki iletişim formları ve WhatsApp hattımız üzerinden paylaştığınız ad, soyad, e-posta ve telefon bilgileriniz, sadece taleplerinize yanıt vermek ve ihracat süreçlerini yönetmek amacıyla işlenir.&lt;/p&gt;&lt;h3&gt;3. Veri Güvenliği&lt;/h3&gt;&lt;p&gt;Verileriniz üçüncü şahıslarla ticari amaçlarla asla paylaşılmaz. Sadece yasal yükümlülükler çerçevesinde yetkili kurumlarla paylaşılabilir.&lt;/p&gt;</value>
+  </data>
+  <data name="TermsFullContent" xml:space="preserve">
+    <value>&lt;h3&gt;1. Hizmet Şartları&lt;/h3&gt;&lt;p&gt;Bu web sitesini kullanarak, sunulan mermer ve doğal taş bilgilerinin bilgilendirme amaçlı olduğunu kabul etmiş sayılırsınız.&lt;/p&gt;&lt;h3&gt;2. Fiyatlandırma&lt;/h3&gt;&lt;p&gt;Doğal taş sektöründeki değişkenlikler nedeniyle sitemizde yer alan bilgiler kesin teklif niteliği taşımaz. Kesin fiyatlandırma için bizimle iletişime geçilmesi zorunludur.&lt;/p&gt;&lt;h3&gt;3. Fikri Mülkiyet&lt;/h3&gt;&lt;p&gt;Sitede yer alan tüm görsel ve içerikler R&amp;Y Stone Export mülkiyetindedir, izinsiz kullanılamaz.&lt;/p&gt;</value>
+  </data>
 </root>
