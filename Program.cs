@@ -6,17 +6,14 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Veritabanı Servisi (SQLite)
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// MVC ve Dil Servisleri
 builder.Services.AddControllersWithViews()
     .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix);
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
-// KİMLİK DOĞRULAMA SERVİSİ
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
@@ -26,43 +23,40 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
-} // <--- DİKKAT: if bloğu burada kapanmalı!
+}
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-// --- DİL AYARLARI ---
-// Bu değişkeni if bloğunun DIŞINA aldık, artık herkes görebilir.
-// Not: Resource dosyaların (SharedResource.nl.resx) ile buradaki kodlar (nl veya nl-NL) uyumlu olmalı.
-// Genelde sadece "tr", "en", "nl" kullanmak daha garantidir ama dosya adın en-US ise böyle kalsın.
-var supportedCultures = new[] { "tr-TR", "en-US", "nl-NL" };
+// === İNGİLİZCE VARSAYILAN DİL AYARI ===
+var supportedCultures = new[] { "en-US", "tr-TR", "nl-NL" };
 
-var localizationOptions = new RequestLocalizationOptions()
-    .SetDefaultCulture("en-US")
-    .AddSupportedCultures(supportedCultures)
-    .AddSupportedUICultures(supportedCultures);
-
-// CRITICAL: Sadece Cookie ve QueryString'i kabul et, Tarayıcı Dilini (Accept-Language) LİSTEDEN ÇIKAR
-localizationOptions.RequestCultureProviders = new List<IRequestCultureProvider>
+var localizationOptions = new RequestLocalizationOptions
 {
-    new CookieRequestCultureProvider(),    // 1. Önce kullanıcın butonla seçtiği dile bak
-    new QueryStringRequestCultureProvider() // 2. Sonra URL'deki dile bak (?culture=en-US gibi)
+    DefaultRequestCulture = new RequestCulture("en-US"), // ✅ Varsayılan İngilizce
+    SupportedCultures = supportedCultures.Select(c => new CultureInfo(c)).ToList(),
+    SupportedUICultures = supportedCultures.Select(c => new CultureInfo(c)).ToList(),
+
+    // ✅ SADECE COOKIE KONTROL ET - Tarayıcı dilini YOKSAY
+    RequestCultureProviders = new List<IRequestCultureProvider>
+    {
+        new CookieRequestCultureProvider()
+    },
+
+    // ✅ Cookie yoksa İNGİLİZCE'ye düş
+    FallBackToParentCultures = false,
+    FallBackToParentUICultures = false
 };
+
 app.UseRequestLocalization(localizationOptions);
-// --------------------
 
 app.UseRouting();
-
 app.UseAuthentication();
 app.UseAuthorization();
-
-// .NET sürümüne göre burası değişebilir ama UseStaticFiles varken MapStaticAssets opsiyoneldir.
-// Hata verirse bu satırı silebilirsin: app.MapStaticAssets(); 
 
 app.MapControllerRoute(
     name: "default",
