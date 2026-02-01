@@ -100,5 +100,9 @@
     <value>Natural stone products may show variations in color, pattern, and veining due to their nature; this is a result of the product's natural origin.</value>
   </data>
 
+<data name="CustomProductionNote" xml:space="preserve">
+  <value>Our products can be produced in custom dimensions and with desired surface treatment options according to customer demand.</value>
+</data>
+
 
 </root>

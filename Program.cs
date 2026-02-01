@@ -40,13 +40,19 @@ app.UseStaticFiles();
 // Bu değişkeni if bloğunun DIŞINA aldık, artık herkes görebilir.
 // Not: Resource dosyaların (SharedResource.nl.resx) ile buradaki kodlar (nl veya nl-NL) uyumlu olmalı.
 // Genelde sadece "tr", "en", "nl" kullanmak daha garantidir ama dosya adın en-US ise böyle kalsın.
-var supportedCultures = new[] { "tr-TR", "en-US", "nl-NL" }; 
+var supportedCultures = new[] { "tr-TR", "en-US", "nl-NL" };
 
 var localizationOptions = new RequestLocalizationOptions()
-    .SetDefaultCulture("tr-TR")
+    .SetDefaultCulture("en-US")
     .AddSupportedCultures(supportedCultures)
     .AddSupportedUICultures(supportedCultures);
 
+// CRITICAL: Sadece Cookie ve QueryString'i kabul et, Tarayıcı Dilini (Accept-Language) LİSTEDEN ÇIKAR
+localizationOptions.RequestCultureProviders = new List<IRequestCultureProvider>
+{
+    new CookieRequestCultureProvider(),    // 1. Önce kullanıcın butonla seçtiği dile bak
+    new QueryStringRequestCultureProvider() // 2. Sonra URL'deki dile bak (?culture=en-US gibi)
+};
 app.UseRequestLocalization(localizationOptions);
 // --------------------
 

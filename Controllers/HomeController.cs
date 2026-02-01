@@ -86,16 +86,28 @@ namespace MermerSitesi.Controllers
         [HttpPost]
         public IActionResult ChangeLanguage(string culture, string returnUrl)
         {
+            // Varsayılanı artık en-US yapıyoruz
             if (string.IsNullOrEmpty(culture))
             {
-                culture = "tr-TR";
+                culture = "en-US";
             }
 
             Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,
                 CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
-                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+                new CookieOptions
+                {
+                    Expires = DateTimeOffset.UtcNow.AddYears(1),
+                    HttpOnly = true, // Güvenlik için eklenebilir
+                    Secure = true    // HTTPS kullanıyorsan eklenebilir
+                }
             );
+
+            // returnUrl boş gelirse ana sayfaya yönlendir (Hata almamak için)
+            if (string.IsNullOrEmpty(returnUrl) || !Url.IsLocalUrl(returnUrl))
+            {
+                return RedirectToAction("Index", "Home");
+            }
 
             return LocalRedirect(returnUrl);
         }

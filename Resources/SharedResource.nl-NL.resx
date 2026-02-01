@@ -101,5 +101,8 @@
     <value>Natuursteenproducten kunnen variaties in kleur, patroon en adering vertonen vanwege hun aard; dit is een resultaat van de natuurlijke oorsprong van het product.</value>
   </data>
 
+<data name="CustomProductionNote" xml:space="preserve">
+  <value>Onze producten kunnen worden vervaardigd in aangepaste afmetingen en met de gewenste oppervlaktebehandelingsopties, geheel volgens de wens van de klant.</value>
+</data>
 
 </root>

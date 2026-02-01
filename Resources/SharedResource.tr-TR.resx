@@ -96,4 +96,7 @@
     <value>Doğaltaş ürünler, doğal yapıları gereği renk, desen ve damar farklılıkları gösterebilir; bu durum ürünün doğallığının bir sonucudur.</value>
   </data>
 
+<data name="CustomProductionNote" xml:space="preserve">
+  <value>Ürünlerimiz, müşteri talebi doğrultusunda özel ölçülerde ve istenilen yüzey işlem seçenekleriyle üretilebilmektedir.</value>
+</data>
 </root>
