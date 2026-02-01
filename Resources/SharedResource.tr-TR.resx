@@ -99,4 +99,11 @@
 <data name="CustomProductionNote" xml:space="preserve">
   <value>Ürünlerimiz, müşteri talebi doğrultusunda özel ölçülerde ve istenilen yüzey işlem seçenekleriyle üretilebilmektedir.</value>
 </data>
+<data name="PricingInfoNote" xml:space="preserve">
+    <value>Güncel fiyat bilgisi için lütfen bizimle iletişime geçin.</value>
+  </data>
+  <data name="ContactUsBtn" xml:space="preserve">
+    <value>İLETİŞİME GEÇİN</value>
+  </data>
+
 </root>

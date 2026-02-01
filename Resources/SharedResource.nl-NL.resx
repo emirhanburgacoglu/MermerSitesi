@@ -104,5 +104,11 @@
 <data name="CustomProductionNote" xml:space="preserve">
   <value>Onze producten kunnen worden vervaardigd in aangepaste afmetingen en met de gewenste oppervlaktebehandelingsopties, geheel volgens de wens van de klant.</value>
 </data>
+<data name="PricingInfoNote" xml:space="preserve">
+    <value>Neem contact met ons op voor actuele prijsinformatie.</value>
+  </data>
+  <data name="ContactUsBtn" xml:space="preserve">
+    <value>NEEM CONTACT OP</value>
+  </data>
 
 </root>

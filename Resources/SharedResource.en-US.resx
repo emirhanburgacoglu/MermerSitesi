@@ -103,6 +103,11 @@
 <data name="CustomProductionNote" xml:space="preserve">
   <value>Our products can be produced in custom dimensions and with desired surface treatment options according to customer demand.</value>
 </data>
-
+<data name="PricingInfoNote" xml:space="preserve">
+    <value>For current pricing information, please contact us.</value>
+  </data>
+  <data name="ContactUsBtn" xml:space="preserve">
+    <value>CONTACT US</value>
+  </data>
 
 </root>

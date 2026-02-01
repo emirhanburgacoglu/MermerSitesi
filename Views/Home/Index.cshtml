@@ -167,7 +167,25 @@
         <div class="text-center mb-5">
             <h2 class="display-6 fw-bold text-uppercase"
                 style="font-family: 'Times New Roman', serif; letter-spacing: 3px;">@Localizer["Collection"]</h2>
-            <div style="width: 60px; height: 3px; background-color: #c9a961; margin: 20px auto;"></div>
+
+            <div style="width: 220px; height: 3px; background-color: #c9a961; margin: 20px auto;"></div>
+            @* --- FİYAT BİLGİSİ VE İLETİŞİM BUTONU (ANASAYFA) --- *@
+            <div class="container text-center mb-5 mt-n3">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <p class="mb-3" style="font-family: 'Times New Roman', serif; font-size: 1.2rem; opacity: 0.8;">
+                            <i class="fas fa-tag me-2" style="color: #c9a961;"></i>
+                            @Localizer["PricingInfoNote"]
+                        </p>
+                        <a asp-controller="Home" asp-action="Contact" class="btn-luxury-contact"
+                            style="display: inline-block; padding: 8px 25px; background: linear-gradient(135deg, #e3c47a 0%, #c9a961 100%); color: #fff; font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border: none; transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(201, 169, 97, 0.2);">
+                            @Localizer["ContactUsBtn"]
+                        </a>
+                        <div class="mx-auto mt-4"
+                            style="width: 50px; height: 1px; opacity: 0.5; background-color: #c9a961;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         @* --- 1. TRAVERTINE --- *@

@@ -1847,3 +1847,25 @@ button:focus-visible {
   box-shadow: 0 4px 10px rgba(201, 169, 97, 0.4);
   /* Gold gölge */
 }
+
+.btn-luxury-contact {
+  display: inline-block;
+  padding: 12px 35px;
+  background: linear-gradient(135deg, #e3c47a 0%, #c9a961 100%);
+  color: #fff !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+}
+
+.btn-luxury-contact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(201, 169, 97, 0.5);
+  filter: brightness(1.1);
+}
