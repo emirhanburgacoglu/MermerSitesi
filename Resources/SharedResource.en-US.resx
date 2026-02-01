@@ -8,7 +8,7 @@
   <data name="Search" xml:space="preserve"><value>SEARCH</value></data>
   <data name="Language" xml:space="preserve"><value>LANGUAGE</value></data>
 <data name="Slogan" xml:space="preserve">
-    <value>We export the elegance of nature to the world for distinguished projects.</value>
+    <value>We export the elegance of nature to distinguished projects around the world.</value>
 </data>
   <data name="OurStory" xml:space="preserve"><value>OUR STORY</value></data>
   <data name="ProcessingArtOfNature" xml:space="preserve"><value>Processing the Art of Nature</value></data>
@@ -34,17 +34,16 @@
     <value>R<span style="color: #c9a961; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export</value>
   </data>
 
-<data name="AboutText1" xml:space="preserve">
-    <value>R&amp;Y Stone Export is a foreign trade company built on a deep-rooted family tradition in marble export, centering on quality and trust. Thanks to our knowledge based on more than 20 years of experience in the sector and our strong organizational structure, we deliver high-standard Turkish marble to many points of the world today. The trust, sustainability, and meticulousness brought by being a family business, combined with our professional working approach, always allow us to offer our customers the right product at the right time. We manage all processes from production to packaging, from loading to shipment transparently, based on international quality standards.</value>
+<data name="AboutText1" xml:space="preserve"><value>R&amp;Y Stone Export is a foreign trade company built on a deep-rooted family tradition in Turkish Natural Stone exports, with a strong focus on quality and trust. With more than 20 years of industry experience and a strong organizational structure, we deliver high-quality Turkish Natural Stone to many parts of the world. The trust, sustainability, and meticulousness that come from being a family business, combined with our professional approach, enable us to consistently offer our customers the right product at the right time. We manage all processes—from production to packaging, and from loading to shipment—in a transparent manner and in accordance with international quality standards.</value>
   </data>
 
   <data name="AboutText2" xml:space="preserve">
-    <value>Our vision is to establish long-term and strong business partnerships by promoting Turkey's natural stone potential on a global scale. Our mission is to stand by our customers at every step with the principles of high quality, reliable delivery, and strong communication. As R&amp;Y Stone Export, we do not only export marble; we build value, trust, and long-term business relationships. We aim to provide sustainable contributions to our business partners through the innovative projects we develop.</value>
+    <value>Our vision is to establish long-term and strong business partnerships by promoting Turkey’s natural stone potential on a global scale. Our mission is to support our customers at every step with the principles of high quality, reliable delivery, and strong communication. At R&amp;Y Stone Export, we do not only export marble; we build value, trust, and long-term business relationships. We aim to provide sustainable contributions to our business partners through the innovative projects we develop.</value>
+  </data>
+<data name="HomeDescription" xml:space="preserve">
+    <value>R&amp;Y Stone Export is a foreign trade brand built on family values, based on quality, trust, and continuity in marble export. With over 20 years of industry experience, we meticulously select Turkish marble and add value to exclusive projects worldwide by managing all processes from production to shipment at high standards.&lt;br&gt;&lt;br&gt;Specialized in marble, travertine, limestone and onyx, we provide high-quality natural stone solutions for prestigious architectural projects worldwide. With extensive experience in the natural stone industry, we supply marble, travertine, limestone and onyx for distinguished projects around the world.&lt;br&gt;&lt;br&gt;In addition to blocks, slabs and cut-to-size products, we offer tailor-made production with custom dimensions and surface finishes for architectural applications. Through our commitment to quality, sustainable sourcing and reliable logistics, we serve architects, contractors and developers in hotel, residential, commercial and public projects as a trusted long-term partner. In every project, we combine the elegance of nature with technical excellence and lasting performance.</value>
   </data>
 
-<data name="HomeDescription" xml:space="preserve">
-  <value>R&amp;Y Stone Export is a foreign trade brand built on family values, basing its marble exports on quality, trust, and continuity. With over 20 years of sector experience, we meticulously select Turkish marble and add value to prestigious projects worldwide by managing all processes from production to shipment at high standards.</value>
-</data>
   <data name="LetsBringProjectsToLife" xml:space="preserve"><value>Let's Bring Your Projects to Life</value></data>
   <data name="HeadOffice" xml:space="preserve"><value>HEAD OFFICE</value></data>
   <data name="Address" xml:space="preserve"><value>Address</value></data>
@@ -84,13 +83,12 @@
   <data name="DiscoverCollection" xml:space="preserve"><value>Discover Our Collection</value></data>
   <data name="ViewDetails" xml:space="preserve"><value>VIEW DETAILS</value></data>
 
-  <data name="FooterDesc" xml:space="preserve"><value>We carry the art created by nature over millions of years to your modern living spaces. The address of quality, aesthetics, and trust.</value></data>
+  <data name="FooterDesc" xml:space="preserve"><value>We bring the art created by nature over millions of years into your modern living spaces — where quality meets aesthetics and trust.</value></data>
   <data name="Discover" xml:space="preserve"><value>Discover</value></data>
   <data name="FAQ" xml:space="preserve"><value>FAQ</value></data>
   <data name="EmailPlaceholder" xml:space="preserve"><value>Your Email Address</value></data>
   <data name="AllRightsReserved" xml:space="preserve"><value>All Rights Reserved.</value></data>
-  <data name="PrivacyPolicy" xml:space="preserve"><value>Privacy Policy</value></data>
-  <data name="TermsOfUse" xml:space="preserve"><value>Terms of Use</value></data>
+ 
   <data name="SearchPlaceholder" xml:space="preserve"><value>Search...</value></data>
   <data name="Travertine" xml:space="preserve"><value>TRAVERTINE</value></data>
   <data name="Marble" xml:space="preserve"><value>MARBLE</value></data>
@@ -121,4 +119,46 @@
   <data name="TermsFullContent" xml:space="preserve">
     <value>&lt;h3&gt;1. Usage&lt;/h3&gt;&lt;p&gt;By accessing this website, you agree to comply with our business terms regarding natural stone supply.&lt;/p&gt;&lt;h3&gt;2. Quotations&lt;/h3&gt;&lt;p&gt;Product details provided on this site are for informational purposes. Formal quotations are required for all international orders.&lt;/p&gt;&lt;h3&gt;3. Intellectual Property&lt;/h3&gt;&lt;p&gt;All designs, stone textures, and logos displayed are the property of R&amp;Y Stone Export.&lt;/p&gt;</value>
   </data>
+  <data name="AcceptTermsNote" xml:space="preserve">
+    <value>I have read and agree to the processing of my personal data.</value>
+  </data>
+  <data name="KvkkError" xml:space="preserve">
+    <value>You must accept the privacy policy to continue.</value>
+  </data>
+  <data name="CookieNote" xml:space="preserve">
+    <value>We use cookies to offer you a better experience. For more information, please see our </value>
+  </data>
+  <data name="AcceptBtn" xml:space="preserve">
+
+    <value>ACCEPT</value>
+  </data>
+  <data name="FAQ" xml:space="preserve"><value>Frequently Asked Questions</value></data>
+  <data name="FaqQ1" xml:space="preserve"><value>Which products do you export?</value></data>
+  [cite_start]<data name="FaqA1" xml:space="preserve"><value>We export marble, travertine and limestone in slab, cut-to-size and project-based custom production options. [cite: 1]</value></data>
+  <data name="FaqQ2" xml:space="preserve"><value>Which countries do you export to?</value></data>
+  [cite_start]<data name="FaqA2" xml:space="preserve"><value>We export natural stone to many countries, primarily across Europe. [cite: 2]</value></data>
+  <data name="FaqQ3" xml:space="preserve"><value>Do you offer project-based and custom size production?</value></data>
+  <data name="FaqA3" xml:space="preserve"><value>Yes. [cite_start]We provide tailor-made production for architectural projects, including custom dimensions and surface finishes. [cite: 3, 4]</value></data>
+  <data name="FaqQ4" xml:space="preserve"><value>Do you work on large-scale and prestigious projects?</value></data>
+  <data name="FaqA4" xml:space="preserve"><value>Yes. [cite_start]We provide natural stone solutions for hotels, residential, commercial and public projects. [cite: 5, 6]</value></data>
+  <data name="FaqQ5" xml:space="preserve"><value>Is there a minimum order quantity?</value></data>
+  [cite_start]<data name="FaqA5" xml:space="preserve"><value>Minimum order quantities depend on the product type and project scope. [cite: 7]</value></data>
+  <data name="FaqQ6" xml:space="preserve"><value>Can we request samples?</value></data>
+  <data name="FaqA6" xml:space="preserve"><value>Yes. [cite_start]We can provide samples upon request. [cite: 8]</value></data>
+  <data name="FaqQ7" xml:space="preserve"><value>What quality standards do your products meet?</value></data>
+  [cite_start]<data name="FaqA7" xml:space="preserve"><value>All our products are subject to quality control processes in compliance with international export standards. [cite: 9]</value></data>
+  <data name="FaqQ8" xml:space="preserve"><value>In which forms can the products be supplied?</value></data>
+  [cite_start]<data name="FaqA8" xml:space="preserve"><value>Our products can be supplied as blocks, slabs and cut-to-size materials, as well as custom-made products for specific projects. [cite: 10]</value></data>
+  <data name="FaqQ9" xml:space="preserve"><value>What is the delivery lead time?</value></data>
+  [cite_start]<data name="FaqA9" xml:space="preserve"><value>Delivery times depend on the product type, quantity and project requirements. [cite: 11]</value></data>
+  <data name="FaqQ10" xml:space="preserve"><value>How are the products packaged and shipped?</value></data>
+  [cite_start]<data name="FaqA10" xml:space="preserve"><value>All products are packaged for international transportation and shipped according to export regulations. [cite: 12]</value></data>
+  <data name="FaqQ11" xml:space="preserve"><value>Do you provide technical support during the project?</value></data>
+  <data name="FaqA11" xml:space="preserve"><value>Yes. [cite_start]We offer technical consultation and product guidance throughout the project. [cite: 13]</value></data>
+  <data name="FaqQ12" xml:space="preserve"><value>Can we see your reference projects?</value></data>
+  <data name="FaqA12" xml:space="preserve"><value>Yes. [cite_start]We can share our reference projects upon request. [cite: 14]</value></data>
+  <data name="FaqQ13" xml:space="preserve"><value>What information is required to receive a quotation?</value></data>
+  [cite_start]<data name="FaqA13" xml:space="preserve"><value>Product type, dimensions, surface finish, quantity and destination country are sufficient. [cite: 15]</value></data>
+  <data name="FaqQ14" xml:space="preserve"><value>Do you provide after-sales support?</value></data>
+  <data name="FaqA14" xml:space="preserve"><value>Yes. [cite_start]We continue to support our clients after delivery. [cite: 16]</value></data>
 </root>

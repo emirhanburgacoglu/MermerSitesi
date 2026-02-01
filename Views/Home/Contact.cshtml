@@ -234,6 +234,21 @@
                                 <label for="messageInput">@Localizer["YourMessage"]</label>
                             </div>
                         </div>
+                        <div class="form-check mb-4 text-start">
+                            <input class="form-check-input" type="checkbox" id="kvkkConsent" required
+                                style="cursor:pointer; border-color: #c9a961;">
+                            <label class="form-check-label small text-muted" for="kvkkConsent"
+                                style="cursor:pointer; line-height: 1.5;">
+                                <a asp-controller="Home" asp-action="Privacy" target="_blank"
+                                    class="text-decoration-underline" style="color: #c9a961;">
+                                    @Localizer["PrivacyPolicy"].Value
+                                </a>
+                                @Localizer["AcceptTermsNote"].Value
+                            </label>
+                            <div class="invalid-feedback">
+                                @Localizer["KvkkError"].Value
+                            </div>
+                        </div>
                         <div class="col-12">
                             <button type="submit" class="btn btn-gold-modern w-100 text-uppercase fw-bold"
                                 style="letter-spacing: 2px;">

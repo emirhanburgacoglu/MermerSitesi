@@ -75,6 +75,36 @@
         color: #1a1a1a;
         letter-spacing: 1px;
     }
+
+    /* Carousel resimlerine sinematik yavaş zoom (Ken Burns) efekti */
+    .carousel-item img {
+        transition: transform 10s linear !important;
+        transform: scale(1);
+    }
+
+    .carousel-item.active img {
+        transform: scale(1.15);
+        /* Resim aktif olduğunda %15 büyür */
+    }
+
+    /* Geçiş hızını yumuşatma (Fade efekti için) */
+    .carousel-fade .carousel-item {
+        transition-duration: 2s !important;
+        /* Geçiş süresini 2 saniyeye çıkarıyoruz */
+    }
+
+    /* Yazıların (Caption) daha zarif gelmesi */
+    .carousel-caption {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 1s ease-in-out 0.5s;
+        /* 0.5 saniye rötarla süzülerek gelir */
+    }
+
+    .active .carousel-caption {
+        opacity: 1;
+        transform: translateY(0);
+    }
 </style>
 <div class="container-fluid p-0 mb-5">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -85,7 +115,7 @@
         </div>
 
         <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="5000">
+            <div class="carousel-item active" data-bs-interval="7000">
                 <img src="/images/1.jpeg" class="d-block w-100" style="height: 600px; object-fit: cover;"
                     alt="Görsel 1">
                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded-pill"
@@ -433,10 +463,3 @@
         </div>
     </div>
 </div>
-
-
-
-<a href="https://wa.me/905459739353" class="whatsapp-float" target="_blank"
-    style="position:fixed; width:60px; height:60px; bottom:40px; right:40px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:30px; box-shadow: 2px 2px 3px #999; z-index:100; display:flex; align-items:center; justify-content:center; text-decoration:none;">
-    <i class="fab fa-whatsapp"></i>
-</a>

@@ -1,0 +1,64 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IHtmlLocalizer<MermerSitesi.SharedResource> Localizer
+@{
+    ViewData["Title"] = Localizer["FAQ"].Value;
+}
+
+<section class="py-5 mt-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="display-6 fw-bold text-uppercase"
+                style="font-family: 'Times New Roman', serif; letter-spacing: 3px;">
+                @Localizer["FAQ"].Value
+            </h1>
+            <div style="width: 60px; height: 3px; background-color: #c9a961; margin: 20px auto;"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="accordion accordion-flush shadow-sm p-4 rounded-3 border" id="faqAccordion"
+                    style="background-color: #fcfbf7;">
+                    @* Buraya döngü gelecek veya soruları tek tek ekleyeceğiz *@
+                    @for (int i = 1; i <= 14; i++)
+                    {
+                        var questionKey = "FaqQ" + i;
+                        var answerKey = "FaqA" + i;
+
+                        <div class="accordion-item border-bottom bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed py-4 bg-transparent fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse@i"
+                                    style="font-family: 'Times New Roman', serif; color: #1a1a1a;">
+                                    @Localizer[questionKey].Value
+                                </button>
+                            </h2>
+                            <div id="collapse@i" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted py-3" style="line-height: 1.8;">
+                                    @Localizer[answerKey].Value
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .accordion-button:not(.collapsed) {
+        color: #c9a961 !important;
+        background-color: transparent !important;
+        box-shadow: none;
+    }
+
+    .accordion-button:focus {
+        box-shadow: none;
+        border-color: rgba(201, 169, 97, 0.5);
+    }
+
+    .accordion-button::after {
+        filter: sepia(100%) hue-rotate(10deg) saturate(200%);
+        /* İkonu altın rengine yaklaştırır */
+    }
+</style>

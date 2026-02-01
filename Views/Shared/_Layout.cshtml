@@ -327,7 +327,11 @@
                                 <li><a asp-controller="Home" asp-action="Collection"
                                         asp-route-id="travertine">@Localizer["Collection"]</a></li>
                                 <li><a asp-controller="Home" asp-action="Contact">@Localizer["Contact"]</a></li>
-                                <li><a href="#">@Localizer["FAQ"]</a></li>
+                                <li><a asp-controller="Home" asp-action="Faq"
+                                        style="color: #c9a961 !important; font-weight: 600;">
+                                        @Localizer["FAQ"].Value
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -389,6 +393,81 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <div id="cookieBanner" class="cookie-banner shadow-lg" style="display: none;">
+        <div class="container py-3">
+            <div class="row align-items-center">
+                <div class="col-md-9 text-center text-md-start">
+                    <p class="mb-0 small text-muted" style="font-family: 'Montserrat', sans-serif;">
+                        <i class="fas fa-cookie-bite me-2" style="color: #c9a961;"></i>
+                        @Localizer["CookieNote"].Value
+                        <a asp-controller="Home" asp-action="Privacy" class="text-decoration-underline"
+                            style="color: #c9a961;">
+                            @Localizer["PrivacyPolicy"].Value
+                        </a>
+                    </p>
+                </div>
+                <div class="col-md-3 text-center text-md-end mt-3 mt-md-0">
+                    <button onclick="acceptCookies()" class="btn-cookie-accept">
+                        @Localizer["AcceptBtn"].Value
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="https://wa.me/905459739353" class="whatsapp-float" target="_blank"
+        style="position:fixed; width:60px; height:60px; bottom:40px; right:40px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:30px; box-shadow: 2px 2px 3px #999; z-index:100; display:flex; align-items:center; justify-content:center; text-decoration:none;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <style>
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.98);
+            border-top: 2px solid #c9a961;
+            z-index: 99999;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-cookie-accept {
+            background: linear-gradient(135deg, #e3c47a 0%, #c9a961 100%);
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn-cookie-accept:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+        }
+    </style>
+
+    <script>
+        // Sayfa yüklendiğinde kontrol et
+        document.addEventListener("DOMContentLoaded", function () {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookieBanner').style.display = 'block';
+            }
+        });
+
+        function acceptCookies() {
+            // 1. Hemen gizle (Kullanıcı beklememeli)
+            var banner = document.getElementById('cookieBanner');
+            banner.style.display = 'none';
+
+            // 2. Hafızaya kaydet (Bir daha çıkmasın)
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+    </script>
+
 </body>
+
 
 </html>

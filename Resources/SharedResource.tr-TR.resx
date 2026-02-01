@@ -27,10 +27,9 @@
 <data name="AboutText2" xml:space="preserve">
   <value>Vizyonumuz, Türkiye’nin doğal taş potansiyelini global ölçekte tanıtarak uzun soluklu ve güçlü iş ortaklıkları kurmaktır. Misyonumuz ise; yüksek kalite, güvenilir teslimat ve güçlü iletişim prensipleriyle müşterilerimizin her adımda yanında olmaktır. R&amp;Y Stone Export olarak yalnızca mermer ihraç etmiyor; değer, güven ve uzun vadeli iş ilişkileri inşa ediyoruz. Geliştirdiğimiz yenilikçi projelerle iş ortaklarımıza sürdürülebilir katkı sağlamayı hedefliyoruz.</value>
 </data>
-
 <data name="HomeDescription" xml:space="preserve">
-  <value>R&amp;Y Stone Export, aile değerleri üzerine inşa edilmiş, mermer ihracatında kaliteyi, güveni ve sürekliliği esas alan bir dış ticaret markasıdır. 20 yılı aşkın sektör tecrübemizle Türk mermerini titizlikle seçiyor; üretimden sevkiyata kadar tüm süreçleri yüksek standartlarda yöneterek dünya genelindeki seçkin projelere değer katıyoruz.</value>
-</data>
+    <value>R&amp;Y Stone Export, aile değerleri üzerine inşa edilmiş, mermer ihracatında kaliteyi, güveni ve sürekliliği esas alan bir dış ticaret markasıdır. 20 yılı aşkın sektör tecrübemizle Türk mermerini titizlikle seçiyor; üretimden sevkiyata kadar tüm süreçleri yüksek standartlarda yöneterek dünya genelindeki seçkin projelere değer katıyoruz.&lt;br&gt;Mermer, traverten, limestone ve oniks ürünlerinde uzmanlaşmış firmamız, seçkin projeler için yüksek kaliteli doğaltaş çözümleri sunmaktadır. Doğaltaş sektöründeki deneyimimizle; mermer, traverten, limestone ve oniks ürünlerini dünya genelindeki prestijli projeler için tedarik ediyoruz.&lt;br&gt;Blok, plaka ve ebatlı ürün seçeneklerinin yanı sıra, mimari projelere özel ölçü ve yüzey işlemleriyle üretim gerçekleştirmekteyiz. Kalite, sürdürülebilir tedarik ve güvenilir lojistik anlayışımızla; otel, konut, ticari ve kamusal projelerde mimarlara, müteahhitlere ve proje geliştiricilerine uzun vadeli iş ortaklığı sunuyoruz. Her projede, doğanın sunduğu zarafeti estetik, dayanıklılık ve teknik mükemmeliyetle bir araya getiriyoruz.</value>
+  </data>
 
   <data name="Show" xml:space="preserve"><value>Görüntüle</value></data>
   <data name="Product1" xml:space="preserve"><value>Nero Marquina (China) Mermer</value></data>
@@ -117,4 +116,45 @@
   <data name="TermsFullContent" xml:space="preserve">
     <value>&lt;h3&gt;1. Hizmet Şartları&lt;/h3&gt;&lt;p&gt;Bu web sitesini kullanarak, sunulan mermer ve doğal taş bilgilerinin bilgilendirme amaçlı olduğunu kabul etmiş sayılırsınız.&lt;/p&gt;&lt;h3&gt;2. Fiyatlandırma&lt;/h3&gt;&lt;p&gt;Doğal taş sektöründeki değişkenlikler nedeniyle sitemizde yer alan bilgiler kesin teklif niteliği taşımaz. Kesin fiyatlandırma için bizimle iletişime geçilmesi zorunludur.&lt;/p&gt;&lt;h3&gt;3. Fikri Mülkiyet&lt;/h3&gt;&lt;p&gt;Sitede yer alan tüm görsel ve içerikler R&amp;Y Stone Export mülkiyetindedir, izinsiz kullanılamaz.&lt;/p&gt;</value>
   </data>
+  <data name="AcceptTermsNote" xml:space="preserve">
+    <value>'nı okudum ve kişisel verilerimin işlenmesini kabul ediyorum.</value>
+  </data>
+  <data name="KvkkError" xml:space="preserve">
+    <value>Devam etmek için gizlilik politikasını kabul etmelisiniz.</value>
+  </data>
+  <data name="CookieNote" xml:space="preserve">
+    <value>Size daha iyi bir deneyim sunabilmek için çerezleri kullanıyoruz. Detaylı bilgi için </value>
+  </data>
+  <data name="AcceptBtn" xml:space="preserve">
+    <value>KABUL ET</value>
+  </data>
+  <data name="FAQ" xml:space="preserve"><value>Sık Sorulan Sorular</value></data>
+  <data name="FaqQ1" xml:space="preserve"><value>Hangi ürünleri ihraç ediyorsunuz?</value></data>
+  <data name="FaqA1" xml:space="preserve"><value>Mermer, traverten ve limestone (kireç taşı) ürünlerini; plaka, ebatlı ürün, özel kesim ve proje bazlı üretim seçenekleriyle ihraç ediyoruz.</value></data>
+  <data name="FaqQ2" xml:space="preserve"><value>Hangi ülkelere ihracat yapıyorsunuz?</value></data>
+  <data name="FaqA2" xml:space="preserve"><value>Avrupa başta olmak üzere birçok ülkeye doğaltaş ihracatı gerçekleştirmekteyiz.</value></data>
+  <data name="FaqQ3" xml:space="preserve"><value>Proje bazlı ve özel ölçü üretim yapıyor musunuz?</value></data>
+  <data name="FaqA3" xml:space="preserve"><value>Evet. Mimari projeler için özel ölçü, yüzey işlemi ve detaylara uygun üretim yapıyoruz.</value></data>
+  <data name="FaqQ4" xml:space="preserve"><value>Büyük ölçekli ve prestijli projeler için çalışıyor musunuz?</value></data>
+  <data name="FaqA4" xml:space="preserve"><value>Evet. Otel, konut, ticari yapılar ve kamusal projeler için çözümler sunuyoruz.</value></data>
+  <data name="FaqQ5" xml:space="preserve"><value>Minimum sipariş miktarı var mı?</value></data>
+  <data name="FaqA5" xml:space="preserve"><value>Sipariş miktarı ürün tipine ve proje kapsamına göre belirlenmektedir.</value></data>
+  <data name="FaqQ6" xml:space="preserve"><value>Numune talep edebilir miyiz?</value></data>
+  <data name="FaqA6" xml:space="preserve"><value>Evet. Projeniz için numune gönderimi sağlayabiliyoruz.</value></data>
+  <data name="FaqQ7" xml:space="preserve"><value>Ürünleriniz hangi kalite standartlarına sahiptir?</value></data>
+  <data name="FaqA7" xml:space="preserve"><value>Ürünlerimizi ihracat standartlarına uygun kalite kontrol süreçlerinden geçirmekteyiz.</value></data>
+  <data name="FaqQ8" xml:space="preserve"><value>Ürünler hangi formlarda tedarik edilebilir?</value></data>
+  <data name="FaqA8" xml:space="preserve"><value>Blok, plaka ve ebatlı ürün olarak; ayrıca proje gereksinimlerine göre özel üretim yapılabilmektedir.</value></data>
+  <data name="FaqQ9" xml:space="preserve"><value>Teslim süresi ne kadardır?</value></data>
+  <data name="FaqA9" xml:space="preserve"><value>Teslim süresi; ürün türü, miktar ve proje detaylarına göre belirlenmektedir.</value></data>
+  <data name="FaqQ10" xml:space="preserve"><value>Paketleme ve sevkiyat nasıl yapılmaktadır?</value></data>
+  <data name="FaqA10" xml:space="preserve"><value>Ürünler, uluslararası taşımaya uygun şekilde paketlenerek sevk edilmektedir.</value></data>
+  <data name="FaqQ11" xml:space="preserve"><value>Proje sürecinde teknik destek sağlıyor musunuz?</value></data>
+  <data name="FaqA11" xml:space="preserve"><value>Evet. Proje süresince teknik danışmanlık ve ürün yönlendirmesi sunuyoruz.</value></data>
+  <data name="FaqQ12" xml:space="preserve"><value>Referans projelerinizi görebilir miyiz?</value></data>
+  <data name="FaqA12" xml:space="preserve"><value>Talep etmeniz halinde tamamladığımız projelere ait referanslarımızı paylaşabiliriz.</value></data>
+  <data name="FaqQ13" xml:space="preserve"><value>Teklif almak için hangi bilgileri paylaşmamız gerekir?</value></data>
+  <data name="FaqA13" xml:space="preserve"><value>Ürün türü, ölçüler, yüzey işlemi, miktar ve teslimat ülkesi bilgileri yeterlidir.</value></data>
+  <data name="FaqQ14" xml:space="preserve"><value>Satış sonrası destek sunuyor musunuz?</value></data>
+  <data name="FaqA14" xml:space="preserve"><value>Evet. Teslimat sonrası süreçte de müşteri desteği sağlamaktayız.</value></data>
 </root>

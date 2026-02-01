@@ -132,6 +132,13 @@ namespace MermerSitesi.Controllers
         {
             return View();
         }
+        // HomeController.cs içinde
+        [Route("sss")] // Tarayıcıda görünecek isim
+        [Route("faq")] // Alternatif ingilizce yol
+        public IActionResult Faq()
+        {
+            return View();
+        }
     }
 
 }

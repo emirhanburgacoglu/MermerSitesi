@@ -8,7 +8,7 @@
   <data name="Search" xml:space="preserve"><value>ZOEKEN</value></data>
   <data name="Language" xml:space="preserve"><value>TAAL</value></data>
  <data name="Slogan" xml:space="preserve">
-    <value>Wij exporteren de elegantie van de natuur naar de wereld voor prestigieuze projecten.</value>
+    <value>Wij exporteren de elegantie van de natuur naar prestigieuze projecten over de hele wereld.</value>
 </data>
   <data name="OurStory" xml:space="preserve"><value>ONS VERHAAL</value></data>
   <data name="ProcessingArtOfNature" xml:space="preserve"><value>De kunst van de natuur verwerken</value></data>
@@ -35,16 +35,16 @@
     <value>R<span style="color: #c9a961; font-style: italic; font-family: 'Playfair Display', serif;">&amp;</span>Y Stone Export</value>
   </data>
 <data name="AboutText1" xml:space="preserve">
-    <value>R&amp;Y Stone Export is een handelsonderneming gebouwd op een diepgewortelde familietraditie in de marmerexport, waarbij kwaliteit en vertrouwen centraal staan. Dankzij onze kennis gebaseerd op meer dan 20 jaar ervaring in de sector en onze sterke organisatiestructuur, leveren wij vandaag de dag Turks marmer van de hoogste standaard naar vele bestemmingen wereldwijd. Het vertrouwen, de duurzaamheid en de zorgvuldigheid van een familiebedrijf, gecombineerd met onze professionele werkaanpak, stelt ons in staat om onze klanten altijd het juiste product op het juiste moment aan te bieden. Wij beheren alle processen — van productie tot verpakking en van belading tot verzending — op een transparante wijze, conform internationale kwaliteitsnormen.</value>
+    <value>R&amp;Y Stone Export is een handelsonderneming die is gebouwd op een diepgewortelde familietraditie in de marmerexport, waarbij kwaliteit en vertrouwen centraal staan. Dankzij onze kennis, gebaseerd op meer dan 20 jaar ervaring in de sector, en onze sterke organisatiestructuur leveren wij vandaag de dag Turks Natuursteen van de hoogste kwaliteit aan vele bestemmingen wereldwijd. De betrouwbaarheid, duurzaamheid en zorgvuldigheid die een familiebedrijf kenmerken, gecombineerd met onze professionele werkaanpak, stellen ons in staat om onze klanten altijd het juiste product op het juiste moment te bieden. Wij beheren alle processen — van productie tot verpakking en van belading tot verzending — op transparante wijze en in overeenstemming met internationale kwaliteitsnormen.</value>
   </data>
 
   <data name="AboutText2" xml:space="preserve">
-    <value>Onze visie is om het potentieel van Turkse natuursteen op mondiale schaal te promoten en langdurige, sterke zakelijke partnerschappen op te bouwen. Onze missie is om onze klanten bij elke stap bij te staan met principes van hoge kwaliteit, betrouwbare levering en sterke communicatie. Als R&amp;Y Stone Export exporteren wij niet alleen marmer; wij bouwen aan waarde, vertrouwen en duurzame zakelijke relaties. Wij streven ernaar om een blijvende bijdrage te leveren aan onze zakenpartners via de innovatieve projecten die wij ontwikkelen.</value>
+    <value>Onze visie is om het potentieel van Turkse natuursteen op mondiale schaal te promoten en langdurige, sterke zakelijke partnerschappen op te bouwen. Onze missie is om onze klanten bij elke stap te ondersteunen met de principes van hoge kwaliteit, betrouwbare levering en sterke communicatie. Bij R&amp;Y Stone Export exporteren wij niet alleen marmer; wij bouwen aan waarde, vertrouwen en duurzame zakelijke relaties. Wij streven ernaar om via de innovatieve projecten die wij ontwikkelen een blijvende bijdrage te leveren aan onze zakenpartners.</value>
   </data>
 
 <data name="HomeDescription" xml:space="preserve">
-  <value>R&amp;Y Stone Export is een handelsmerk gebouwd op familiewaarden, waarbij de marmeruitvoer is gebaseerd op kwaliteit, vertrouwen en continuïteit. Met meer dan 20 jaar sectorervaring selecteren wij zorgvuldig Turks marmer en voegen wij waarde toe aan prestigieuze projecten wereldwijd door alle processen van productie tot verzending volgens hoge standaarden te beheren.</value>
-</data>
+    <value>R&amp;Y Stone Export is een handelsmerk gebouwd op familiewaarden, gebaseerd op kwaliteit, vertrouwen en continuïteit in de export van marmer. Met meer dan 20 jaar ervaring in de sector selecteren wij zorgvuldig Turks marmer en voegen wij waarde toe aan exclusieve projecten wereldwijd door alle processen van productie tot verzending op hoog niveau te beheren.&lt;br&gt;Gespecialiseerd in marmer, travertin, kalksteen en onyx leveren wij hoogwaardige natuursteenoplossingen voor prestigieuze projecten wereldwijd. Met onze ervaring in de natuursteensector leveren wij marmer, travertin, kalksteen en onyx voor toonaangevende projecten over de hele wereld.&lt;br&gt;Naast blokken, platen en op maat gezaagde producten bieden wij projectgerichte maatwerkproductie met specifieke afmetingen en oppervlakteafwerkingen. Dankzij onze focus op kwaliteit, duurzame inkoop en betrouwbare logistiek zijn wij een vaste partner voor architecten, aannemers en projectontwikkelaars in hotel-, woon-, commerciële en publieke projecten. In elk project combineren wij de elegantie van de natuur met technische perfectie en duurzame kwaliteit.</value>
+  </data>
 
   <data name="LetsBringProjectsToLife" xml:space="preserve"><value>Laten we uw projecten tot leven brengen</value></data>
   <data name="HeadOffice" xml:space="preserve"><value>HOOFDKANTOOR</value></data>
@@ -85,24 +85,23 @@
   <data name="DiscoverCollection" xml:space="preserve"><value>Ontdek Onze Collectie</value></data>
   <data name="ViewDetails" xml:space="preserve"><value>BEKIJK DETAILS</value></data>
 
-  <data name="FooterDesc" xml:space="preserve"><value>Wij brengen de kunst die de natuur in miljoenen jaren heeft gecreëerd naar uw moderne leefruimtes. Het adres voor kwaliteit, esthetiek en vertrouwen.</value></data>
+  <data name="FooterDesc" xml:space="preserve"><value>Wij brengen de kunst die de natuur in miljoenen jaren heeft gecreëerd naar uw moderne leefruimtes. Waar kwaliteit en esthetiek samenkomen met vertrouwen.</value></data>
   <data name="Discover" xml:space="preserve"><value>Ontdekken</value></data>
   <data name="FAQ" xml:space="preserve"><value>FAQ</value></data>
   <data name="EmailPlaceholder" xml:space="preserve"><value>Uw E-mailadres</value></data>
   <data name="AllRightsReserved" xml:space="preserve"><value>Alle Rechten Voorbehouden.</value></data>
-  <data name="PrivacyPolicy" xml:space="preserve"><value>Privacybeleid</value></data>
-  <data name="TermsOfUse" xml:space="preserve"><value>Gebruiksvoorwaarden</value></data>
+ 
   <data name="SearchPlaceholder" xml:space="preserve"><value>Zoeken...</value></data>
   <data name="Travertine" xml:space="preserve"><value>TRAVERTIJN</value></data>
   <data name="Marble" xml:space="preserve"><value>MARMER</value></data>
   <data name="Onyx" xml:space="preserve"><value>ONYX</value></data>
   <data name="Limestone" xml:space="preserve"><value>KALKSTEEN</value></data>
 <data name="NaturalStoneWarning" xml:space="preserve">
-    <value>Natuursteenproducten kunnen variaties in kleur, patroon en adering vertonen vanwege hun aard; dit is een resultaat van de natuurlijke oorsprong van het product.</value>
+    <value> Natuursteenproducten kunnen variaties vertonen in kleur, patroon en adering als gevolg van hun natuurlijke karakter.</value>
   </data>
 
 <data name="CustomProductionNote" xml:space="preserve">
-  <value>Onze producten kunnen worden vervaardigd in aangepaste afmetingen en met de gewenste oppervlaktebehandelingsopties, geheel volgens de wens van de klant.</value>
+  <value>Onze producten kunnen worden vervaardigd in aangepaste afmetingen en met de gewenste oppervlaktebehandelingen, volledig afgestemd op de wensen van de klant.</value>
 </data>
 <data name="PricingInfoNote" xml:space="preserve">
     <value>Neem contact met ons op voor actuele prijsinformatie.</value>
@@ -123,4 +122,45 @@
   <data name="TermsFullContent" xml:space="preserve">
     <value>&lt;h3&gt;1. Voorwaarden&lt;/h3&gt;&lt;p&gt;De inhoud van deze website is uitsluitend bedoeld voor algemene informatie over onze natuursteenproducten.&lt;/p&gt;&lt;h3&gt;2. Offertes&lt;/h3&gt;&lt;p&gt;Prijzen op de website zijn indicatief. Neem contact op voor een definitieve offerte inclusief transportkosten.&lt;/p&gt;&lt;h3&gt;3. Auteursrecht&lt;/h3&gt;&lt;p&gt;Alle afbeeldingen en teksten zijn eigendom van R&amp;Y Stone Export.&lt;/p&gt;</value>
   </data>
+  <data name="AcceptTermsNote" xml:space="preserve">
+    <value>Ik heb het gelezen en ga akkoord met de verwerking van mijn persoonsgegevens.</value>
+  </data>
+  <data name="KvkkError" xml:space="preserve">
+    <value>U moet het privacybeleid accepteren om door te gaan.</value>
+  </data>
+  <data name="CookieNote" xml:space="preserve">
+    <value>Wij gebruiken cookies om u een betere ervaring te bieden. Voor meer informatie, zie ons </value>
+  </data>
+  <data name="AcceptBtn" xml:space="preserve">
+    <value>ACCEPTEREN</value>
+  </data>
+  <data name="FAQ" xml:space="preserve"><value>Veelgestelde vragen</value></data>
+  <data name="FaqQ1" xml:space="preserve"><value>Welke producten exporteren jullie?</value></data>
+  [cite_start]<data name="FaqA1" xml:space="preserve"><value>Wij exporteren marmer, travertin en kalksteen (limestone) in platen, op maat gezaagde producten en projectgerichte maatwerkoplossingen. [cite: 17]</value></data>
+  <data name="FaqQ2" xml:space="preserve"><value>Naar welke landen exporteren jullie?</value></data>
+  [cite_start]<data name="FaqA2" xml:space="preserve"><value>Wij exporteren natuursteen naar vele landen, voornamelijk binnen Europa. [cite: 18]</value></data>
+  <data name="FaqQ3" xml:space="preserve"><value>Bieden jullie projectgerichte en maatwerkproductie aan?</value></data>
+  <data name="FaqA3" xml:space="preserve"><value>Ja. [cite_start]Voor architecturale projecten leveren wij maatwerk, inclusief specifieke afmetingen en oppervlakteafwerkingen. [cite: 19]</value></data>
+  <data name="FaqQ4" xml:space="preserve"><value>Werken jullie aan grootschalige en prestigieuze projecten?</value></data>
+  <data name="FaqA4" xml:space="preserve"><value>Ja. [cite_start]Wij leveren natuursteenoplossingen voor hotels, woon-, commerciële en publieke projecten. [cite: 20]</value></data>
+  <data name="FaqQ5" xml:space="preserve"><value>Is there a minimum order quantity?</value></data>
+  [cite_start]<data name="FaqA5" xml:space="preserve"><value>De minimale bestelhoeveelheid is afhankelijk van het type product en de omvang van het project. [cite: 21]</value></data>
+  <data name="FaqQ6" xml:space="preserve"><value>Kunnen wij monsters aanvragen?</value></data>
+  <data name="FaqA6" xml:space="preserve"><value>Ja. [cite_start]Op verzoek kunnen wij monsters leveren. [cite: 22]</value></data>
+  <data name="FaqQ7" xml:space="preserve"><value>Aan welke kwaliteitsnormen voldoen jullie producten?</value></data>
+  [cite_start]<data name="FaqA7" xml:space="preserve"><value>Onze ürünleri worden gecontroleerd volgens internationale export- en kwaliteitsnormen. [cite: 23]</value></data>
+  <data name="FaqQ8" xml:space="preserve"><value>In welke vormen kunnen de producten worden geleverd?</value></data>
+  [cite_start]<data name="FaqA8" xml:space="preserve"><value>De producten kunnen worden geleverd als blokken, platen en op maat gezaagde materialen, evenals projectgerichte maatwerkproducten. [cite: 24]</value></data>
+  <data name="FaqQ9" xml:space="preserve"><value>Wat is de gemiddelde levertijd?</value></data>
+  [cite_start]<data name="FaqA9" xml:space="preserve"><value>De levertijd is afhankelijk van het producttype, de hoeveelheid en de projectspecificaties. [cite: 25]</value></data>
+  <data name="FaqQ10" xml:space="preserve"><value>Hoe worden de producten verpakt en verzonden?</value></data>
+  [cite_start]<data name="FaqA10" xml:space="preserve"><value>Alle producten worden professioneel verpakt voor internationaal transport en volgens exportvoorschriften verzonden. [cite: 26]</value></data>
+  <data name="FaqQ11" xml:space="preserve"><value>Bieden jullie technische ondersteuning tijdens het project?</value></data>
+  <data name="FaqA11" xml:space="preserve"><value>Ja. [cite_start]Wij bieden technische ondersteuning ve productadvies gedurende het gehele project. [cite: 27]</value></data>
+  <data name="FaqQ12" xml:space="preserve"><value>Kunnen wij jullie referentieprojecten bekijken?</value></data>
+  <data name="FaqA12" xml:space="preserve"><value>Ja. [cite_start]Op verzoek kunnen wij onze referentieprojecten met u delen. [cite: 28]</value></data>
+  <data name="FaqQ13" xml:space="preserve"><value>Welke informatie is nodig om een offerte te ontvangen?</value></data>
+  [cite_start]<data name="FaqA13" xml:space="preserve"><value>Producttype, afmetingen, afwerking, hoeveelheid en het land van bestemming zijn voldoende. [cite: 29, 30]</value></data>
+  <data name="FaqQ14" xml:space="preserve"><value>Bieden jullie aftersales ondersteuning?</value></data>
+  <data name="FaqA14" xml:space="preserve"><value>Ja. [cite_start]Wij bieden ook ondersteuning na levering. [cite: 31]</value></data>
 </root>
