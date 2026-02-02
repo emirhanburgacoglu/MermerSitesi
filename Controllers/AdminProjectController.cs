@@ -7,8 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using MermerSitesi.Data;
 using MermerSitesi.Models;
 using System.IO;
-using Microsoft.AspNetCore.Http; 
-using Microsoft.AspNetCore.Authorization; 
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MermerSitesi.Controllers
 {
@@ -46,16 +46,17 @@ namespace MermerSitesi.Controllers
         // POST: AdminProject/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TitleTr,ContentTr,TitleEn,ContentEn")] ProjectItem projectItem, IFormFile file)
+        // DÜZELTME 1: "Content" alanları silindi, "TitleNl" ve "Country" EKLENDİ.
+        public async Task<IActionResult> Create([Bind("Id,TitleTr,TitleEn,TitleNl,Country")] ProjectItem projectItem, IFormFile file)
         {
             if (file != null)
             {
                 var extension = Path.GetExtension(file.FileName);
                 var imageName = Guid.NewGuid() + extension;
                 var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
-                
+
                 if (!Directory.Exists(folderPath)) Directory.CreateDirectory(folderPath);
-                
+
                 using (var stream = new FileStream(Path.Combine(folderPath, imageName), FileMode.Create))
                 {
                     await file.CopyToAsync(stream);
@@ -90,7 +91,8 @@ namespace MermerSitesi.Controllers
         // POST: AdminProject/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,TitleTr,ContentTr,TitleEn,ContentEn,ImageUrl,CreatedDate")] ProjectItem projectItem, IFormFile? file)
+        // DÜZELTME 2: Edit metoduna da "TitleNl" ve "Country" EKLENDİ.
+        public async Task<IActionResult> Edit(int id, [Bind("Id,TitleTr,TitleEn,TitleNl,Country,ImageUrl,CreatedDate")] ProjectItem projectItem, IFormFile? file)
         {
             if (id != projectItem.Id) return NotFound();
 
@@ -98,6 +100,9 @@ namespace MermerSitesi.Controllers
             {
                 try
                 {
+                    // Eski resmi korumak için veritabanından mevcut hali çekilebilir ama 
+                    // burada hidden input (ImageUrl) ile geldiği varsayılıyor.
+
                     if (file != null)
                     {
                         var extension = Path.GetExtension(file.FileName);
@@ -111,6 +116,7 @@ namespace MermerSitesi.Controllers
                         }
                         projectItem.ImageUrl = "/images/" + imageName;
                     }
+
                     _context.Update(projectItem);
                     await _context.SaveChangesAsync();
                 }

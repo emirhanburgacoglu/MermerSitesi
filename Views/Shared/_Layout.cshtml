@@ -240,38 +240,73 @@
                                     <span>WHATSAPP</span>
                                 </a>
                             </li>
-
                             @if (User.Identity.IsAuthenticated)
                             {
-                                <li class="nav-item dropdown ms-lg-3">
-                                    <a class="nav-link dropdown-toggle text-dark fw-bold d-flex align-items-center" href="#"
-                                        role="button" data-bs-toggle="dropdown">
-                                        <div class="admin-avatar">
-                                            <i class="fas fa-user-cog"></i>
-                                        </div>
-                                        <span>YÖNETİM</span>
+                                /* --- MASAÜSTÜ GÖRÜNÜMÜ (MODERN & KÜÇÜK BUTON) --- */
+                                <li class="nav-item dropdown ms-lg-2 d-none d-lg-block">
+                                    <a class="nav-link dropdown-toggle d-flex align-items-center bg-dark text-white rounded-pill px-3 py-1 shadow-sm"
+                                        href="#" role="button" data-bs-toggle="dropdown"
+                                        style="font-size: 0.75rem; transition: all 0.3s ease;">
+                                        <i class="fas fa-user-shield me-2" style="color: #c9a961;"></i>
+                                        <span class="fw-bold" style="letter-spacing: 1px;">PANEL</span>
                                     </a>
-                                    <ul class="dropdown-menu dropdown-menu-end dropdown-modern">
+                                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 mt-2 dropdown-modern">
                                         <li>
-                                            <h6 class="dropdown-header text-muted text-uppercase small">İçerik Yönetimi
-                                            </h6>
+                                            <h6 class="dropdown-header text-uppercase extra-small text-muted">Kontrol
+                                                Merkezi</h6>
                                         </li>
-                                        <li><a class="dropdown-item-modern" asp-controller="AdminProduct"
-                                                asp-action="Index"><i class="fas fa-box me-2 text-primary"></i>
-                                                Ürünler</a>
+                                        <li>
+                                            <a class="dropdown-item-modern py-2" asp-controller="AdminProduct"
+                                                asp-action="Index">
+                                                <i class="fas fa-box me-2 text-primary"></i> Ürünler
+                                            </a>
                                         </li>
-                                        <li><a class="dropdown-item-modern" asp-controller="AdminProject"
-                                                asp-action="Index"><i class="fas fa-pen-nib me-2 text-success"></i>
-                                                Proje
-                                                Yönetimi</a></li>
+                                        <li>
+                                            <a class="dropdown-item-modern py-2" asp-controller="AdminProject"
+                                                asp-action="Index">
+                                                <i class="fas fa-pen-nib me-2 text-success"></i> Projeler
+                                            </a>
+                                        </li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
-                                        <li><a class="dropdown-item-modern text-danger fw-bold" asp-controller="Account"
-                                                asp-action="Logout"><i class="fas fa-sign-out-alt me-2"></i> ÇIKIŞ
-                                                YAP</a>
+                                        <li>
+                                            <a class="dropdown-item-modern text-danger fw-bold py-2"
+                                                asp-controller="Account" asp-action="Logout">
+                                                <i class="fas fa-sign-out-alt me-2"></i> Çıkış
+                                            </a>
                                         </li>
                                     </ul>
+                                </li>
+
+                                /* --- MOBİL GÖRÜNÜMÜ (HİZALAMA SORUNSUZ) --- */
+                                <li class="nav-item d-lg-none mt-3 border-top pt-3">
+                                    <span class="text-muted small fw-bold text-uppercase d-block mb-2"
+                                        style="letter-spacing: 1px;">Yönetici Paneli</span>
+
+                                    <a class="d-flex align-items-center py-2 text-decoration-none text-dark"
+                                        asp-controller="AdminProduct" asp-action="Index">
+                                        <div style="width: 25px; text-align: center;" class="me-2">
+                                            <i class="fas fa-box text-primary"></i>
+                                        </div>
+                                        <span>Ürün Yönetimi</span>
+                                    </a>
+
+                                    <a class="d-flex align-items-center py-2 text-decoration-none text-dark"
+                                        asp-controller="AdminProject" asp-action="Index">
+                                        <div style="width: 25px; text-align: center;" class="me-2">
+                                            <i class="fas fa-pen-nib text-success"></i>
+                                        </div>
+                                        <span>Proje Yönetimi</span>
+                                    </a>
+
+                                    <a class="d-flex align-items-center py-2 text-decoration-none text-danger fw-bold"
+                                        asp-controller="Account" asp-action="Logout">
+                                        <div style="width: 25px; text-align: center;" class="me-2">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                        </div>
+                                        <span>Çıkış Yap</span>
+                                    </a>
                                 </li>
                             }
                         </ul>

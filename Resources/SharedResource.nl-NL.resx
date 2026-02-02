@@ -43,7 +43,7 @@
   </data>
 
 <data name="HomeDescription" xml:space="preserve">
-    <value>R&amp;Y Stone Export is een handelsmerk gebouwd op familiewaarden, gebaseerd op kwaliteit, vertrouwen en continuïteit in de export van marmer. Met meer dan 20 jaar ervaring in de sector selecteren wij zorgvuldig Turks marmer en voegen wij waarde toe aan exclusieve projecten wereldwijd door alle processen van productie tot verzending op hoog niveau te beheren.&lt;br&gt;Gespecialiseerd in marmer, travertin, kalksteen en onyx leveren wij hoogwaardige natuursteenoplossingen voor prestigieuze projecten wereldwijd. Met onze ervaring in de natuursteensector leveren wij marmer, travertin, kalksteen en onyx voor toonaangevende projecten over de hele wereld.&lt;br&gt;Naast blokken, platen en op maat gezaagde producten bieden wij projectgerichte maatwerkproductie met specifieke afmetingen en oppervlakteafwerkingen. Dankzij onze focus op kwaliteit, duurzame inkoop en betrouwbare logistiek zijn wij een vaste partner voor architecten, aannemers en projectontwikkelaars in hotel-, woon-, commerciële en publieke projecten. In elk project combineren wij de elegantie van de natuur met technische perfectie en duurzame kwaliteit.</value>
+    <value>R&amp;Y Stone Export is een handelsmerk dat is gebouwd op familiewaarden, waarbij de marmerexport is gebaseerd op kwaliteit, vertrouwen en continuïteit. Met meer dan 20 jaar ervaring in de sector selecteren wij zorgvuldig Turks Natuursteen en voegen wij wereldwijd waarde toe aan prestigieuze projecten door alle processen, van productie tot verzending, te beheren volgens de hoogste kwaliteitsnormen.&lt;br&gt;Gespecialiseerd in marmer, travertin, kalksteen en onyx leveren wij hoogwaardige natuursteenoplossingen voor prestigieuze projecten wereldwijd. Met onze ervaring in de natuursteensector leveren wij marmer, travertin, kalksteen en onyx voor toonaangevende projecten over de hele wereld.&lt;br&gt;Naast blokken, platen en op maat gezaagde producten bieden wij projectgerichte maatwerkproductie met specifieke afmetingen en oppervlakteafwerkingen. Dankzij onze focus op kwaliteit, duurzame inkoop en betrouwbare logistiek zijn wij een vaste partner voor architecten, aannemers en projectontwikkelaars in hotel-, woon-, commerciële en publieke projecten. In elk project combineren wij de elegantie van de natuur met technische perfectie en duurzame kwaliteit.</value>
   </data>
 
   <data name="LetsBringProjectsToLife" xml:space="preserve"><value>Laten we uw projecten tot leven brengen</value></data>
@@ -136,31 +136,35 @@
   </data>
   <data name="FAQ" xml:space="preserve"><value>Veelgestelde vragen</value></data>
   <data name="FaqQ1" xml:space="preserve"><value>Welke producten exporteren jullie?</value></data>
-  [cite_start]<data name="FaqA1" xml:space="preserve"><value>Wij exporteren marmer, travertin en kalksteen (limestone) in platen, op maat gezaagde producten en projectgerichte maatwerkoplossingen. [cite: 17]</value></data>
+  [cite_start]<data name="FaqA1" xml:space="preserve"><value>Wij exporteren marmer, travertin en kalksteen (limestone) in platen, op maat gezaagde producten en projectgerichte maatwerkoplossingen.</value></data>
   <data name="FaqQ2" xml:space="preserve"><value>Naar welke landen exporteren jullie?</value></data>
-  [cite_start]<data name="FaqA2" xml:space="preserve"><value>Wij exporteren natuursteen naar vele landen, voornamelijk binnen Europa. [cite: 18]</value></data>
+  [cite_start]<data name="FaqA2" xml:space="preserve"><value>Wij exporteren natuursteen naar vele landen, voornamelijk binnen Europa.</value></data>
   <data name="FaqQ3" xml:space="preserve"><value>Bieden jullie projectgerichte en maatwerkproductie aan?</value></data>
-  <data name="FaqA3" xml:space="preserve"><value>Ja. [cite_start]Voor architecturale projecten leveren wij maatwerk, inclusief specifieke afmetingen en oppervlakteafwerkingen. [cite: 19]</value></data>
+  <data name="FaqA3" xml:space="preserve"><value>Ja. Voor architecturale projecten leveren wij maatwerk, inclusief specifieke afmetingen en oppervlakteafwerkingen.</value></data>
   <data name="FaqQ4" xml:space="preserve"><value>Werken jullie aan grootschalige en prestigieuze projecten?</value></data>
-  <data name="FaqA4" xml:space="preserve"><value>Ja. [cite_start]Wij leveren natuursteenoplossingen voor hotels, woon-, commerciële en publieke projecten. [cite: 20]</value></data>
+  <data name="FaqA4" xml:space="preserve"><value>Ja.Wij leveren natuursteenoplossingen voor hotels, woon-, commerciële en publieke projecten.</value></data>
   <data name="FaqQ5" xml:space="preserve"><value>Is there a minimum order quantity?</value></data>
-  [cite_start]<data name="FaqA5" xml:space="preserve"><value>De minimale bestelhoeveelheid is afhankelijk van het type product en de omvang van het project. [cite: 21]</value></data>
+  [cite_start]<data name="FaqA5" xml:space="preserve"><value>De minimale bestelhoeveelheid is afhankelijk van het type product en de omvang van het project.</value></data>
   <data name="FaqQ6" xml:space="preserve"><value>Kunnen wij monsters aanvragen?</value></data>
-  <data name="FaqA6" xml:space="preserve"><value>Ja. [cite_start]Op verzoek kunnen wij monsters leveren. [cite: 22]</value></data>
+  <data name="FaqA6" xml:space="preserve"><value>Ja. Op verzoek kunnen wij monsters leveren.</value></data>
   <data name="FaqQ7" xml:space="preserve"><value>Aan welke kwaliteitsnormen voldoen jullie producten?</value></data>
-  [cite_start]<data name="FaqA7" xml:space="preserve"><value>Onze ürünleri worden gecontroleerd volgens internationale export- en kwaliteitsnormen. [cite: 23]</value></data>
+  [cite_start]<data name="FaqA7" xml:space="preserve"><value>Onze ürünleri worden gecontroleerd volgens internationale export- en kwaliteitsnormen.</value></data>
   <data name="FaqQ8" xml:space="preserve"><value>In welke vormen kunnen de producten worden geleverd?</value></data>
-  [cite_start]<data name="FaqA8" xml:space="preserve"><value>De producten kunnen worden geleverd als blokken, platen en op maat gezaagde materialen, evenals projectgerichte maatwerkproducten. [cite: 24]</value></data>
+  [cite_start]<data name="FaqA8" xml:space="preserve"><value>De producten kunnen worden geleverd als blokken, platen en op maat gezaagde materialen, evenals projectgerichte maatwerkproducten.</value></data>
   <data name="FaqQ9" xml:space="preserve"><value>Wat is de gemiddelde levertijd?</value></data>
-  [cite_start]<data name="FaqA9" xml:space="preserve"><value>De levertijd is afhankelijk van het producttype, de hoeveelheid en de projectspecificaties. [cite: 25]</value></data>
+  [cite_start]<data name="FaqA9" xml:space="preserve"><value>De levertijd is afhankelijk van het producttype, de hoeveelheid en de projectspecificaties.</value></data>
   <data name="FaqQ10" xml:space="preserve"><value>Hoe worden de producten verpakt en verzonden?</value></data>
-  [cite_start]<data name="FaqA10" xml:space="preserve"><value>Alle producten worden professioneel verpakt voor internationaal transport en volgens exportvoorschriften verzonden. [cite: 26]</value></data>
+  [cite_start]<data name="FaqA10" xml:space="preserve"><value>Alle producten worden professioneel verpakt voor internationaal transport en volgens exportvoorschriften verzonden.</value></data>
   <data name="FaqQ11" xml:space="preserve"><value>Bieden jullie technische ondersteuning tijdens het project?</value></data>
-  <data name="FaqA11" xml:space="preserve"><value>Ja. [cite_start]Wij bieden technische ondersteuning ve productadvies gedurende het gehele project. [cite: 27]</value></data>
+  <data name="FaqA11" xml:space="preserve"><value>Ja. Wij bieden technische ondersteuning ve productadvies gedurende het gehele project.</value></data>
   <data name="FaqQ12" xml:space="preserve"><value>Kunnen wij jullie referentieprojecten bekijken?</value></data>
-  <data name="FaqA12" xml:space="preserve"><value>Ja. [cite_start]Op verzoek kunnen wij onze referentieprojecten met u delen. [cite: 28]</value></data>
+  <data name="FaqA12" xml:space="preserve"><value>Ja. Op verzoek kunnen wij onze referentieprojecten met u delen.</value></data>
   <data name="FaqQ13" xml:space="preserve"><value>Welke informatie is nodig om een offerte te ontvangen?</value></data>
-  [cite_start]<data name="FaqA13" xml:space="preserve"><value>Producttype, afmetingen, afwerking, hoeveelheid en het land van bestemming zijn voldoende. [cite: 29, 30]</value></data>
+  <data name="FaqA13" xml:space="preserve"><value>Producttype, afmetingen, afwerking, hoeveelheid en het land van bestemming zijn voldoende.</value></data>
   <data name="FaqQ14" xml:space="preserve"><value>Bieden jullie aftersales ondersteuning?</value></data>
-  <data name="FaqA14" xml:space="preserve"><value>Ja. [cite_start]Wij bieden ook ondersteuning na levering. [cite: 31]</value></data>
+  <data name="FaqA14" xml:space="preserve"><value>Ja. Wij bieden ook ondersteuning na levering.</value></data>
+
+<data name="NoProjectsYet" xml:space="preserve">
+    <value>Er zijn nog geen projecten gepubliceerd.</value>
+  </data>
 </root>

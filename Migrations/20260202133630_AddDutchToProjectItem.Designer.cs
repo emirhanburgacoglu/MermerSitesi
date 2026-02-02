@@ -3,6 +3,7 @@ using System;
 using MermerSitesi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MermerSitesi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260202133630_AddDutchToProjectItem")]
+    partial class AddDutchToProjectItem
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
@@ -55,7 +58,13 @@ namespace MermerSitesi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Country")
+                    b.Property<string>("ContentEn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ContentNl")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ContentTr")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CreatedDate")
