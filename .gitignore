@@ -486,3 +486,6 @@ $RECYCLE.BIN/
 *.db
 *.db-shm
 *.db-wal
+
+# Hassas ayar dosyalarını gizle
+appsettings.json

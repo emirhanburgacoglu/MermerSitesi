@@ -10,31 +10,36 @@
         <div class="col-md-4">
             <div class="card shadow-lg border-0 rounded-0">
                 <div class="card-header bg-black text-white text-center py-4">
-                    <h4 class="mb-0 font-serif">HOLLAND STONE</h4>
-                    <small>Yönetim Paneli</small>
+                    <h4 class="mb-0 font-serif" style="letter-spacing: 2px;">R&Y STONE</h4>
+                    <small style="letter-spacing: 1px;">YÖNETİM PANELİ</small>
                 </div>
+
                 <div class="card-body p-4">
 
                     @if (ViewBag.Error != null)
                     {
-                        <div class="alert alert-danger text-center small">@ViewBag.Error</div>
+                        <div class="alert alert-danger text-center small rounded-0">@ViewBag.Error</div>
                     }
 
                     <form asp-action="Login" method="post">
                         <div class="mb-3">
-                            <label class="form-label small fw-bold text-muted">KULLANICI ADI</label>
-                            <input type="text" name="username" class="form-control rounded-0 bg-light" required
-                                autofocus>
+                            <label class="form-label small fw-bold text-muted">E-POSTA ADRESİ</label>
+
+                            <input type="email" name="email" class="form-control rounded-0 bg-light" required
+                                placeholder="info@rystonexport.com" autofocus>
                         </div>
+
                         <div class="mb-4">
                             <label class="form-label small fw-bold text-muted">ŞİFRE</label>
                             <input type="password" name="password" class="form-control rounded-0 bg-light" required>
                         </div>
+
                         <div class="d-grid">
                             <button type="submit" class="btn btn-dark rounded-0 py-2 fw-bold">GİRİŞ YAP</button>
                         </div>
                     </form>
                 </div>
+
                 <div class="card-footer text-center bg-white border-0 py-3">
                     <a href="/" class="text-decoration-none text-muted small">← Siteye Dön</a>
                 </div>
