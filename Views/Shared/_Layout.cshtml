@@ -8,6 +8,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - R&Y Stone Export</title>
+    <meta name="description"
+        content="R&Y Stone Export, traverten, mermer, kirectasi ve oniks urunlerinde uluslararasi tas ihracati sunar." />
+    <meta property="og:title" content="R&Y Stone Export" />
+    <meta property="og:description"
+        content="R&Y Stone Export, traverten, mermer, kirectasi ve oniks urunlerinde uluslararasi tas ihracati sunar." />
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
@@ -400,12 +405,45 @@
             <div class="footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-6 text-center text-md-start">
-                        <p class="mb-0">
-                            &copy; 2026 R&Y Stone Export. @Localizer["AllRightsReserved"]
-                            <a asp-controller="Account" asp-action="Login" class="admin-link" title="Yönetim Paneli">
-                                <i class="fas fa-lock fa-xs"></i>
-                            </a>
-                        </p>
+                        <div class="container-fluid py-3">
+                            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center text-center"
+                                style="gap: 0.5rem; color: #888; font-size: 0.9rem;">
+
+                                <span>
+                                    &copy; 2026 R&Y Stone Export. @Localizer["AllRightsReserved"]
+                                </span>
+
+                                <span class="d-none d-md-inline" style="color: #444;">|</span>
+
+                                <span class="text-nowrap">
+                                    Developed by
+                                    <a href="https://www.linkedin.com/in/murat-emirhan-burgacoglu-143b8521a/"
+                                        target="_blank" class="text-decoration-none fw-bold"
+                                        style="color: #c9a961; transition: color 0.3s ease;">
+                                        Murat Emirhan Burgaçoğlu
+                                    </a>
+
+                                    <a asp-controller="Account" asp-action="Login" class="ms-1 text-dark opacity-25"
+                                        style="transition: opacity 0.3s;" title="Yönetim">
+                                        <i class="fas fa-lock fa-xs"></i>
+                                    </a>
+                                </span>
+
+                            </div>
+                        </div>
+
+                        <style>
+                            /* İmza Parlama Efekti */
+                            .text-nowrap a:first-of-type:hover {
+                                color: #fff !important;
+                                text-shadow: 0 0 10px rgba(201, 169, 97, 0.6);
+                            }
+
+                            /* Kilit İkonu Efekti */
+                            .text-nowrap a:last-of-type:hover {
+                                opacity: 1 !important;
+                            }
+                        </style>
                     </div>
                     <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
                         <a asp-controller="Home" asp-action="Privacy" class="footer-legal-link">
