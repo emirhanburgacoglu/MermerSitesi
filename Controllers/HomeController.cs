@@ -139,6 +139,18 @@ namespace MermerSitesi.Controllers
         {
             return View();
         }
+
+        public async Task<IActionResult> ProjectDetails(int id)
+        {
+            // Projeyi ve içindeki Galeri Resimlerini (Include) çekiyoruz
+            var project = await _context.ProjectItems
+                .Include(p => p.Images) // Önemli: İlişkili resimleri getir
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (project == null) return NotFound();
+
+            return View(project);
+        }
     }
 
 }

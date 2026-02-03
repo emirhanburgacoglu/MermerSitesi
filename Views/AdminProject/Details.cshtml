@@ -1,0 +1,95 @@
+@model MermerSitesi.Models.ProjectItem
+
+@{
+    ViewData["Title"] = "Proje Detayları";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">Proje Detayları</h2>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning shadow-sm">
+                <i class="fas fa-edit me-2"></i>Düzenle
+            </a>
+            <a asp-action="Index" class="btn btn-secondary shadow-sm ms-2">
+                <i class="fas fa-arrow-left me-2"></i>Listeye Dön
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-header bg-dark text-white fw-bold">
+                    <i class="fas fa-info-circle me-2"></i> Temel Bilgiler
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4 text-muted">Ülke:</dt>
+                        <dd class="col-sm-8 fw-bold text-primary">@Model.Country</dd>
+
+                        <dt class="col-sm-4 text-muted">Türkçe Başlık:</dt>
+                        <dd class="col-sm-8">@Model.TitleTr</dd>
+
+                        <dt class="col-sm-4 text-muted">İngilizce Başlık:</dt>
+                        <dd class="col-sm-8">@Model.TitleEn</dd>
+
+                        <dt class="col-sm-4 text-muted">Flemenkçe Başlık:</dt>
+                        <dd class="col-sm-8">@(Model.TitleNl ?? "-")</dd>
+
+                        <dt class="col-sm-4 text-muted">Oluşturulma:</dt>
+                        <dd class="col-sm-8">@Model.CreatedDate.ToString("dd.MM.yyyy HH:mm")</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-header bg-dark text-white fw-bold">
+                    <i class="fas fa-image me-2"></i> Kapak Resmi
+                </div>
+                <div class="card-body text-center p-0 overflow-hidden d-flex align-items-center justify-content-center bg-light"
+                    style="min-height: 250px;">
+                    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                    {
+                        <img src="@Model.ImageUrl" class="img-fluid" style="max-height: 300px;" alt="Kapak Resmi">
+                    }
+                    else
+                    {
+                        <span class="text-muted">Resim Yok</span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-0 mt-4">
+        <div class="card-header bg-secondary text-white fw-bold">
+            <i class="fas fa-images me-2"></i> Galeri Resimleri (@(Model.Images?.Count ?? 0))
+        </div>
+        <div class="card-body">
+            @if (Model.Images != null && Model.Images.Any())
+            {
+                <div class="row g-3">
+                    @foreach (var img in Model.Images)
+                    {
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="border rounded p-1 shadow-sm h-100">
+                                <img src="@img.ImageUrl" class="w-100 h-100 object-fit-cover rounded" style="aspect-ratio: 1/1;"
+                                    alt="Galeri">
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-light text-center border">
+                    Bu projeye ait ekstra galeri görseli bulunmamaktadır.
+                </div>
+            }
+        </div>
+    </div>
+</div>

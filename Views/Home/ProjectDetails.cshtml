@@ -1,0 +1,53 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Globalization
+@* AŞAĞIDAKİ SATIR EKSİKTİ, BU YÜZDEN HATA ALIYORDUN *@
+@inject IHtmlLocalizer<MermerSitesi.SharedResource> Localizer
+@model MermerSitesi.Models.ProjectItem
+
+@{
+    var currentCulture = CultureInfo.CurrentCulture.Name;
+    string title = Model.TitleTr;
+    if (currentCulture.StartsWith("nl") && !string.IsNullOrEmpty(Model.TitleNl)) title = Model.TitleNl;
+    else if (currentCulture.StartsWith("en") && !string.IsNullOrEmpty(Model.TitleEn)) title = Model.TitleEn;
+}
+
+<div class="container mt-5 pt-5 mb-5">
+    <div class="text-center mb-5">
+        <span class="badge bg-warning text-dark mb-2"><i class="fas fa-map-marker-alt me-1"></i> @Model.Country</span>
+        <h1 class="fw-bold display-5">@title</h1>
+        <div class="divider mx-auto bg-dark mt-3" style="width: 50px; height: 3px;"></div>
+    </div>
+
+    <div class="row g-3">
+        @* Önce Kapak Resmi *@
+        <div class="col-md-6 mb-3">
+            <a href="@Model.ImageUrl" data-lightbox="project-gallery">
+                <img src="@Model.ImageUrl" class="img-fluid rounded shadow w-100 object-fit-cover"
+                    style="height: 400px;" alt="Kapak">
+            </a>
+        </div>
+
+        @* Sonra Diğer Galeri Resimleri *@
+        @if (Model.Images != null)
+        {
+            @foreach (var img in Model.Images)
+            {
+                <div class="col-md-6 mb-3">
+                    <a href="@img.ImageUrl" data-lightbox="project-gallery">
+                        <img src="@img.ImageUrl" class="img-fluid rounded shadow w-100 object-fit-cover" style="height: 400px;"
+                            alt="Detay">
+                    </a>
+                </div>
+            }
+        }
+    </div>
+
+    <div class="text-center mt-5">
+        <a asp-controller="Home" asp-action="Projects" class="btn btn-outline-dark px-4 py-2">
+            <i class="fas fa-arrow-left me-2"></i> @Localizer["BackToProjects"]
+        </a>
+    </div>
+</div>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>

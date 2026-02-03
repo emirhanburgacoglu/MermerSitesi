@@ -167,4 +167,8 @@
 <data name="NoProjectsYet" xml:space="preserve">
     <value>Er zijn nog geen projecten gepubliceerd.</value>
   </data>
+  <data name="BackToProjects" xml:space="preserve">
+    <value>Terug naar Projecten</value>
+  </data>
+  
 </root>

@@ -84,8 +84,7 @@
   <data name="FAQ" xml:space="preserve"><value>SSS</value></data>
   <data name="EmailPlaceholder" xml:space="preserve"><value>E-Posta Adresiniz</value></data>
   <data name="AllRightsReserved" xml:space="preserve"><value>Tüm Hakları Saklıdır.</value></data>
-  <data name="PrivacyPolicy" xml:space="preserve"><value>Gizlilik Politikası</value></data>
-  <data name="TermsOfUse" xml:space="preserve"><value>Kullanım Şartları</value></data>
+ 
   <data name="SearchPlaceholder" xml:space="preserve"><value>Site içinde ara</value></data>
   <data name="Travertine" xml:space="preserve"><value>TRAVERTEN</value></data>
   <data name="Marble" xml:space="preserve"><value>MERMER</value></data>
@@ -157,4 +156,10 @@
   <data name="FaqA13" xml:space="preserve"><value>Ürün türü, ölçüler, yüzey işlemi, miktar ve teslimat ülkesi bilgileri yeterlidir.</value></data>
   <data name="FaqQ14" xml:space="preserve"><value>Satış sonrası destek sunuyor musunuz?</value></data>
   <data name="FaqA14" xml:space="preserve"><value>Evet. Teslimat sonrası süreçte de müşteri desteği sağlamaktayız.</value></data>
+<data name="BackToProjects" xml:space="preserve">
+    <value>Projelere Dön</value>
+  </data>
+  <data name="NoProjectsYet" xml:space="preserve">
+    <value>Henüz yayınlanmış bir proje bulunmamaktadır.</value>
+  </data>
 </root>

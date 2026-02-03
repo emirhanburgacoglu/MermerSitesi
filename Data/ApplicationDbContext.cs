@@ -12,5 +12,7 @@ namespace MermerSitesi.Data
         // Veritabanı Tablolarımız
         public DbSet<Product> Products { get; set; }
         public DbSet<ProjectItem> ProjectItems { get; set; }
+
+        public DbSet<ProjectImage> ProjectImages { get; set; }
     }
 }

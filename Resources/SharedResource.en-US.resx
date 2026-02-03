@@ -158,7 +158,13 @@ In addition to blocks, slabs and cut-to-size products, we offer tailor-made prod
   <data name="FaqQ12" xml:space="preserve"><value>Can we see your reference projects?</value></data>
   <data name="FaqA12" xml:space="preserve"><value>Yes. We can share our reference projects upon request.</value></data>
   <data name="FaqQ13" xml:space="preserve"><value>What information is required to receive a quotation?</value></data>
-  [cite_start]<data name="FaqA13" xml:space="preserve"><value>Product type, dimensions, surface finish, quantity and destination country are sufficient.</value></data>
+  <data name="FaqA13" xml:space="preserve"><value>Product type, dimensions, surface finish, quantity and destination country are sufficient.</value></data>
   <data name="FaqQ14" xml:space="preserve"><value>Do you provide after-sales support?</value></data>
   <data name="FaqA14" xml:space="preserve"><value>Yes. We continue to support our clients after delivery.</value></data>
+  <data name="BackToProjects" xml:space="preserve">
+    <value>Back to Projects</value>
+  </data>
+  <data name="NoProjectsYet" xml:space="preserve">
+    <value>No projects published yet.</value>
+  </data>
 </root>

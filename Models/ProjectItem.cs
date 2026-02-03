@@ -27,5 +27,11 @@ namespace MermerSitesi.Models
 
         [Display(Name = "Tarih")]
         public DateTime CreatedDate { get; set; } = DateTime.Now;
+
+
+        // YENİ: Projenin diğer detay resimleri
+        public List<ProjectImage> Images { get; set; } = new List<ProjectImage>();
+
+
     }
 }

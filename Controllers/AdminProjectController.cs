@@ -29,11 +29,18 @@ namespace MermerSitesi.Controllers
         }
 
         // GET: AdminProject/Details/5
+        // GET: AdminProject/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null) return NotFound();
-            var projectItem = await _context.ProjectItems.FirstOrDefaultAsync(m => m.Id == id);
+
+            // Projeyi ve Galeri Resimlerini veritabanından çekiyoruz
+            var projectItem = await _context.ProjectItems
+                .Include(p => p.Images) // <--- GALERİ RESİMLERİNİ DAHİL ET
+                .FirstOrDefaultAsync(m => m.Id == id);
+
             if (projectItem == null) return NotFound();
+
             return View(projectItem);
         }
 
@@ -46,39 +53,66 @@ namespace MermerSitesi.Controllers
         // POST: AdminProject/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        // DÜZELTME 1: "Content" alanları silindi, "TitleNl" ve "Country" EKLENDİ.
-        public async Task<IActionResult> Create([Bind("Id,TitleTr,TitleEn,TitleNl,Country")] ProjectItem projectItem, IFormFile file)
+        // DİKKAT: "file" yerine "files" (liste) alıyoruz.
+        public async Task<IActionResult> Create([Bind("Id,TitleTr,TitleEn,TitleNl,Country")] ProjectItem projectItem, List<IFormFile> files)
         {
-            if (file != null)
-            {
-                var extension = Path.GetExtension(file.FileName);
-                var imageName = Guid.NewGuid() + extension;
-                var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
-
-                if (!Directory.Exists(folderPath)) Directory.CreateDirectory(folderPath);
-
-                using (var stream = new FileStream(Path.Combine(folderPath, imageName), FileMode.Create))
-                {
-                    await file.CopyToAsync(stream);
-                }
-                projectItem.ImageUrl = "/images/" + imageName;
-            }
-            else
-            {
-                projectItem.ImageUrl = "";
-            }
-
-            projectItem.CreatedDate = DateTime.Now;
-
             if (ModelState.IsValid)
             {
+                // 1. Önce Projeyi Kaydet (ID oluşsun diye)
+                // Eğer ilk resim varsa onu kapak resmi yapalım
+                if (files != null && files.Count > 0)
+                {
+                    // İlk resmi kapak yapma mantığı aşağıda işlenecek
+                }
+
                 _context.Add(projectItem);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(); // Burada projenin ID'si oluştu
+
+                // 2. Resimleri Yükle ve Galeriye Ekle
+                if (files != null && files.Count > 0)
+                {
+                    var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/projects");
+                    if (!Directory.Exists(folderPath)) Directory.CreateDirectory(folderPath);
+
+                    // İlk dosya kapak resmi olsun (ImageUrl)
+                    bool isFirst = true;
+
+                    foreach (var file in files)
+                    {
+                        var extension = Path.GetExtension(file.FileName);
+                        var imageName = Guid.NewGuid() + extension;
+                        var fullPath = Path.Combine(folderPath, imageName);
+
+                        using (var stream = new FileStream(fullPath, FileMode.Create))
+                        {
+                            await file.CopyToAsync(stream);
+                        }
+
+                        if (isFirst)
+                        {
+                            // Kapak resmi
+                            projectItem.ImageUrl = "/images/projects/" + imageName;
+                            _context.Update(projectItem);
+                            isFirst = false;
+                        }
+                        else
+                        {
+                            // Diğer resimler galeriye
+                            var galleryImage = new ProjectImage
+                            {
+                                ImageUrl = "/images/projects/" + imageName,
+                                ProjectItemId = projectItem.Id
+                            };
+                            _context.ProjectImages.Add(galleryImage);
+                        }
+                    }
+                    await _context.SaveChangesAsync();
+                }
+
                 return RedirectToAction(nameof(Index));
             }
             return View(projectItem);
         }
-
         // GET: AdminProject/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
