@@ -144,6 +144,22 @@
 </div>
 
 <div class="container mb-5 pb-5">
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+            <i class="fas fa-check-circle me-2"></i> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
+            <i class="fas fa-exclamation-circle me-2"></i> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
     <div class="row gx-lg-5 gy-5 align-items-stretch">
         <div class="col-lg-5">
             <div class="contact-info-box-modern h-100 d-flex flex-column">
@@ -186,7 +202,6 @@
                 </div>
 
                 <div class="mt-auto map-frame-modern">
-                    @* Yeni doğrulanan konuma göre güncellenmiş harita *@
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.8152575239!2d27.9068!3d39.6644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b7003440787341%3A0x673c09b7c85268c1!2sPa%C5%9Fa%20Alan%C4%B1%2C%20455.%20Sk.%2C%2010110%20Karesi%2FBal%C4%B1kesir!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str"
                         width="100%" height="220" style="border:0; display: block;" allowfullscreen="" loading="lazy"
@@ -204,38 +219,39 @@
                     <p class="text-muted">@Localizer["ContactFormDesc"]</p>
                 </div>
 
-                <form>
+                <form asp-controller="Home" asp-action="Contact" method="post">
+                    @Html.AntiForgeryToken()
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control form-control-modern" id="nameInput"
-                                    placeholder=".">
+                                <input type="text" class="form-control form-control-modern" id="nameInput" name="name"
+                                    required placeholder=".">
                                 <label for="nameInput">@Localizer["NameSurname"]</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control form-control-modern" id="emailInput"
-                                    placeholder=".">
+                                    name="email" required placeholder=".">
                                 <label for="emailInput">@Localizer["YourEmail"]</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control form-control-modern" id="subjectInput"
-                                    placeholder=".">
+                                    name="subject" required placeholder=".">
                                 <label for="subjectInput">@Localizer["Subject"]</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating mb-4">
                                 <textarea class="form-control form-control-modern" placeholder="." id="messageInput"
-                                    style="height: 160px"></textarea>
+                                    name="message" required style="height: 160px"></textarea>
                                 <label for="messageInput">@Localizer["YourMessage"]</label>
                             </div>
                         </div>
                         <div class="form-check mb-4 text-start">
-                            <input class="form-check-input" type="checkbox" id="kvkkConsent" required
+                            <input class="form-check-input" type="checkbox" id="kvkkConsent" name="kvkkConsent" value="true" required
                                 style="cursor:pointer; border-color: #c9a961;">
                             <label class="form-check-label small text-muted" for="kvkkConsent"
                                 style="cursor:pointer; line-height: 1.5;">

@@ -20,6 +20,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LoginPath = "/Account/Login";
         options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
     });
+builder.Services.AddTransient<MermerSitesi.Services.IEmailService, MermerSitesi.Services.EmailService>();
 
 var app = builder.Build();
 
